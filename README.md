@@ -5,5 +5,7 @@ The House House App is a tool that allows students and teachers to see their hou
 
 ## How It Works
 **Customizable Houses**: You have the flexibility to create and customize house names, colors, and even the number of houses. The app adapts to your unique school culture.
+
 **Instant Recognition**: Deans can award points to students using the app.
+
 **Announcements**: An Admin and send announcements that everyone can see.
