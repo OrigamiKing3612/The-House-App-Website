@@ -3,3 +3,5 @@ plugins:
 - jekyll-remote-theme 
 title: The House App
 description: The House App Coming Soon
+github:
+  is_project_page: false
