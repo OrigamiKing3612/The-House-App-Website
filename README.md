@@ -18,4 +18,4 @@ The House App empowers educational institutions to streamline house-related proc
 If you would like more details, please reach out to us via email at the.house.app.app@gmail.com.
 
 ### Copyright
-Copyright (C) 2024, OrigamiKing2612. All Rights Reserved.
+Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.
