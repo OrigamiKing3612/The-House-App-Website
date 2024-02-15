@@ -15,7 +15,7 @@ The House App is a sophisticated tool designed to enhance the educational experi
 The House App empowers educational institutions to streamline house-related processes and foster a sense of community.
 
 ## Getting started
-If you would like more details, please reach out to us via email at the.house.app.app@gmail.com.
+If you would like more details, please reach out to us via email at [the.house.app.app@gmail.com](mailto:the.house.app.app@gmail.com).
 
 ### Copyright
 Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.
