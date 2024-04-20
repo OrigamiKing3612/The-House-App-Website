@@ -33,13 +33,9 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
 
 .all {
   position: relative;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.link {
-  text-decoration: none;
 }
