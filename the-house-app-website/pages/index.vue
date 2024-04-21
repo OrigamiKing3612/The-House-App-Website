@@ -41,10 +41,8 @@
         </section>
       </div>
     </Card>
-  </div>
-  <div class="copyright">
-    <Card>
-      <p class="copyright-text">Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.</p>
+    <Card width="70">
+      <p class="title">Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.</p>
     </Card>
   </div>
 </template>
@@ -71,18 +69,6 @@
 
 .bold {
   font-weight: bold;
-}
-
-.copyright {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 0;
-  max-width: 300px;
-
-  .copyright-text {
-    font-size: 10px;
-  }
 }
 
 .link {
