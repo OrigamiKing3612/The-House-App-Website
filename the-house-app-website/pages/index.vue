@@ -53,7 +53,7 @@
 .container {
   max-width: 80vh;
   margin: 0 auto;
-  padding: 8px;
+  padding: 20px;
   color: $text;
 }
 
