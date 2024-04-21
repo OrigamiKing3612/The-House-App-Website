@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <Card width="900">
+    <Card width="70">
       <div class="container">
         <h1 class="title">The House App</h1>
         <section class="about-section">
@@ -44,14 +44,14 @@
   </div>
   <div class="copyright">
     <Card>
-      <p>Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.</p>
+      <p class="copyright-text">Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.</p>
     </Card>
   </div>
 </template>
 
 <style scoped lang="scss">
 .container {
-  max-width: 800px;
+  max-width: 80vh;
   margin: 0 auto;
   padding: 20px;
   color: $text;
@@ -75,9 +75,14 @@
 
 .copyright {
   position: fixed;
-  bottom: 5px;
-  right: 5px;
-  padding: 0 5px;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  max-width: 300px;
+
+  .copyright-text {
+    font-size: 10px;
+  }
 }
 
 .link {

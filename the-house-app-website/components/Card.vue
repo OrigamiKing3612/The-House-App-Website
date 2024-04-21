@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :style="{ width: props.width + 'px', 'margin-bottom': props.marginBottom + 'px' }">
+  <div class="card" :style="{ 'width': props.width + 'vw', 'margin-bottom': props.marginBottom + 'px' }">
     <div class="v-container">
       <slot />
     </div>
@@ -14,7 +14,7 @@ const props = defineProps({
   },
   width: {
     type: String,
-    default: "450"
+    default: "45"
   }
 });
 </script>
