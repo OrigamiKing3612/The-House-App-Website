@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     viewTransition: true
   },
   devtools: { enabled: true },
+  ssr: false,
   vite: {
     css: {
       preprocessorOptions: {
