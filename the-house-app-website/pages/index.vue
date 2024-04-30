@@ -35,7 +35,7 @@
           </ul>
         </section>
         <section>
-          <p>If you would like more details, please reach out to me by email at <a class="link"
+          <p>If you would like more details, please reach out to me by email at <a :style="'color: ' + linkColor + ';'"
                                                                                    href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
           </p>
         </section>
