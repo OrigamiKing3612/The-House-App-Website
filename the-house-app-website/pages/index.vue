@@ -72,19 +72,18 @@
 }
 
 .link {
-  color: v-bind(linkColor);
+  color: var(--link-color);
 }
 </style>
 
 <script setup lang="ts">
-import getHouseColor, {houseColors} from "~/compostables/getHouseColor";
+import { ref, onMounted } from 'vue';
+import getHouseColor, { houseColors } from "~/compostables/getHouseColor";
 
-const linkColor = ref(randomHouseColor())
+const linkColor = ref('');
 
-
-function randomHouseColor(): string {
+onMounted(() => {
   const randomIndex = Math.floor(Math.random() * houseColors.length);
-
-  return getHouseColor(houseColors[randomIndex]);
-}
+  linkColor.value = getHouseColor(houseColors[randomIndex]);
+});
 </script>
