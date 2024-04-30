@@ -35,8 +35,9 @@
           </ul>
         </section>
         <section>
-          <p>If you would like more details, please reach out to me by email at <a :style="'color: ' + linkColor + ';'"
-                                                                                   href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
+          <p>If you would like more details, please reach out to me by email at <a
+              :style="{ color: generateRandomColor() }"
+              href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
           </p>
         </section>
       </div>
@@ -70,20 +71,13 @@
 .bold {
   font-weight: bold;
 }
-
-.link {
-  color: v-bind(linkColor);
-}
 </style>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import getHouseColor, { houseColors } from "~/compostables/getHouseColor";
+import getHouseColor, {houseColors} from "~/compostables/getHouseColor";
 
-const linkColor = ref('');
-
-onMounted(() => {
+const generateRandomColor = () => {
   const randomIndex = Math.floor(Math.random() * houseColors.length);
-  linkColor.value = getHouseColor(houseColors[randomIndex]);
-});
+  return getHouseColor(houseColors[randomIndex]);
+};
 </script>
