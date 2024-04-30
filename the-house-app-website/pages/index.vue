@@ -77,13 +77,14 @@
 </style>
 
 <script setup lang="ts">
+import getHouseColor, {houseColors} from "~/compostables/getHouseColor";
+
 const linkColor = ref(randomHouseColor())
 
 
 function randomHouseColor(): string {
-  const colors = ["red", "orange", "yellow", "green", "teal", "cyan", "blue", "navy", "indigo", "purple", "pink", "maroon", "brown", "gray"];
-  const randomIndex = Math.floor(Math.random() * colors.length);
+  const randomIndex = Math.floor(Math.random() * houseColors.length);
 
-  return colors[randomIndex];
+  return getHouseColor(houseColors[randomIndex]);
 }
 </script>
