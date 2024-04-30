@@ -72,7 +72,7 @@
 }
 
 .link {
-  color: var(--link-color);
+  color: v-bind(linkColor);
 }
 </style>
 
