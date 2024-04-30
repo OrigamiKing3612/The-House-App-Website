@@ -2491,7 +2491,7 @@ packages:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
       balanced-match: 1.0.2
-      concat-map: 0.0.1
+      concat-map: 0.0.2
     dev: false
 
   /brace-expansion@2.0.1:

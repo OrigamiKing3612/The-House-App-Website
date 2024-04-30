@@ -1,19 +1,23 @@
 {
-  "version": "0.0.1",
-  "notes": "Dev Notes",
-  "pub_date": "2024-04-21T20:45:39.710Z",
+  "version": "0.0.2",
+  "notes": "Fixed bugs",
+  "pub_date": "2024-04-30T17:27:01.081Z",
   "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjZseTlpV2orNnE4QmdGc1BFOTFCaW5TM3g1OEkxeGJlK0RKR25Da2xja1c5VDB3L1p3aXRXdHJxRHFXOVJ6ZnFmck91YURlMnVad3dBZzhWMzN1WUFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzE0NDk4MDE2CWZpbGU6VGhlIEhvdXNlIEFwcCBEZXNrdG9wLmFwcC50YXIuZ3oKQzZ0OEFickJncFl4dGxFeFpWRWVDaFdXMjFqbU9IeC8xMTZzSGhLZDZMTitxTGxPeWdwc3Q4cGR0NytmT2VhWnA0Z2JWWERIbTRybUxMeFBYVk04QlE9PQo=",
+      "url": "https://the-house-app.com/desktop/versions/0.0.2/macos/The.House.App.Desktop_aarch64.app.tar.gz"
+    },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjJBd2Q4bW1yRHhSQjJTTUkwazl5RE1GaFcxbXBmRU54d3ppOTY5MW1GR1dLSCtMZlQ5SUZ3d0pJMlBmZHF2cTV3NGZFL2pUYSs2U05JZ21kVWdKVWdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzNzMyMzEzCWZpbGU6VGhlIEhvdXNlIEFwcCBEZXNrdG9wLmFwcC50YXIuZ3oKczdWcGFINzFua2Z1UUEwQ0NtWjVCRFVBeGVFTk9iazJaQUJ2NUhCZ2RTTVVqenVWMnhteGFaTHZBODVaZVpQWkxMVFEyWjB4LzdCbjh5RGs5YUhrRGc9PQo=",
-      "url": "https://the-house-app.com/desktop/versions/0.0.1/macos/The.House.App.Desktop_x64.app.tar"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjZseTlpV2orNnE4QmdGc1BFOTFCaW5TM3g1OEkxeGJlK0RKR25Da2xja1c5VDB3L1p3aXRXdHJxRHFXOVJ6ZnFmck91YURlMnVad3dBZzhWMzN1WUFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzE0NDk4MDE2CWZpbGU6VGhlIEhvdXNlIEFwcCBEZXNrdG9wLmFwcC50YXIuZ3oKQzZ0OEFickJncFl4dGxFeFpWRWVDaFdXMjFqbU9IeC8xMTZzSGhLZDZMTitxTGxPeWdwc3Q4cGR0NytmT2VhWnA0Z2JWWERIbTRybUxMeFBYVk04QlE9PQo=",
+      "url": "https://the-house-app.com/desktop/versions/0.0.2/macos/The.House.App.Desktop_aarch64.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjMvcmQzVXRNMXBrRzcxT0JuUVBRL3hWc3F6VS9vRjBWTWg1TlVxR3FWNlM5M1BId3ZUUWUrem1mNTkwbkxDd0FEVUovMUl5Zjk2dlUrUFRSbWdlVEFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzNzMyMTcyCWZpbGU6dGhlLWhvdXNlLWFwcC1kZXNrdG9wXzAuMC4xX2FtZDY0LkFwcEltYWdlLnRhci5negozVUVUdHNYem9xdGhvbWhTVDVvNS91c3hPMFBRZC9pZHNjSWt5aTFzYXRGSjVtQVBQd0hEdGtDMlptdG0yaUxvVW8ybnhsVlJtS0I0UTBsSmJFRHFDUT09Cg==",
-      "url": "https://the-house-app.com/desktop/versions/0.0.1/linux/the-house-app-desktop_0.0.1_amd64.AppImage.tar"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMis2RHZzeit6WG5JMGhHZDBQNUZZVXBOK1MzeFBIZTIxdzRUSUxXd1BXcEJXREtkcFF1cHlqRmJLamJDZ3N2QlFMWGtKeWRTenBjN0xLYzJFR1lCZ2dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzE0NDk4Mzg1CWZpbGU6dGhlLWhvdXNlLWFwcC1kZXNrdG9wXzAuMC4yX2FtZDY0LkFwcEltYWdlLnRhci5nego0cm85aVU0VEpIMXNjbHp4YldFMkYzQ2szbStadTZEOGx1VUZVRDhPeCtSNTBvUlNuYjFxbWM2Q2ovWEZkM2JNeGhEcTFQakJGNXlPS1RPbEdJTmVDQT09Cg==",
+      "url": "https://the-house-app.com/desktop/versions/0.0.2/linux/the-house-app-desktop_0.0.2_amd64.AppImage.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjBGN1pERkZmUlI3TVdNQnRkazhNOUlCREdTVGl4Y3BNNVYrbEJhT3QxWENvTWJ2KzhLdjNXZmJpdHM5ZThDZTdCZWxTRS9LWEo2WDRGblJBdTZtQ0FjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzNzMyMzM1CWZpbGU6VGhlIEhvdXNlIEFwcCBEZXNrdG9wXzAuMC4xX3g2NF9lbi1VUy5tc2kuemlwCjJpbURaTzEvc3FacWJ1a2RSODRjVkRDUXRyV05nWnBLZjNDS3k2eGllOURYQnYxbC82RS9kMHNyaHJ1N2NTR1BYckU1T0xVYnJNL2M2ajlGUktQY0JRPT0K",
-      "url": "https://the-house-app.com/desktop/versions/0.0.1/windows/The%20House%20App%20Desktop_0.0.1_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRHUwQVM0RjJiMjAvMnduWDdBemJhZ1ovcEhCMG9yOWdkeXk2MTY2eUNSRnViZk5QVk9XbTRMWTFEMFdsYWVIYkRzVkdvdy9DOElmYUFMRDcwbVFwMC92aG9UM2dLVXcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzE0NDk4NjE5CWZpbGU6VGhlIEhvdXNlIEFwcCBEZXNrdG9wXzAuMC4yX3g2NF9lbi1VUy5tc2kuemlwCis1d254cityNDRaK3RwQmhoWWZJTnlIYWVDb3MzNTBzTmpzaCtxVUt3RmRlK1h0Vy9JNlJJSEtYNzAydEIvaHdvRGJDS3A1QWRpaWp4NHZXWnB1c0NRPT0K",
+      "url": "https://the-house-app.com/desktop/versions/0.0.2/windows/The.House.App.Desktop_0.0.2_x64_en-US.msi.zip"
     }
   }
 }
