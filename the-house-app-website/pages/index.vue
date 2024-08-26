@@ -13,8 +13,8 @@
           <h2>About The App</h2>
           <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers
             alike. It offers insights to track house-related activities and achievements, fostering engagement within
-            the
-            school community.</p>
+            the school community. To see a full example of the app, click <NuxtLink class="example link" :style="{ color: generateRandomColor() }"
+ to="https://beta-desktop.the-house-app.com/example">here</NuxtLink>.</p>
         </section>
         <section class="key-features">
           <h3>Key Features</h3>
@@ -70,6 +70,10 @@
 
 .bold {
   font-weight: bold;
+}
+
+.example-link {
+  text-decoraction: none;
 }
 </style>
 
