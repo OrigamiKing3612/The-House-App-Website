@@ -8,8 +8,8 @@ h1, h2, h3, h4, h5, h6, p, .link, label {
 :global(html), :global(body) {
   background-color: $main-background !important;
   font-family: 'Inter', sans-serif;
-  cursor: default;
-  overflow: hidden;
+  // cursor: default;
+  // overflow: hidden;
 }
 
 .scrollable {
