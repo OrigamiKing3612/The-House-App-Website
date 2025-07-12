@@ -42,7 +42,7 @@
                 </section>
                 <section>
                     <p>If you would like more details, please reach out to me by email at <a
-                        :style="{ color: generateRandomColor() }"
+                        <!-- :style="{ color: generateRandomColor() }" -->
                         href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
                     </p>
                 </section>
