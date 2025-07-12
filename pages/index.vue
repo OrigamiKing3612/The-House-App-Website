@@ -20,17 +20,13 @@
                     <h3>Key Features</h3>
                     <ul>
                         <li class="list-item">
-                            <span class="bold">Customizable Houses:</span> Tailor the app to reflect your school’s unique culture by
-                            creating and customizing house names, colors, and even adjusting the number of houses.
+                            <span class="bold">Customizable Houses:</span> Tailor the app to reflect your school’s unique culture by creating and customizing house names, colors, and even adjusting the number of houses.
                         </li>
                         <li class="list-item">
-                            <span class="bold">Instant Recognition:</span> Deans can effortlessly award points to deserving students
-                            via
-                            the app, ensuring prompt acknowledgment of their efforts.
+                            <span class="bold">Instant Recognition:</span> Deans can effortlessly award points to deserving students via the app, ensuring prompt acknowledgment of their efforts.
                         </li>
                         <li class="list-item">
-                            <span class="bold">Announcements:</span> Administrators can broadcast crucial announcements to all users,
-                            fostering effective communication and transparency.
+                            <span class="bold">Announcements:</span> Administrators can broadcast crucial announcements to all users, fostering effective communication and transparency.
                         </li>
                         <li class="list-item">
                             <span class="bold">Calendar:</span> Administrators can create a calendar for students, leaders, and/or deans. This system allows for even more communication.
