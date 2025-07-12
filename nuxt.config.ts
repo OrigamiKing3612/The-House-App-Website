@@ -43,7 +43,8 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             failOnError: false,
-        }
+        },
+        logLevel: 3,
     },
     ssr: true,
     modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
