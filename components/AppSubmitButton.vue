@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-const isLoading = ref();
+const isLoading = ref(false);
 
 const props = defineProps({
     danger: {

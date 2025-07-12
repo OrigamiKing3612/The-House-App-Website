@@ -8,10 +8,10 @@
       <!-- </div> -->
       <NuxtLink to="/">
         <div v-if="colorMode.value === 'dark'">
-          <img src="/assets/images/logo-icon-dark.png" width="30" class="logo">
+            <img src="/assets/images/logo-icon-dark.png" width="30" class="logo" alt="House App Dark Mode Logo">
         </div>
         <div v-else>
-          <img src="/assets/images/logo-icon.png" width="30" class="logo">
+            <img src="/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
         </div>
       </NuxtLink>
     </div>
@@ -24,27 +24,6 @@ const colorMode = useColorMode();
 
 const leftPadding = ref("10px");
 
-const props = defineProps({
-  showBackButton: {
-    type: Boolean,
-    required: true
-  },
-  showProfile: {
-    type: Boolean,
-    required: true
-  },
-  showTitle: {
-    type: Boolean,
-    required: true
-  },
-  showRefreshButton: {
-    type: Boolean,
-    required: true
-  }
-});
-
-onMounted(async () => {
-});
 </script>
 
 <style scoped lang="scss">
