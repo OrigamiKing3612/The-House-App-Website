@@ -84,7 +84,7 @@
 </style>
 
 <script setup lang="ts">
-import getHouseColor, {houseColors} from "~/compostables/getHouseColor";
+import getHouseColor, {houseColors} from "~/composables/getHouseColor";
 
 const generateRandomColor = () => {
   const randomIndex = Math.floor(Math.random() * houseColors.length);
