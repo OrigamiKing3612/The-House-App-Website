@@ -1,6 +1,8 @@
 name: Build site
 on:
   push:
+    branches-ignore:
+      - master
   workflow_dispatch:
 permissions:
   contents: read
