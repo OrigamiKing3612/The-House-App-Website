@@ -1,0 +1,14 @@
+$text: white;
+
+$main-background: rgb(22, 24, 28);
+$background-primary: lighten($main-background, 5%);
+
+$background-secondary: lighten($background-primary, 5%);
+$background-tertiary: lighten($background-secondary, 5%);
+$background-quaternary: lighten($background-tertiary, 5%);
+
+$submit-button: #007bff;
+$submit-button-hover: darken($submit-button, 10%);
+
+$shadow: 3px 3px 3px 0 rgba(255, 255, 255, 0);
+$transparent: rgba(0, 0, 0, 0.8);
