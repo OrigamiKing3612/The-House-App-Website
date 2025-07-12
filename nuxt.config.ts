@@ -41,8 +41,8 @@ export default defineNuxtConfig({
         viewTransition: true
     },
     nitro: {
-        devErrorHandler: true,
-        preset: 'node-server'
+        // devErrorHandler: true,
+        preset: 'node'
     },
     ssr: true,
     modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
