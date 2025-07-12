@@ -31,14 +31,15 @@ jobs:
       #       echo "Unable to determine package manager"
       #       exit 1
       #     fi
+      - run: corepack enable
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
