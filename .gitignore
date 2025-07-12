@@ -1,4 +1,28 @@
-### IntelliJ IDEA ###
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
 .idea/
 /.idea
 *.iws
@@ -10,6 +34,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-### Mac OS ###
-.DS_Store

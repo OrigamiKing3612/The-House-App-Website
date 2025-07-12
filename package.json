@@ -1,0 +1,27 @@
+{
+    "name": "the-house-app-website",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@nuxtjs/color-mode": "^3.5.2",
+        "nuxt": "^3.17.6",
+        "vue": "^3.5.17"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.31.0",
+        "@nuxt/eslint": "^1.5.2",
+        "eslint": "^9.31.0",
+        "eslint-plugin-vue": "^10.3.0",
+        "sass": "^1.89.2",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.36.0"
+    },
+    "packageManager": "pnpm@9.5.0"
+}
