@@ -1,6 +1,6 @@
 <template>
     <div class="all">
-        <Card width="70">
+        <Card>
             <div class="container">
                 <h1 class="title">The House App</h1>
                 <section class="about-section">
@@ -13,7 +13,7 @@
                     <h2>About The App</h2>
                     <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers
                         alike. It offers insights to track house-related activities and achievements, fostering engagement within
-                        the school community. To see a full example of the app, click <NuxtLink class="example link" :style="{ color: generateRandomColor() }"
+                        the school community. To see a full example of the app, click <NuxtLink class="example link" style="color: var(--house-cyan)"
                             to="https://desktop.the-house-app.com/example">here</NuxtLink>.</p>
                 </section>
                 <section class="key-features">
@@ -41,53 +41,26 @@
                     </ul>
                 </section>
                 <section>
-                    <p>If you would like more details, please reach out to me by email at <a
-                        <!-- :style="{ color: generateRandomColor() }" -->
-                        href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
+                    <p>If you would like more details, please reach out to me by email at <a style="color: var(--house-cyan); text-decoration: none;" href="mailto:the.house.app.app@gmail.com">the.house.app.app@gmail.com</a>.
                     </p>
                 </section>
             </div>
         </Card>
-        <Card width="70">
+        <Card>
             <p class="title">Copyright (C) 2025, OrigamiKing3612. All Rights Reserved.</p>
         </Card>
     </div>
 </template>
 
 <style scoped lang="scss">
-// .container {
-  // max-width: 80vh;
-  // margin: 0 auto;
-  // padding: 20px;
-//   color: var(--text);
-// }
-//
-// .title {
-//   text-align: center;
-// }
-//
-// .about-section, .key-features {
-//   margin-bottom: 30px;
-// }
-//
-// .list-item {
-//   margin-bottom: 10px;
-// }
-//
-// .bold {
-//   font-weight: bold;
-// }
-//
-// .example-link {
-//   text-decoraction: none;
-// }
+.title {
+  text-align: center;
+}
+
+.container {
+    text-align: left;
+}
 </style>
 
 <script setup lang="ts">
-import getHouseColor, {houseColors} from "~/composables/getHouseColor";
-
-const generateRandomColor = () => {
-  const randomIndex = Math.floor(Math.random() * houseColors.length);
-  return getHouseColor(houseColors[randomIndex]);
-};
 </script>
