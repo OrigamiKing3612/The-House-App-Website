@@ -37,7 +37,6 @@ export default defineNuxtConfig({
                 { rel: "shortcut icon", href: "/favicon.ico" },
                 { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
             ]
-
         },
         viewTransition: true
     },
