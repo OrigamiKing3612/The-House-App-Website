@@ -31,28 +31,27 @@ jobs:
       #       echo "Unable to determine package manager"
       #       exit 1
       #     fi
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          # cache: pnpm
+          node-version: 20
       - name: Install pnpm
         run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: nuxt
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            dist
-            .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-build-
-      - name: Install dependencies
-        run: pnpm install
+      # - name: Restore cache
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: |
+      #       dist
+      #       .nuxt
+      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-nuxt-build-
       - name: Static HTML export with Nuxt
         run: pnpm generate
       - name: Upload artifact
@@ -69,3 +68,54 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+#   name: Build and Publish container
+# on:
+#   push:
+#     branches:
+#       - master
+#     paths-ignore:
+#       - 'LICENSE'
+#       - '**.md'
+#       - '.github/ISSUE_TEMPLATE/**'
+#       - 'src-tauri/**'
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read
+#       packages: write
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#       - name: Setup node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#       - name: Install pnpm
+#         run: npm i -g pnpm
+#       - name: install frontend dependencies
+#         run: |
+#           pnpm install
+#       - name: Build frontend
+#         run: |
+#           pnpm build
+#       - name: Rename output directory
+#         run: |
+#           mv .output/ the-house-app-desktop-files
+#       - name: Set up Docker Buildx
+#         uses: docker/setup-buildx-action@v3
+#       - name: Login to GitHub Container Registry (GHCR)
+#         uses: docker/login-action@v3
+#         with:
+#           registry: ghcr.io
+#           username: ${{ github.actor }}
+#           password: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Build and push multi-arch Docker image to GHCR
+#         uses: docker/build-push-action@v5
+#         with:
+#           context: .
+#           push: true
+#           platforms: linux/amd64
+#           tags: ghcr.io/origamiking3612/thehouseappdesktop:latest
+#
