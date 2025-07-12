@@ -1,14 +1,39 @@
-$text: white;
+@use "sass:color";
 
-$main-background: rgb(22, 24, 28);
-$background-primary: lighten($main-background, 5%);
+/*  MARK: Light theme */
+:root {
+  --text: #384c53;
 
-$background-secondary: lighten($background-primary, 5%);
-$background-tertiary: lighten($background-secondary, 5%);
-$background-quaternary: lighten($background-tertiary, 5%);
+  --main-background: #ffffff;
 
-$submit-button: #007bff;
-$submit-button-hover: darken($submit-button, 10%);
+  --background-primary: #C3EFFF;
+  --background-secondary: #adf;
 
-$shadow: 3px 3px 3px 0 rgba(255, 255, 255, 0);
-$transparent: rgba(0, 0, 0, 0.8);
+  --primary: #00b8fb;
+  --submit-button: #007bff;
+  --submit-button-hover: #{color.adjust(#007bff, $lightness: -10%)};
+
+  --submit-button-loading: #5a6363;
+  --submit-button-loading-hover: #{color.adjust(#5a6363, $lightness: -10%)};
+
+  --submit-button-danger: #ff1e00;
+  --submit-button-danger-hover: #ff1e00;
+
+  --gold: #FFD700;
+
+  --transparent: rgba(0, 0, 0, 0.8);
+}
+
+/*  MARK: Dark theme */
+:root.dark {
+  // Only change the colors that are different from the light theme
+  --text: #ffffff;
+
+  --main-background: #000000;
+
+  --background-primary: #384c53;
+  --background-secondary: rgb(32, 38, 43);
+
+  --primary: #00b8fb;
+}
+

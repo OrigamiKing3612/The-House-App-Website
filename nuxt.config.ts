@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     future: {
         compatibilityVersion: 3
     },
+    compatibilityDate: "2024-07-14",
     app: {
         head: {
             htmlAttrs: {
@@ -28,21 +29,21 @@ export default defineNuxtConfig({
             title: title,
             meta: Object.entries(meta).map(([name, content]): object => {
                 return { name, content };
-            })
+            }),
+            link: [
+                { rel: "manifest", href: "/manifest.json" },
+                { rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96" },
+                { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+                { rel: "shortcut icon", href: "/favicon.ico" },
+                { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+            ]
+
         },
         viewTransition: true
     },
     modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
+    css: ['@/assets/styles/main.scss'],
     devtools: { enabled: true },
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: `@use "@/assets/styles/main.scss" as *;`
-                }
-            }
-        }
-    },
     components: [
         { path: "~/components/", pathPrefix: false }
     ],

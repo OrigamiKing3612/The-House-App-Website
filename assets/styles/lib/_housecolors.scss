@@ -1,17 +1,20 @@
-$house-red: rgb(254, 68, 57);
-$house-brightOrange: rgb(255, 127, 2);
-$house-orange: rgb(254, 127, 0);
-$house-yellow: rgb(254, 215, 9);
-$house-green: rgb(50, 215, 75);
-$house-mint: rgb(103, 191, 214);
-$house-teal: rgb(0, 128, 128);
-$house-cyan: rgb(98, 211, 253);
-$house-blue: rgb(0, 0, 255);
-$house-navy: rgb(0, 0, 229);
-$house-indigo: rgb(75, 0, 130);
-$house-purple: rgb(191, 90, 242);
-$house-brightPink: rgb(254, 101, 177);
-$house-pink: rgb(255, 192, 203);
-$house-maroon: rgb(127, 0, 0);
-$house-brown: rgb(165, 42, 42);
-$house-gray: rgb(128, 128, 128);
+:root {
+  --house-red: #ff1e00;
+  --house-orange: #ff6a00;
+  --house-yellow: #ff9d00;
+  --house-lime: #9fcf00;
+  --house-green: #00c217;
+  --house-mint: #00cd6d;
+  --house-teal: #00c7a6;
+  --house-cyan: #00b8fb;
+  --house-lightBlue: #00b8fb;
+  --house-blue: #006fff;
+  --house-navy: #3c3853;
+  --house-indigo: #5400fb;
+  --house-purple: #8e00fb;
+  --house-magenta: #da00fb;
+  --house-pink: #ff005d;
+  --house-maroon: #7d0d36;
+  --house-brown: #693c31;
+  --house-gray: #67637b;
+}

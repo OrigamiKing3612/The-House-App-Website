@@ -14,7 +14,7 @@
                     <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers
                         alike. It offers insights to track house-related activities and achievements, fostering engagement within
                         the school community. To see a full example of the app, click <NuxtLink class="example link" :style="{ color: generateRandomColor() }"
-                            to="https://beta-desktop.the-house-app.com/example">here</NuxtLink>.</p>
+                            to="https://desktop.the-house-app.com/example">here</NuxtLink>.</p>
                 </section>
                 <section class="key-features">
                     <h3>Key Features</h3>
@@ -49,38 +49,38 @@
             </div>
         </Card>
         <Card width="70">
-            <p class="title">Copyright (C) 2024, OrigamiKing3612. All Rights Reserved.</p>
+            <p class="title">Copyright (C) 2025, OrigamiKing3612. All Rights Reserved.</p>
         </Card>
     </div>
 </template>
 
 <style scoped lang="scss">
-.container {
-  max-width: 80vh;
-  margin: 0 auto;
-  padding: 20px;
-  color: $text;
-}
-
-.title {
-  text-align: center;
-}
-
-.about-section, .key-features {
-  margin-bottom: 30px;
-}
-
-.list-item {
-  margin-bottom: 10px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.example-link {
-  text-decoraction: none;
-}
+// .container {
+  // max-width: 80vh;
+  // margin: 0 auto;
+  // padding: 20px;
+//   color: var(--text);
+// }
+//
+// .title {
+//   text-align: center;
+// }
+//
+// .about-section, .key-features {
+//   margin-bottom: 30px;
+// }
+//
+// .list-item {
+//   margin-bottom: 10px;
+// }
+//
+// .bold {
+//   font-weight: bold;
+// }
+//
+// .example-link {
+//   text-decoraction: none;
+// }
 </style>
 
 <script setup lang="ts">
