@@ -53,7 +53,7 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-nuxt-build-
       - name: Static HTML export with Nuxt
-        run: nuxt build --preset github_pages
+        run: pnpm nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
