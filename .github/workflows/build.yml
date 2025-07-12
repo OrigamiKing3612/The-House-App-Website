@@ -32,6 +32,8 @@ jobs:
       #       exit 1
       #     fi
       - run: corepack enable
+      - run: DEBUG="nuxt:*,nitro:*"
+      - run: NUXT_LOG_LEVEL=debug
       - name: Setup node
         uses: actions/setup-node@v4
         with:
