@@ -1,0 +1,8 @@
+@use "sass:color";
+
+:root {
+  --border-radius: 20px;
+  --border-radius-small: 4px;
+  --border: 1px solid var(--text);
+  --hover-shadow: 3px 3px 0px var(--primary)
+}

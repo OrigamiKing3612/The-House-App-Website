@@ -1,40 +1,51 @@
 @use "sass:color";
 
-input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="datetime-local"], input[type="time"], select, textarea {
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="username"],
+input[type="password"],
+input[type="organization_id"],
+input[type="email"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+select,
+textarea {
   padding: 8px;
   font-size: 1rem;
-  border: 1px solid var(--text);
-  border-radius: 50px;
+  border: var(--border);
+  border-radius: 20px;
   color: var(--text) !important;
   background: var(--main-background);
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 
 input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text);
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
-    background-color: var(--main-background);
-    transition: background-color 0.2s;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: var(--border);
+  border-radius: var(--border-radius-small);
+  position: relative;
+  cursor: pointer;
+  background-color: var(--main-background);
+  transition: background-color 0.2s;
 
-    &:checked {
-      background-color: var(--primary);
-    }
+  &:checked {
+    background-color: var(--primary);
+  }
 
-    &:checked::after {
-      content: '';
-      position: absolute;
-      top: 3px;
-      left: 6px;
-      width: 3px;
-      height: 6px;
-      border: solid var(--background-primary);
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
+  &:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 3px;
+    height: 6px;
+    border: solid var(--background-primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
 }
