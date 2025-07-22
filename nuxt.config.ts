@@ -18,9 +18,9 @@ const meta = {
 
 export default defineNuxtConfig({
     future: {
-        compatibilityVersion: 3
+        compatibilityVersion: 4
     },
-    compatibilityDate: "2024-07-14",
+    compatibilityDate: "2025-07-18",
     app: {
         head: {
             htmlAttrs: {

@@ -1,6 +1,6 @@
 <template>
     <div class="all">
-        <Card>
+        <Card style="margin-bottom: 10px;">
             <div class="container">
                 <h1 class="title">The House App</h1>
                 <section class="about-section">
