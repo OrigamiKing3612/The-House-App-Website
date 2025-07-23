@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thank you for submitting your report. Your feedback helps improve The House App for everyone. Thank you!
   - type: textarea
     id: describe-the-bug
     attributes:
@@ -44,14 +44,14 @@ body:
     attributes:
       label: Screenshots
       description: If applicable, add screenshots to help explain your problem.
-      placeholder: (Only put images in here)
+      placeholder: (Only put images/videos in here)
       # value:
     validations:
       required: false
   - type: dropdown
     id: os
     attributes:
-      label: What operating software are you seeing the problem on?
+      label: What are you seeing the problem on?
       multiple: true
       options:
         - Linux
@@ -63,17 +63,30 @@ body:
   - type: input
     id: version-os
     attributes:
-      label: What version of that operating software are you seeing the problem on?
+      label: What version of that software are you seeing the problem on?
+    validations:
+      required: false
+  - type: dropdown
+    id: brower
+    attributes:
+      label: If you selected Web, what brower are you seeing the problem on?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
     validations:
       required: false
   - type: dropdown
     id: version
     attributes:
-      label: What version of The House App Desktop are you seeing the problem on?
-      description: Please make sure this issue is on the latest version of The House App Desktop
+      label: What version of The House App are you seeing the problem on?
+      description: Please make sure this issue is on the latest version of The House App before submitting.
       options:
         - Latest
         - Latest Testing Release
+        - Website
     validations:
       required: true
   - type: textarea
