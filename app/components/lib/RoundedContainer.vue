@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 .rounded-card {
-    width: 85%;
+    width: 100%;
     max-width: 700px;
     background-color: var(--main-background);
     border-radius: 30px;

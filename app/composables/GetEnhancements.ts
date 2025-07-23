@@ -24,7 +24,7 @@ const GetIssues = async () => {
         ))
 
     } catch (error: any) {
-        console.error("GitHub API error:", error.message)
+        console.error("API error:", error.message)
         return []
     }
 }
