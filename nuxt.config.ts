@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         },
         logLevel: 3,
     },
-    ssr: true,
+    ssr: false,
     modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
     css: ['@/assets/styles/main.scss'],
     devtools: { enabled: true },

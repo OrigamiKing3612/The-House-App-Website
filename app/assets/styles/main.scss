@@ -48,6 +48,19 @@ label {
   // background-color: var(--background-primary) !important;
   color: var(--text);
   // padding-bottom: 50px;
+  transition: margin-top 0.3s ease;
+}
+
+@media (min-width: 450px) {
+  .all {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .all {
+    margin-top: 20px;
+  }
 }
 
 .link {

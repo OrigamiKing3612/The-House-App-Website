@@ -1,24 +1,21 @@
 <template>
     <div class="all">
-        <Card style="margin-bottom: 10px;">
+        <Card>
             <div class="container">
                 <h1 class="title">The House App</h1>
                 <section class="about-section">
                     <h2>About the House System</h2>
                     <p>Originating in British Commonwealth boarding schools, the house system has evolved into a
-                        cornerstone of
-                        educational institutions worldwide. It not only provides organizational structure but also
-                        cultivates
-                        leadership and community among students.</p>
+                        cornerstone of educational institutions worldwide. It not only provides organizational structure
+                        but also cultivates leadership and community among students.</p>
                 </section>
                 <section class="about-section">
                     <h2>About The App</h2>
                     <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and
-                        teachers
-                        alike. It offers insights to track house-related activities and achievements, fostering
-                        engagement within
-                        the school community. To see a full example of the app, click <NuxtLink class="example link"
-                            style="color: var(--house-cyan)" to="https://desktop.the-house-app.com/example">here
+                        teachers alike. It offers insights to track house-related activities and achievements, fostering
+                        engagement within the school community. To see a full example of the app, click <NuxtLink
+                            class="example link" style="color: var(--house-cyan)"
+                            to="https://desktop.the-house-app.com/example">here
                         </NuxtLink>.</p>
                 </section>
                 <section class="key-features">
@@ -62,6 +59,11 @@
 </template>
 
 <script setup lang="ts">
+
+definePageMeta({
+    layout: "tab-view"
+});
+
 </script>
 
 <style scoped lang="scss">

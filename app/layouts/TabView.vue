@@ -1,8 +1,9 @@
 <template>
-    <TitleBar :show-title="true" :show-back-button="true" :show-profile="false" :show-refresh-button="true" />
+    <TitleBar :show-title="true" :show-back-button="false" :show-profile="true" :show-refresh-button="true" />
     <div class="all">
         <slot />
     </div>
+    <AppTabView />
 </template>
 
 <script setup lang="ts">
