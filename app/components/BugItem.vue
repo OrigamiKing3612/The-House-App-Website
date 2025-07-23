@@ -3,7 +3,8 @@
     <NuxtLink :to="issue.html_url" class="link">
         <div class="container">
             <span class="title">#{{ issue.number }}: {{ issue.title }}</span>
-            <span class="status-text" :class="issue.state">{{ normalizeString(issue.state) }}</span>
+            <span class="status-text" style="color: #ffffff;" :class="{ [issue.state]: true }">{{
+                normalizeString(issue.state) }}</span>
         </div>
     </NuxtLink>
 </template>

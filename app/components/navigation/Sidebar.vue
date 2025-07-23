@@ -7,6 +7,14 @@
             <h1 class="title">Bug Tracker</h1>
         </NuxtLink>
 
+        <div class="title theme-button" @click="changeTheme()">
+            <div v-if="colorMode.value === 'dark'">
+                <LightModeIcon width="30" height="30" />
+            </div>
+            <div v-else>
+                <DarkModeIcon width="30" height="30" />
+            </div>
+        </div>
         <div class="title back" @click="localValue = false">
             <h1 class="title">Back</h1>
             <ChevronRightIcon style="width: 35px; height: 35px;" />
@@ -21,6 +29,12 @@ const props = defineProps<{
 }>();
 
 const localValue = ref<boolean>(props.value)
+
+const colorMode = useColorMode();
+
+function changeTheme() {
+    colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark')
+}
 
 watch(() => props.value, (newValue) => {
     localValue.value = newValue
@@ -85,5 +99,11 @@ const emit = defineEmits(["update:modelValue"]);
         margin-left: 15px;
         fill: var(--text);
     }
+}
+
+.theme-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 </style>

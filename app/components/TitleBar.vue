@@ -16,14 +16,27 @@
                 </div>
             </NuxtLink>
         </div>
+        <div class="right-window-controls">
+            <div class="theme-button" @click="changeTheme()">
+                <div v-if="colorMode.value === 'dark'">
+                    <LightModeIcon width="30" height="30" />
+                </div>
+                <div v-else>
+                    <DarkModeIcon width="30" height="30" />
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode();
-
 const leftPadding = ref("10px");
 
+const colorMode = useColorMode();
+
+function changeTheme() {
+    colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark')
+}
 </script>
 
 <style scoped lang="scss">
@@ -58,27 +71,18 @@ const leftPadding = ref("10px");
         top: 7px;
         left: v-bind(leftPadding);
         gap: 10px;
-
-        .navigation-title-container {
-            z-index: 999;
-        }
-
-        .navigation-title {
-            text-decoration: none;
-            border: 0;
-            background: var(--background-secondary);
-            border-radius: 10px;
-            font-weight: bold;
-            color: var(--text);
-            padding: 10px;
-            font-size: 16px;
-        }
     }
 }
 
 @media (max-width: 900px) {
     .title-bar {
         background-color: var(--main-background);
+    }
+}
+
+@media (max-width: 450px) {
+    .theme-button {
+        display: none;
     }
 }
 
