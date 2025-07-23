@@ -1,26 +1,26 @@
 import axios from "axios"
 
-const GetIssues = async () => {
+const GetEnhancements = async () => {
     try {
         const response = await axios.get("https://n8n.origamiking3612.com/webhook/the-house-app/get/enhancements")
 
         if (!Array.isArray(response.data)) {
-            throw new Error("Expected array of issues, got: " + typeof response.data)
+            throw new Error("Expected array of enhancements, got: " + typeof response.data)
         }
 
-        return response.data.map((issue: any) => new GitHubIssue(
-            issue.id,
-            issue.number,
-            issue.title,
-            issue.html_url,
-            (issue.labels || []).map((label: any) => ({
+        return response.data.map((enhancements: any) => new GitHubIssue(
+            enhancements.id,
+            enhancements.number,
+            enhancements.title,
+            enhancements.html_url,
+            (enhancements.labels || []).map((label: any) => ({
                 id: label.id,
                 name: label.name,
                 color: label.color
             })),
-            issue.state,
-            issue.body,
-            issue.state_reason
+            enhancements.state,
+            enhancements.body,
+            enhancements.state_reason
         ))
 
     } catch (error: any) {
@@ -29,4 +29,4 @@ const GetIssues = async () => {
     }
 }
 
-export default GetIssues
+export default GetEnhancements
