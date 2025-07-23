@@ -1,5 +1,6 @@
 <template>
-    <NuxtLink :to="'/bugs/' + issue.number" class="link">
+    <!-- <NuxtLink :to="'/bugs/' + issue.number" class="link"> -->
+    <NuxtLink :to="issue.html_url" class="link">
         <div class="container">
             <span class="title">#{{ issue.number }}: {{ issue.title }}</span>
             <span class="status-text" :class="issue.state">{{ normalizeString(issue.state) }}</span>

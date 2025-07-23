@@ -30,7 +30,8 @@
                 Enhancements and Feature Requests
             </template>
             <template #default>
-                <div v-if="issues.length > 0" v-for="enhancement in issues" :key="enhancement.id" class="left-aligned">
+                <div v-if="enhancements.length > 0" v-for="enhancement in enhancements" :key="enhancement.id"
+                    class="left-aligned">
                     <EnhancementItem :enhancement="enhancement" />
                 </div>
                 <div v-else class="left-aligned">
@@ -48,6 +49,7 @@
 import type { GitHubIssue } from '#imports';
 
 const issues = ref<GitHubIssue[]>([]);
+const enhancements = ref<GitHubIssue[]>([]);
 
 definePageMeta({
     layout: "tab-view"
@@ -55,6 +57,7 @@ definePageMeta({
 
 onMounted(async () => {
     issues.value = await GetIssues()
+    enhancements.value = await GetEnhancements()
 });
 </script>
 
@@ -68,12 +71,13 @@ onMounted(async () => {
     text-align: left;
 }
 
-
 .container {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
     border-bottom: 0.5px solid var(--main-background);
+    width: 100%;
+    max-width: 700px;
 }
 </style>
