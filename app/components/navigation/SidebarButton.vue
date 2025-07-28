@@ -1,26 +1,13 @@
 <template>
     <div class="sidebar-button">
-        <button class="sidebar-button-button" @click="localValue = !localValue">
+        <button class="sidebar-button-button" @click="model = !model">
             <ChevronLeftIcon style="width: 30px; height: 30px;" />
         </button>
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-    value: boolean
-}>();
-
-const localValue = ref(props.value)
-
-watch(() => props.value, (newValue) => {
-    localValue.value = newValue
-})
-
-watch(localValue, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-const emit = defineEmits(["update:modelValue"]);
+const model = defineModel<boolean>({ required: true });
 </script>
 
 <style scoped lang="scss">

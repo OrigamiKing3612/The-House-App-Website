@@ -1,54 +1,27 @@
 <template>
     <div class="text-field">
         <label :for="label" v-if="label">{{ label }}</label>
-        <input :id="label" :type="props.type" :placeholder="placeholder" v-model="localValue" :readonly="props.readonly"
+        <input :id="label" :type="props.type" :placeholder="placeholder" v-model="model" :readonly="props.readonly"
             :required="props.required" />
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    label: {
-        type: String,
-        required: false
-    },
-    placeholder: {
-        type: String,
-        default: ''
-    },
-    value: {
-        type: String,
-        default: ''
-    },
-    type: {
-        type: String,
-        default: 'text'
-    },
-    readonly: {
-        type: Boolean,
-        default: false
-    },
-    required: {
-        type: Boolean,
-        default: false
-    }
+const props = withDefaults(defineProps<{
+    label?: string,
+    placeholder?: string,
+    type: 'text' | 'email' | 'number' | 'search' | 'username' | 'organization_id',
+    readonly?: boolean,
+    required?: boolean
+}>(), {
+    label: '',
+    placeholder: '',
+    type: 'text',
+    readonly: false,
+    required: false
 })
 
-const localValue = ref(props.value)
-
-watch(() => props.value, (newValue) => {
-    localValue.value = newValue
-})
-
-watch(localValue, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-const emit = defineEmits(["update:modelValue"]);
-onMounted(() => {
-    if (props.type === "password") {
-        console.warn("Using 'password' type in TextField is not recommended. Use PasswordField instead.");
-    }
-});
+const model = defineModel<string>({ required: true })
 </script>
 
 <style scoped lang="scss">
@@ -58,7 +31,7 @@ onMounted(() => {
     align-items: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: $mobile-width) {
     .text-field {
         flex-direction: column;
         align-items: stretch;

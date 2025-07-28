@@ -2,32 +2,15 @@
     <div class="setting">
         <label :title="props.description">{{ props.label }}:</label>
         <div v-if="!props.isEditing" class="value">
-            <p v-if="props.settingValue">
-                {{ props.settingValue }}
+            <p v-if="model !== undefined && model !== null && model !== ''">
+                <slot name="display">
+                    {{ model }}
+                </slot>
             </p>
-            <p v-else>
-                None
-            </p>
+            <p v-else>(None)</p>
         </div>
         <div v-else class="value">
-            <!--  @vue-ignore -->
-            <TextField v-if="props.type == 'text'" :value="value" v-model="value" />
-            <div v-else-if="props.type == 'picker_prefix'">
-                <NamePrefixPicker v-if="typeof value == 'string'" :initial-value="initialValue.toString()"
-                    v-model="value" />
-            </div>
-            <div v-else-if="props.type == 'picker_house'">
-                <HousePicker v-if="typeof value == 'string'" :initial-value="initialValue.toString()" v-model="value" />
-            </div>
-            <div v-else-if="props.type == 'picker_user_type'">
-                <UserTypePicker v-if="typeof value == 'string'" :initial-value="initialValue.toString()"
-                    v-model="value" />
-            </div>
-            <div v-else-if="props.type == 'picker_color'">
-                <ColorPicker v-if="typeof value == 'string'" :initial-value="initialValue.toString()" v-model="value" />
-            </div>
-            <!--  @vue-ignore -->
-            <Checkbox v-else-if="props.type == 'toggle'" :value="value" v-model="value" />
+            <slot />
         </div>
         <AppSubmitButton v-if="props.isEditing && showSaveButton" class="submit" @click="save">
             Save
@@ -36,75 +19,52 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    label: {
-        type: String,
-        required: true
-    },
-    settingValue: {
-        type: [String, Boolean],
-        required: true
-    },
-    isEditing: {
-        type: Boolean,
-        required: true
-    },
-    type: {
-        type: String,
-        default: "toggle",
-        required: false
-    },
-    description: {
-        type: String,
-        default: "",
-        required: false
-    }
-});
-const getDefaultValue = () => {
-    if (props.type == "toggle") {
-        return props.settingValue == "Yes" ? true : false;
-    } else {
-        return props.settingValue;
-    }
-};
+const emit = defineEmits<{
+    (e: "save"): void
+}>();
+const props = defineProps<{
+    label: string,
+    isEditing: boolean,
+    description?: string
+}>();
 
-const initialValue = ref(props.settingValue);
-const value = ref<string | boolean>(getDefaultValue());
+const model = defineModel<string | boolean>({ required: true });
+const initialValue = ref<string | boolean>('');
+
+function save() {
+    emit("save");
+    initialValue.value = model.value;
+}
 
 const showSaveButton = computed(() => {
-    if (props.type == "toggle") {
-        return value.value !== (props.settingValue == "Yes" ? true : false);
-    } else {
-        return value.value.toString().trim() !== initialValue.value.toString().trim();
+    if (typeof model.value === 'boolean') {
+        return model.value !== initialValue.value;
+    }
+
+    return model.value?.toString().trim() !== initialValue.value?.toString().trim();
+});
+
+watch(model, (newVal) => {
+    if (!props.isEditing) {
+        initialValue.value = newVal;
     }
 });
 
-watch(() => props.settingValue, (newValue) => {
-    initialValue.value = newValue;
-    value.value = getDefaultValue();
+onMounted(() => {
+    initialValue.value = model.value;
 });
-
-watch(value, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-function save() {
-    emit("save", value.value);
-    initialValue.value = value.value;
-}
-const emit = defineEmits(["update:modelValue", "save"]);
 </script>
 
 <style scoped lang="scss">
 .setting {
     display: flex;
     align-items: center;
-    margin-bottom: 1px;
-    margin-top: 1px;
+    justify-content: space-between;
 
     .value {
-        flex-grow: 1;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
 }
 

@@ -7,7 +7,7 @@
 <script setup lang="ts">
 </script>
 
-<style>
+<style scoped lang="scss">
 .largeTitle {
     font-size: 6em;
     text-align: left;
@@ -16,7 +16,7 @@
     margin: 0px 0px 40px 0px
 }
 
-@media (max-width: 450px) {
+@media (max-width: $mobile-width) {
     .largeTitle {
         font-size: 3.6em;
         line-height: 90%;

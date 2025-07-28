@@ -1,35 +1,29 @@
 <template>
-  <button
-    class="app-submit-button" :class="{ 'loading': isLoading, 'danger': props.danger}" type="submit"
-    @click="clickAction"
-  >
-    <slot />
-  </button>
+    <button class="app-submit-button" :class="{ 'loading': loading, 'danger': props.danger }" type="submit"
+        :disabled="loading" @click="clickAction">
+        <slot />
+    </button>
 </template>
 
 <script setup lang="ts">
-const isLoading = ref(false);
+const emit = defineEmits<{
+    (e: "click"): void
+}>();
+const props = defineProps<{
+    danger?: boolean,
+}>();
 
-const props = defineProps({
-    danger: {
-        type: Boolean,
-        default: false,
-    },
-});
+const loading = ref();
 
 function clickAction() {
-  isLoading.value = true;
-  emit("click");
-  isLoading.value = false;
+    loading.value = true;
+    emit("click");
+    loading.value = false;
 }
 
-const emit = defineEmits(["click"]);
 </script>
 
 <style scoped lang="scss">
-@use "@/assets/styles/main.scss" as *;
-@use "@/assets/styles/lib/_housecolors.scss" as *;
-
 .app-submit-button {
     background-color: var(--main-background);
     color: var(--text);
@@ -63,7 +57,4 @@ const emit = defineEmits(["click"]);
         }
     }
 }
-
-
 </style>
-

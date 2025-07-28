@@ -6,6 +6,12 @@
         <NuxtLink to="/bugs" :class="{ active: route.path === '/bugs' }" class="link">
             <h1 class="title">Bug Tracker</h1>
         </NuxtLink>
+        <NuxtLink to="/terms" :class="{ active: route.path == '/terms' }" class="link">
+            <h1 class="title">Terms of Use</h1>
+        </NuxtLink>
+        <NuxtLink to="/privacy" :class="{ active: route.path == '/privacy' }" class="link">
+            <h1 class="title">Privacy Policy</h1>
+        </NuxtLink>
 
         <div class="title theme-button" @click="changeTheme()">
             <div v-if="colorMode.value === 'dark'">

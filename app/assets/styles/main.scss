@@ -1,8 +1,8 @@
 @use "sass:color";
-@use "@/assets/styles/lib/_colors.scss" as *;
-@use "@/assets/styles/lib/_housecolors.scss" as *;
-@use "@/assets/styles/lib/_variables.scss" as *;
-@use "@/assets/styles/lib/input_types.scss" as *;
+@use "./lib/_colors.scss" as *;
+@use "./lib/_housecolors.scss" as *;
+@use "./lib/_variables.scss" as *;
+@use "./lib/input_types.scss" as *;
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 h1,
@@ -39,27 +39,24 @@ label {
 }
 
 .all {
-  // position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // background-color: var(--background-primary) !important;
   color: var(--text);
-  // padding-bottom: 50px;
   transition: margin-top 0.3s ease;
 }
 
-@media (min-width: 450px) {
-  .all {
-    margin-bottom: 50px;
+@media (min-width: $mobile-width) {
+  :global(body) {
+    margin-bottom: 80px;
   }
 }
 
 @media (max-width: 900px) {
-  .all {
-    margin-top: 20px;
+  :global(body) {
+    margin-top: 40px;
   }
 }
 
@@ -75,4 +72,11 @@ label {
 ::-webkit-scrollbar-thumb {
   border-radius: var(--border-radius);
   background-color: var(--background-primary);
+}
+
+.horizontal-align {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
 }

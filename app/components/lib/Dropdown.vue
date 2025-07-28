@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="dropdown" :class="{ open: dropdownVisible }" @click="toggleDropdown">
-            <div class="selected-option" :style="{ color: getColor(selectedValue) }">
-                {{ selectedValue }}
+            <div class="selected-option" :style="{ color: getColor(model) }">
+                {{ props.optionDisplay(model) }}
                 <div class="selected-option-icon" :style="{ transform: dropdownVisible ? 'rotate(90deg)' : '' }">
                     <svg width="13" height="22" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -15,8 +15,8 @@
 
         <div v-if="dropdownVisible" class="options">
             <div v-for="(option, index) in props.options" :key="index" class="option"
-                :style="{ color: getColor(option) }"
-                :class="{ selected: selectedValue === props.optionDisplay(option) }" @click="updateValue(option)">
+                :style="{ color: getColor(option) }" :class="{ selected: model === props.optionDisplay(option) }"
+                @click="updateValue(option)">
                 {{ props.optionDisplay(option) }}
             </div>
         </div>
@@ -26,27 +26,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const props = defineProps({
-    initialValue: {
-        type: String,
-        required: true
-    },
-    options: {
-        type: Array,
-        required: true
-    },
-    optionDisplay: {
-        type: Function,
-        required: true
-    },
-    optionColor: {
-        type: Function,
-        required: false
-    }
-});
-const dropdownVisible = ref(false);
+const props = defineProps<{
+    options: Array<any>,
+    optionDisplay: Function,
+    optionColor?: Function
+}>();
 
-const selectedValue = ref(props.initialValue);
+const model = defineModel({ required: true })
+const dropdownVisible = ref(false);
 
 const toggleDropdown = () => {
     dropdownVisible.value = !dropdownVisible.value;
@@ -60,12 +47,9 @@ const getColor = (option: any | string) => {
     }
 };
 const updateValue = (option: any) => {
-    selectedValue.value = props.optionDisplay(option);
-    emit("update:modelValue", props.optionDisplay(option));
+    model.value = props.optionDisplay(option);
     dropdownVisible.value = false;
 };
-
-const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <style scoped lang="scss">

@@ -48,11 +48,25 @@ export default defineNuxtConfig({
     },
     ssr: false,
     modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
-    css: ['@/assets/styles/main.scss'],
     devtools: { enabled: true },
+    css: ['~/assets/styles/main.scss'],
     components: [
         { path: "~/components/", pathPrefix: false }
     ],
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `
+                        @use "@/assets/styles/lib/_variables.scss" as *;
+                        @use "@/assets/styles/lib/_colors.scss" as *;
+                        @use "@/assets/styles/lib/_housecolors.scss" as *;
+                    `
+                }
+            }
+        }
+
+    },
     colorMode: {
         classSuffix: "",
         preference: "system",

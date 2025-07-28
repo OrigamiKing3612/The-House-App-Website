@@ -1,49 +1,25 @@
 <template>
     <div class="text-field">
         <label :for="label" v-if="label">{{ label }}</label>
-        <input v-if="label" :id="label" v-model="localValue" type="datetime-local">
-        <input v-else :id="label" v-model="localValue" type="datetime-local">
+        <input v-if="label" :id="label" v-model="model" type="datetime-local">
+        <input v-else :id="label" v-model="model" type="datetime-local">
     </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    label: {
-        type: String,
-        required: false
-    },
-    placeholder: {
-        type: String,
-        default: ''
-    },
-    value: {
-        type: String,
-        default: ''
-    },
-    type: {
-        type: String,
-        default: 'text'
-    },
-    readonly: {
-        type: Boolean,
-        default: false
-    },
-    required: {
-        type: Boolean,
-        default: false
-    }
-})
+withDefaults(defineProps<{
+    label?: string,
+    placeholder?: string,
+    readonly?: boolean,
+    required?: boolean
+}>(), {
+    label: '',
+    placeholder: '',
+    readonly: false,
+    required: false
+});
 
-const localValue = ref(props.value)
-
-watch(() => props.value, (newValue) => {
-    localValue.value = newValue
-})
-
-watch(localValue, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-const emit = defineEmits(["update:modelValue"]);
+const model = defineModel({ required: true });
 </script>
 
 <style scoped lang="scss">

@@ -2,9 +2,9 @@
     <div class="text-field">
         <label :for="label" v-if="label">{{ label }}</label>
         <div class="input-wrapper">
-            <input :id="label" :type="type" :placeholder="placeholder" v-model="localValue" :readonly="props.readonly"
+            <input :id="label" :type="type" :placeholder="placeholder" v-model="model" :readonly="props.readonly"
                 :required="props.required" />
-            <button v-if="!props.readonly && localValue != ''" type="button" class="toggle-password"
+            <button v-if="!props.readonly && model != ''" type="button" class="toggle-password"
                 @click="show_password = !show_password">
                 <EyeIcon :open="show_password" />
             </button>
@@ -16,28 +16,17 @@
 const props = withDefaults(defineProps<{
     label?: string,
     placeholder?: string,
-    value?: string,
     readonly?: boolean,
     required?: boolean
 }>(), {
     placeholder: '',
-    value: '',
     readonly: false,
     required: false
 })
 
-const localValue = ref(props.value)
+const model = defineModel<string>({ required: true })
 const show_password = ref(false)
 const type = computed(() => show_password.value ? 'text' : 'password')
-
-watch(() => props.value, (newValue) => {
-    localValue.value = newValue
-})
-
-watch(localValue, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <style scoped lang="scss">
@@ -64,7 +53,7 @@ const emit = defineEmits(["update:modelValue"]);
     color: var(--text);
 }
 
-@media (max-width: 480px) {
+@media (max-width: $mobile-width) {
     .text-field {
         flex-direction: column;
         align-items: stretch;
