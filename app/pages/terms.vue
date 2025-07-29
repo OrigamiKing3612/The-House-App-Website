@@ -48,7 +48,7 @@
 
             <h2>11. Contact</h2>
             Questions or issues? Email us at
-            <Email />.
+            <SupportEmail />.
         </div>
     </Card>
 </template>

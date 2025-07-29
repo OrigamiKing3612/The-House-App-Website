@@ -13,15 +13,19 @@
 const props = defineProps<{
     title?: string,
 }>();
+
+const padding_top = computed(() => {
+    return props.title ? '50px' : '20px';
+});
 </script>
 
 
 <style lang="scss" scoped>
 .card {
     position: relative;
-    padding: 50px 20px 20px 20px;
+    padding: v-bind(padding_top) 20px 20px 20px;
     background-color: var(--main-background);
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     border: var(--border);
     margin-bottom: 10px;
     max-width: 450px;

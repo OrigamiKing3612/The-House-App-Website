@@ -13,9 +13,8 @@
                 <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and
                     teachers alike. It offers insights to track house-related activities and achievements, fostering
                     engagement within the school community. To see a full example of the app, click <NuxtLink
-                        class="example link" style="color: var(--house-cyan)"
-                        to="https://desktop.the-house-app.com/example">here
-                    </NuxtLink>.</p>
+                        class="example link" style="color: var(--primary)"
+                        to="https://desktop.the-house-app.com/example">here</NuxtLink>.</p>
             </section>
             <section class="key-features">
                 <h3>Key Features</h3>
@@ -44,17 +43,28 @@
                 </ul>
             </section>
             <section>
-                <p>If you would like more details, please reach out to me by email at <Email></Email>.
+                <p>If you would like more details, please reach out by email at
+                    <InfoEmail />.
+                </p>
+            </section>
+            <section class="login-section">
+                <h2>Ready to Use the App?</h2>
+                <p>
+                    If you're part of a school or organization using The House App, you can log in
+                    <NuxtLink class="example link" style="color: var(--primary)" to="https://desktop.the-house-app.com">
+                        here</NuxtLink>.
                 </p>
             </section>
         </div>
     </Card>
     <Card>
-        <p class="title">Copyright (C) 2025, OrigamiKing3612. All Rights Reserved.</p>
+        Copyright © {{ current_year }}, OrigamiKing3612. All Rights Reserved.
     </Card>
 </template>
 
 <script setup lang="ts">
+
+const current_year = new Date().getFullYear();
 
 definePageMeta({
     layout: "tab-view"
@@ -63,10 +73,6 @@ definePageMeta({
 </script>
 
 <style scoped lang="scss">
-.title {
-    text-align: center;
-}
-
 .container {
     text-align: left;
 }
