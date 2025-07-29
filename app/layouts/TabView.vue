@@ -4,6 +4,7 @@
         <slot />
     </div>
     <AppTabView />
+    <Footer />
 </template>
 
 <script setup lang="ts">

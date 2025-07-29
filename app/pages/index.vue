@@ -51,14 +51,11 @@
                 <h2>Ready to Use the App?</h2>
                 <p>
                     If you're part of a school or organization using The House App, you can log in
-                    <NuxtLink class="example link" style="color: var(--primary)" to="https://desktop.the-house-app.com">
+                    <NuxtLink class="link" style="color: var(--primary)" to="https://desktop.the-house-app.com">
                         here</NuxtLink>.
                 </p>
             </section>
         </div>
-    </Card>
-    <Card>
-        Copyright © {{ current_year }}, OrigamiKing3612. All Rights Reserved.
     </Card>
 </template>
 

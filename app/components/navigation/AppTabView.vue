@@ -11,12 +11,12 @@
             <NuxtLink to="/bugs" :class="{ active: route.path === '/bugs' }">
                 <BugIcon style="width: 30px; height: 30px;" />
             </NuxtLink>
-            <NuxtLink to="/privacy" :class="{ active: route.path === '/privacy' }">
-                <LockIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
-            <NuxtLink to="/terms" :class="{ active: route.path === '/terms' }">
-                <ShieldIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
+            <!-- <NuxtLink to="/privacy" :class="{ active: route.path === '/privacy' }"> -->
+            <!--     <LockIcon style="width: 30px; height: 30px;" /> -->
+            <!-- </NuxtLink> -->
+            <!-- <NuxtLink to="/terms" :class="{ active: route.path === '/terms' }"> -->
+            <!--     <ShieldIcon style="width: 30px; height: 30px;" /> -->
+            <!-- </NuxtLink> -->
         </div>
     </div>
     <div class="sidebar">
