@@ -42,7 +42,6 @@
 
                 .footer-text a {
                     text-decoration: none;
-
                 }
             }
         }

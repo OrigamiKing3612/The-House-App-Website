@@ -12,7 +12,7 @@
     "dependencies": {
         "@nuxtjs/color-mode": "^3.5.2",
         "axios": "^1.10.0",
-        "nuxt": "^4.0.0",
+        "nuxt": "^4.0.2",
         "vue": "^3.5.17"
     },
     "devDependencies": {
