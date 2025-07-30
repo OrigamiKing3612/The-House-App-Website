@@ -1,0 +1,4 @@
+# Hello! Nice to see you here
+
+User-agent: *
+Disallow: /bugs
