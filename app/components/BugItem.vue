@@ -1,6 +1,6 @@
 <template>
     <!-- <NuxtLink :to="'/bugs/' + issue.number" class="link"> -->
-    <NuxtLink :to="issue.html_url" class="link">
+    <NuxtLink :to="issue.html_url" external class="link">
         <div class="container">
             <span class="title">#{{ issue.number }}: {{ issue.title }}</span>
             <span class="status-text" style="color: #ffffff;" :class="{ [issue.state]: true }">{{

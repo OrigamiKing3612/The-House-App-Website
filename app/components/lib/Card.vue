@@ -29,6 +29,7 @@ const padding_top = computed(() => {
     border: var(--border);
     margin-bottom: 10px;
     max-width: 450px;
+    width: 90%;
 
     .title {
         position: absolute;
@@ -36,11 +37,23 @@ const padding_top = computed(() => {
         left: 15px;
         font-size: 1.4em;
         letter-spacing: -1px;
+    }
 
-        .v-container {
+    .v-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        :deep(form),
+        :deep(.card-ignore) {
+            display: flex;
             flex-direction: column;
-            padding-top: 15px;
+            gap: 10px;
         }
     }
+}
+
+:deep(p) {
+    text-align: left;
 }
 </style>

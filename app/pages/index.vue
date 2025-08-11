@@ -61,8 +61,6 @@
 
 <script setup lang="ts">
 
-const current_year = new Date().getFullYear();
-
 definePageMeta({
     layout: "tab-view"
 });

@@ -1,26 +1,34 @@
 <template>
     <button class="app-submit-button" :class="{ 'loading': loading, 'danger': props.danger }" type="submit"
         :disabled="loading" @click="clickAction">
-        <slot />
+        <template v-if="!loading">
+            <slot />
+        </template>
+        <template v-else>
+            <span class="spinner"></span>
+        </template>
     </button>
 </template>
 
 <script setup lang="ts">
 const emit = defineEmits<{
-    (e: "click"): void
+    click: [done: () => void]
 }>();
 const props = defineProps<{
     danger?: boolean,
 }>();
 
-const loading = ref();
+const loading = ref<boolean>(false);
 
-function clickAction() {
+async function clickAction() {
+    if (loading.value) return;
+
     loading.value = true;
-    emit("click");
-    loading.value = false;
-}
 
+    emit("click", () => {
+        loading.value = false;
+    });
+}
 </script>
 
 <style scoped lang="scss">
@@ -33,7 +41,7 @@ function clickAction() {
     cursor: pointer;
     font-size: 15px;
     box-shadow: 0 0 0 var(--primary);
-    transition: box-shadow 0.5;
+    transition: box-shadow 0.1s;
 
     &:hover {
         background-color: var(--background-primary);
@@ -42,7 +50,6 @@ function clickAction() {
 
     &.loading {
         background-color: var(--submit-button-loading);
-        // TODO: fix this
         cursor: not-allowed;
 
         &:hover {
@@ -52,9 +59,24 @@ function clickAction() {
 
     &.danger {
         &:hover {
-            // background-color: var(--submit-button-danger);
             box-shadow: 3px 3px 0px var(--submit-button-danger-hover);
         }
+    }
+}
+
+.spinner {
+    width: 1em;
+    height: 1em;
+    border: 2px solid var(--text);
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 </style>

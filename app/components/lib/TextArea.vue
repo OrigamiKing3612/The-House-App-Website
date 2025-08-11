@@ -22,9 +22,19 @@ const model = defineModel<string>({ required: true })
 </script>
 
 <style scoped lang="scss">
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    label {
+        text-align: left;
+    }
+}
+
 .area {
-    width: 95vw;
-    max-width: 400px;
+    width: 100%;
     height: 300px;
     resize: none;
     border-radius: var(--border-radius);

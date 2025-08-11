@@ -34,6 +34,10 @@ const type = computed(() => show_password.value ? 'text' : 'password')
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    label {
+        text-align: left;
+    }
 }
 
 .input-wrapper {
@@ -43,7 +47,7 @@ const type = computed(() => show_password.value ? 'text' : 'password')
 
 .toggle-password {
     position: absolute;
-    right: 0.5rem;
+    right: -15px;
     top: 25%;
     // transform: translateY(-50%);
     background: none;
@@ -54,16 +58,6 @@ const type = computed(() => show_password.value ? 'text' : 'password')
 }
 
 @media (max-width: $mobile-width) {
-    .text-field {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .text-field label {
-        text-align: left;
-        margin-bottom: 0.25rem;
-    }
-
     .toggle-password {
         margin-right: 2rem;
     }

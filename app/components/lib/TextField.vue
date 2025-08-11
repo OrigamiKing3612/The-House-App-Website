@@ -2,7 +2,7 @@
     <div class="text-field">
         <label :for="label" v-if="label">{{ label }}</label>
         <input :id="label" :type="props.type" :placeholder="placeholder" v-model="model" :readonly="props.readonly"
-            :required="props.required" />
+            :required="props.required" :disabled="props.disabled" />
     </div>
 </template>
 
@@ -12,16 +12,18 @@ const props = withDefaults(defineProps<{
     placeholder?: string,
     type: 'text' | 'email' | 'number' | 'search' | 'username' | 'organization_id',
     readonly?: boolean,
-    required?: boolean
+    required?: boolean,
+    disabled?: boolean
 }>(), {
     label: '',
     placeholder: '',
     type: 'text',
     readonly: false,
-    required: false
+    required: false,
+    disabled: false
 })
 
-const model = defineModel<string>({ required: true })
+const model = defineModel<string | number>({ required: true })
 </script>
 
 <style scoped lang="scss">
@@ -29,17 +31,9 @@ const model = defineModel<string>({ required: true })
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-@media (max-width: $mobile-width) {
-    .text-field {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .text-field label {
+    label {
         text-align: left;
-        margin-bottom: 0.25rem;
     }
 }
 </style>

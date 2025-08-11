@@ -15,12 +15,36 @@ textarea {
   padding: 8px;
   font-size: 1rem;
   border: var(--border);
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   color: var(--text) !important;
   background: var(--main-background);
-  margin-top: 10px;
 }
 
+input[type="file"] {
+  padding: 8px;
+  font-size: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--text) !important;
+
+  &::-webkit-file-upload-button {
+    background: var(--main-background);
+    color: var(--text);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  &::file-selector-button {
+    background: var(--main-background);
+    color: var(--text);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+}
 
 input[type="checkbox"] {
   appearance: none;

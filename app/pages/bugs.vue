@@ -1,12 +1,19 @@
 <template>
     <div class="all">
         <LargeTitleText>Bug<br>Tracker</LargeTitleText>
-        <Card style="margin-bottom: 10px;">
-            <p class="left-aligned">
+        <Card>
+            <p>
                 Welcome to The House App bug tracker! Here, you can find a list of known issues and bugs that have been
                 reported by users. If you encounter any problems while using the app, please check this list to see if
                 the issue has already been reported. If not, feel free to report it so we can work on fixing it. Your
                 feedback is invaluable in helping us improve the app and provide a better experience for all users.
+            </p>
+            <p>
+                For a comprehensive and up-to-date overview of reported bugs, please visit our <NuxtLink class="link"
+                    style="color: var(--primary)" to="https://github.com/OrigamiKing3612/The-House-App-Website/issues"
+                    target="_blank" rel="noopener noreferrer">
+                    GitHub Issues page
+                </NuxtLink>.
             </p>
         </Card>
         <RoundedContainer>

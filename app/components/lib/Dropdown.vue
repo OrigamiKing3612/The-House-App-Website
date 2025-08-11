@@ -2,7 +2,7 @@
     <div>
         <div class="dropdown" :class="{ open: dropdownVisible }" @click="toggleDropdown">
             <div class="selected-option" :style="{ color: getColor(model) }">
-                {{ props.optionDisplay(model) }}
+                {{ displayText(model) }}
                 <div class="selected-option-icon" :style="{ transform: dropdownVisible ? 'rotate(90deg)' : '' }">
                     <svg width="13" height="22" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -14,10 +14,9 @@
         </div>
 
         <div v-if="dropdownVisible" class="options">
-            <div v-for="(option, index) in props.options" :key="index" class="option"
-                :style="{ color: getColor(option) }" :class="{ selected: model === props.optionDisplay(option) }"
-                @click="updateValue(option)">
-                {{ props.optionDisplay(option) }}
+            <div v-for="(option, index) in allOptions" :key="index" class="option" :style="{ color: getColor(option) }"
+                :class="{ selected: model === option }" @click="updateValue(option)">
+                {{ displayText(option) }}
             </div>
         </div>
     </div>
@@ -27,27 +26,44 @@
 import { ref } from "vue";
 
 const props = defineProps<{
-    options: Array<any>,
-    optionDisplay: Function,
-    optionColor?: Function
+    options: any[],
+    optionDisplay: (o: any) => string,
+    optionColor?: (o: any) => string,
+    noneOption?: boolean,
+    noneOptionText?: string
 }>();
 
 const model = defineModel({ required: true })
 const dropdownVisible = ref(false);
+
+const allOptions = computed(() => {
+    if (props.noneOption) {
+        return [null, ...props.options];
+    }
+    return props.options;
+});
 
 const toggleDropdown = () => {
     dropdownVisible.value = !dropdownVisible.value;
 };
 
 const getColor = (option: any | string) => {
-    if (props.optionColor) {
+    if (props.optionColor && option) {
         return props.optionColor(option);
     } else {
         return "var(--text)";
     }
 };
+
+const displayText = (option: any) => {
+    if (option === null && props.noneOption) {
+        return props.noneOptionText || "None";
+    }
+    return props.optionDisplay(option);
+};
+
 const updateValue = (option: any) => {
-    model.value = props.optionDisplay(option);
+    model.value = option;
     dropdownVisible.value = false;
 };
 </script>
@@ -67,7 +83,13 @@ const updateValue = (option: any) => {
         justify-content: space-between;
         padding-left: 24px;
         padding-right: 24px;
-        align-items: left;
+        align-items: center;
+
+        // For ellipsis
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%; // ensures it fits inside the dropdown
     }
 
     &.open {
@@ -81,6 +103,7 @@ const updateValue = (option: any) => {
         display: flex;
         align-items: center;
         color: var(--text);
+        margin-right: -7px;
     }
 }
 
@@ -99,14 +122,17 @@ const updateValue = (option: any) => {
         width: 5px;
     }
 
+
     .option {
         padding: 10px 24px;
         cursor: pointer;
         text-align: left;
-        height: 10px;
         line-height: 10px;
 
-
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
 
         &.selected {
             background-color: var(--background-primary);

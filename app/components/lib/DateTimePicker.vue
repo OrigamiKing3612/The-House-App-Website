@@ -27,5 +27,9 @@ const model = defineModel({ required: true });
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    label {
+        text-align: left;
+    }
 }
 </style>

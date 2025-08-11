@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 const emit = defineEmits<{
-    (e: "save"): void
+    save: [done: () => void]
 }>();
 const props = defineProps<{
     label: string,
@@ -28,12 +28,14 @@ const props = defineProps<{
     description?: string
 }>();
 
-const model = defineModel<string | boolean>({ required: true });
-const initialValue = ref<string | boolean>('');
+const model = defineModel<any>({ required: true });
+const initialValue = ref<any>('');
 
-function save() {
-    emit("save");
-    initialValue.value = model.value;
+function save(done: () => void) {
+    emit("save", () => {
+        initialValue.value = model.value;
+        done()
+    });
 }
 
 const showSaveButton = computed(() => {
@@ -41,7 +43,7 @@ const showSaveButton = computed(() => {
         return model.value !== initialValue.value;
     }
 
-    return model.value?.toString().trim() !== initialValue.value?.toString().trim();
+    return JSON.stringify(model.value).toString().trim() !== JSON.stringify(initialValue.value).toString().trim();
 });
 
 watch(model, (newVal) => {
@@ -60,6 +62,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
 
     .value {
         display: flex;

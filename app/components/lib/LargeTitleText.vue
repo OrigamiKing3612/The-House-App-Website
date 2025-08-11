@@ -1,5 +1,5 @@
 <template>
-    <h1 class="largeTitle">
+    <h1 class="large-title">
         <slot />
     </h1>
 </template>
@@ -8,8 +8,8 @@
 </script>
 
 <style scoped lang="scss">
-.largeTitle {
-    font-size: 6em;
+.large-title {
+    font-size: clamp(2rem, 10vw, 6em);
     text-align: left;
     line-height: 85%;
     letter-spacing: -5px;
@@ -17,10 +17,8 @@
 }
 
 @media (max-width: $mobile-width) {
-    .largeTitle {
-        font-size: 3.6em;
-        line-height: 90%;
-        letter-spacing: -3px;
+    .large-title {
+        letter-spacing: -1px;
     }
 }
 </style>

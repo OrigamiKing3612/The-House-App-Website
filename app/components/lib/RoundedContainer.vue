@@ -19,9 +19,9 @@
     width: 100%;
     max-width: 700px;
     background-color: var(--main-background);
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     padding: 0px 0px 30px 0px;
-    border: 1px solid var(--text);
+    border: var(--border);
     margin-bottom: 10px;
 }
 
@@ -33,7 +33,8 @@
 
 .title {
     margin: 15px 20px;
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    text-align: left;
 }
 
 .more-button {
