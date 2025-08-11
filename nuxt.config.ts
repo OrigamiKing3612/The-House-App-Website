@@ -1,21 +1,24 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 const title = "The House App";
-const meta = {
+const metaName = {
     description: "The House App",
     publisher: "OrigamiKing3612",
     keywords: "The House App, The House App Desktop, The House App App",
+    "apple-mobile-web-app-title": "The House App",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+};
+
+const metaProperty = {
     "og:locale": "en_US",
     "og:type": "website",
     "og:title": title,
     "og:site_name": title,
     "og:description": "The House App",
-    "og:url": "the-house-app.com",
-    "apple-mobile-web-app-title": "The House App",
-    "mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "default"
+    "og:url": "https://the-house-app.com"
 };
-
 export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4
@@ -27,9 +30,10 @@ export default defineNuxtConfig({
                 lang: "en"
             },
             title: title,
-            meta: Object.entries(meta).map(([name, content]): object => {
-                return { name, content };
-            }),
+            meta: [
+                ...Object.entries(metaName).map(([name, content]) => ({ name, content })),
+                ...Object.entries(metaProperty).map(([property, content]) => ({ property, content })),
+            ],
             link: [
                 { rel: "manifest", href: "/manifest.json" },
                 { rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96" },
