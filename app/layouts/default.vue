@@ -6,7 +6,14 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode();
+useSeoMeta({
+    title: "The House App",
+    ogTitle: "The House App",
+    ogUrl: "https://the-house-app.com",
+    ogImage: "https://the-house-app.com/web-app-manifest-192x192.png",
+    twitterImage: "https://the-house-app.com/web-app-manifest-192x192.png",
+    twitterTitle: "The House App",
+})
 </script>
 
 <style scoped lang="scss">
