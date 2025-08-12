@@ -50,8 +50,8 @@ export default defineNuxtConfig({
         },
         logLevel: 3,
     },
-    ssr: false,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint"],
+    ssr: true,
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap"],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
@@ -77,4 +77,11 @@ export default defineNuxtConfig({
         fallback: "dark",
         storageKey: "thehouseapp-theme",
     },
+    site: {
+        url: 'https://the-house-app.com',
+        name: 'The House App'
+    },
+    robots: {
+        sitemap: '/sitemap.xml',
+    }
 })
