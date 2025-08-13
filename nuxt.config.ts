@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 const title = "The House App";
 const metaName = {
-    description: "The House App",
+    description: "The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers alike. It offers insights to track house-related activities and achievements, fostering engagement within the school community.",
     publisher: "OrigamiKing3612",
     keywords: "The House App, The House App Desktop, The House App App",
     "apple-mobile-web-app-title": "The House App",
