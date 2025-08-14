@@ -50,6 +50,9 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             failOnError: true,
+            crawlLinks: true,
+            routes: ["/sitemap.xml", "/robots.txt"],
+            ignore: ["/bugs"]
         },
         logLevel: 3,
     },
