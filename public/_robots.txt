@@ -3,4 +3,3 @@
 User-agent: *
 Allow: /
 Disallow: /bugs
-Disallow: /_nuxt
