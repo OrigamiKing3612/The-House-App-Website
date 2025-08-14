@@ -8,7 +8,7 @@ const metaName = {
     "apple-mobile-web-app-title": "The House App",
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
-    "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+    "viewport": "width=device-width, initial-scale=1",
 };
 
 const metaProperty = {
