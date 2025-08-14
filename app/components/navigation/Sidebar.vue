@@ -1,17 +1,11 @@
 <template>
-    <div class="sidebar" :class="{ open: localValue }">
+    <div class="sidebar" :class="{ open: model }">
         <NuxtLink to="/" :class="{ active: route.path === '/' }" class="link">
             <h1 class="title">Home</h1>
         </NuxtLink>
         <NuxtLink to="/bugs" :class="{ active: route.path === '/bugs' }" class="link">
             <h1 class="title">Bug Tracker</h1>
         </NuxtLink>
-        <!-- <NuxtLink to="/terms" :class="{ active: route.path == '/terms' }" class="link"> -->
-        <!--     <h1 class="title">Terms of Use</h1> -->
-        <!-- </NuxtLink> -->
-        <!-- <NuxtLink to="/privacy" :class="{ active: route.path == '/privacy' }" class="link"> -->
-        <!--     <h1 class="title">Privacy Policy</h1> -->
-        <!-- </NuxtLink> -->
 
         <div class="title theme-button" @click="changeTheme()">
             <div v-if="colorMode.value === 'dark'">
@@ -21,7 +15,7 @@
                 <DarkModeIcon width="30" height="30" />
             </div>
         </div>
-        <div class="title back" @click="localValue = false">
+        <div class="title back" @click="model = false">
             <h1 class="title">Back</h1>
             <ChevronRightIcon style="width: 35px; height: 35px;" />
         </div>
@@ -30,11 +24,8 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const props = defineProps<{
-    value: boolean
-}>();
 
-const localValue = ref<boolean>(props.value)
+const model = defineModel<boolean>({ required: true });
 
 const colorMode = useColorMode();
 
@@ -42,18 +33,9 @@ function changeTheme() {
     colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark')
 }
 
-watch(() => props.value, (newValue) => {
-    localValue.value = newValue
-})
-
-watch(localValue, (newValue) => {
-    emit('update:modelValue', newValue)
-})
-
 watch(route, () => {
-    localValue.value = false; // Close sidebar when route changes
+    model.value = false; // Close sidebar when route changes
 })
-const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <style scoped lang="scss">

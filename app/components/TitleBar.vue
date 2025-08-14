@@ -1,30 +1,12 @@
 <template>
     <div class="title-bar">
         <div class="left-window-controls">
-            <!-- <div v-if="props.showTitle" class="navigation-title-container"> -->
-            <!--   <div class="navigation-title" :style="'color: ' + titleBarStore.color + ';'"> -->
-            <!--     {{ titleBarStore.title }} -->
-            <!--   </div> -->
-            <!-- </div> -->
             <NuxtLink to="/">
-                <div v-if="colorMode.value === 'dark'">
-                    <img src="~/assets/images/logo-icon-dark.png" width="30" class="logo"
-                        alt="House App Dark Mode Logo">
-                </div>
-                <div v-else>
-                    <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
-                </div>
+                <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
             </NuxtLink>
         </div>
         <div class="right-window-controls">
-            <div class="theme-button" @click="changeTheme()">
-                <div v-if="colorMode.value === 'dark'">
-                    <LightModeIcon width="30" height="30" />
-                </div>
-                <div v-else>
-                    <DarkModeIcon width="30" height="30" />
-                </div>
-            </div>
+            <SwitchThemesButton />
         </div>
     </div>
 </template>

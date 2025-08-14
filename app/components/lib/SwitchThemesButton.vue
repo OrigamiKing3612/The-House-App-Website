@@ -1,19 +1,13 @@
 <template>
-    <AppSubmitButton @click="changeTheme()">
-        <div v-if="props.useIcon">
-            <div class="theme-button" @click="changeTheme()">
-                <div v-if="colorMode.value === 'dark'">
-                    <LightModeIcon width="30" height="30" />
-                </div>
-                <div v-else>
-                    <DarkModeIcon width="30" height="30" />
-                </div>
-            </div>
+    <div v-if="props.useIcon" @click="changeTheme(() => { })">
+        <div class="theme-button">
+            <LightModeIcon v-show="colorMode.value === 'dark'" width="30" height="30" />
+            <DarkModeIcon v-show="colorMode.value !== 'dark'" width="30" height="30" />
         </div>
-        <div v-else>
-            Toggle theme
-        </div>
-    </AppSubmitButton>
+    </div>
+    <div v-else @click="changeTheme(() => { })">
+        Toggle theme
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -25,8 +19,9 @@ const props = withDefaults(defineProps<{
     useIcon: true
 });
 
-const changeTheme = () => {
+const changeTheme = (done: () => void) => {
     colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark');
+    done();
 };
 </script>
 

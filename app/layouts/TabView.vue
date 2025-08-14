@@ -1,5 +1,5 @@
 <template>
-    <TitleBar :show-title="true" :show-back-button="false" :show-profile="true" :show-refresh-button="true" />
+    <TitleBar />
     <div class="all">
         <slot />
     </div>
