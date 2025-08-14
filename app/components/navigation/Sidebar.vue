@@ -20,12 +20,6 @@ const route = useRoute();
 
 const model = defineModel<boolean>({ required: true });
 
-const colorMode = useColorMode();
-
-function changeTheme() {
-    colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark')
-}
-
 watch(route, () => {
     model.value = false; // Close sidebar when route changes
 })

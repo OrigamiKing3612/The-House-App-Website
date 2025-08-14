@@ -1,9 +1,15 @@
 <template>
     <div class="title-bar">
         <div class="left-window-controls">
-            <NuxtLink to="/">
-                <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
-            </NuxtLink>
+            <ClientOnly>
+                <div v-if="colorMode.value === 'dark'">
+                    <img src="~/assets/images/logo-icon-dark.png" width="30" class="logo"
+                        alt="House App Dark Mode Logo">
+                </div>
+                <div v-else>
+                    <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
+                </div>
+            </ClientOnly>
         </div>
         <div class="right-window-controls">
             <SwitchThemesButton />
@@ -15,10 +21,6 @@
 const leftPadding = ref("10px");
 
 const colorMode = useColorMode();
-
-function changeTheme() {
-    colorMode.preference = (colorMode.value === 'dark' ? 'light' : 'dark')
-}
 </script>
 
 <style scoped lang="scss">

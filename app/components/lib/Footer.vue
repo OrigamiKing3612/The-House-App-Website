@@ -54,5 +54,6 @@
 
 .link {
     color: var(--primary);
+    font-weight: bold;
 }
 </style>
