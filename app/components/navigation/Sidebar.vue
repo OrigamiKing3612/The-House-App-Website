@@ -7,14 +7,7 @@
             <h1 class="title">Bug Tracker</h1>
         </NuxtLink>
 
-        <div class="title theme-button" @click="changeTheme()">
-            <div v-if="colorMode.value === 'dark'">
-                <LightModeIcon width="30" height="30" />
-            </div>
-            <div v-else>
-                <DarkModeIcon width="30" height="30" />
-            </div>
-        </div>
+        <SwitchThemesButton class="theme-button" />
         <div class="title back" @click="model = false">
             <h1 class="title">Back</h1>
             <ChevronRightIcon style="width: 35px; height: 35px;" />
