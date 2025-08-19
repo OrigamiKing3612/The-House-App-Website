@@ -1,24 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 const title = "The House App";
-const metaName = {
-    description: "The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers alike. It offers insights to track house-related activities and achievements, fostering engagement within the school community.",
-    publisher: "OrigamiKing3612",
-    keywords: "The House App, The House App Desktop, The House App App",
-    "apple-mobile-web-app-title": "The House App",
-    "mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "default",
-    "viewport": "width=device-width, initial-scale=1",
-};
+const description = "The House App is a cutting-edge tool designed to enrich the educational journey for students and teachers alike. It offers insights to track house-related activities and achievements, fostering engagement within the school community."
 
-const metaProperty = {
-    "og:locale": "en_US",
-    "og:type": "website",
-    "og:title": title,
-    "og:site_name": title,
-    "og:description": "The House App",
-    "og:url": "https://the-house-app.com"
-};
 export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4
@@ -31,8 +15,19 @@ export default defineNuxtConfig({
             },
             title: title,
             meta: [
-                ...Object.entries(metaName).map(([name, content]) => ({ name, content })),
-                ...Object.entries(metaProperty).map(([property, content]) => ({ property, content })),
+                { name: "description", content: title },
+                { name: "publisher", content: "OrigamiKing3612" },
+                { name: "keywords", content: "The House App, The House App Desktop, The House App App" },
+                { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#ffffff" },
+                { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#000000" },
+                { name: "background-color", media: "(prefers-color-scheme: light)", content: "#ffffff" },
+                { name: "background-color", media: "(prefers-color-scheme: dark)", content: "#000000" },
+                { property: "og:locale", content: "en_US" },
+                { property: "og:type", content: "website" },
+                { property: "og:title", content: title },
+                { property: "og:site_name", content: title },
+                { property: "og:description", content: description },
+                { property: "og:url", content: "https://the-house-app.com" },
             ],
             link: [
                 { rel: "manifest", href: "/manifest.json" },
@@ -41,7 +36,7 @@ export default defineNuxtConfig({
                 { rel: "shortcut icon", href: "/favicon.ico" },
                 { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
-                { rel: "preconnect", href: "https://fonts.gstatic.com" },
+                { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
                 { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap" },
             ]
         },
@@ -85,7 +80,7 @@ export default defineNuxtConfig({
     },
     site: {
         url: 'https://the-house-app.com',
-        name: 'The House App'
+        name: title,
     },
     robots: {
         sitemap: '/sitemap.xml',
