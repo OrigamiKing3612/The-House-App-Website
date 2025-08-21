@@ -76,7 +76,6 @@ export default defineNuxtConfig({
         classSuffix: "",
         preference: "system",
         fallback: "dark",
-        storageKey: "thehouseapp-theme",
     },
     site: {
         url: 'https://the-house-app.com',
