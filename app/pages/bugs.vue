@@ -171,5 +171,6 @@ onMounted(async () => {
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.1s ease;
+    z-index: 999;
 }
 </style>
