@@ -14,12 +14,18 @@
                     GitHub Issues page </NuxtLink>.
             </p>
         </Card>
-        <RoundedContainer>
+        <div class="settings">
+            <Dropdown :options="['Issues', 'Feature Requests']" :option-display="a => a" v-model="mode" class="mode" />
+            <SearchField v-model="search" v-if="!isScreenWidth && !isSmaller" />
+            <Dropdown :options="['Open', 'Closed']" :option-display="a => a" v-model="status" class="status" />
+        </div>
+        <SearchField v-model="search" v-if="isSmaller && !isScreenWidth" class="search" />
+        <RoundedContainer v-if="mode === 'Issues'">
             <template #title>
                 Known Issues
             </template>
             <template #default>
-                <div v-if="issues.length > 0" v-for="issue in issues" :key="issue.id" class="left-aligned">
+                <div v-if="filtered.length > 0" v-for="issue in filtered" :key="issue.id" class="left-aligned">
                     <BugItem :issue="issue" />
                 </div>
                 <div v-else class="left-aligned">
@@ -30,12 +36,12 @@
                 </div>
             </template>
         </RoundedContainer>
-        <RoundedContainer>
+        <RoundedContainer v-if="mode === 'Feature Requests'">
             <template #title>
                 Enhancements and Feature Requests
             </template>
             <template #default>
-                <div v-if="enhancements.length > 0" v-for="enhancement in enhancements" :key="enhancement.id"
+                <div v-if="filtered.length > 0" v-for="enhancement in filtered" :key="enhancement.id"
                     class="left-aligned">
                     <EnhancementItem :enhancement="enhancement" />
                 </div>
@@ -48,6 +54,7 @@
             </template>
         </RoundedContainer>
     </div>
+    <SearchField v-if="isScreenWidth" v-model="search" class="mobile search-field" />
 </template>
 
 <script setup lang="ts">
@@ -56,10 +63,41 @@ import type { GitHubIssue } from '#imports';
 const issues = ref<GitHubIssue[]>([]);
 const enhancements = ref<GitHubIssue[]>([]);
 
+const mode = ref<'Issues' | 'Feature Requests'>('Issues');
+const status = ref<'Open' | 'Closed'>('Open');
+const search = ref<string>('');
+
+const isScreenWidth = useScreenWidth(520);
+const isSmaller = useScreenWidth(650);
+
 definePageMeta({
     layout: "tab-view",
     title: "Bug Tracker"
 });
+
+const filtered = computed<GitHubIssue[]>(() => {
+    let result
+    if (mode.value === 'Issues') {
+        result = issues.value;
+    } else {
+        result = enhancements.value;
+    }
+
+    if (mode.value === 'Issues') {
+        result = result.filter(u => u.state == status.value.toLowerCase());
+    }
+
+    if (mode.value === 'Feature Requests') {
+        result = result.filter(u => u.state == status.value.toLowerCase());
+    }
+
+    if (search.value.trim() !== "") {
+        result = result.filter(u =>
+            u.title.toLowerCase().includes(search.value.toLowerCase().trim())
+        );
+    }
+    return result;
+})
 
 onMounted(async () => {
     issues.value = await GetIssues()
@@ -78,5 +116,60 @@ onMounted(async () => {
         margin-bottom: 0px;
         max-width: 700px;
     }
+}
+
+.settings {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    .mode {
+        min-width: 200px;
+        justify-content: flex-end;
+    }
+
+    .status {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .settings {
+        justify-content: center;
+        gap: 10px;
+
+        .mode,
+        .status {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .settings {
+        justify-content: center;
+        gap: 10px;
+
+        .mode,
+        .status {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+
+.mobile {
+    position: fixed;
+    bottom: 10px;
+    background: none;
+    text-align: center;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.1s ease;
 }
 </style>
