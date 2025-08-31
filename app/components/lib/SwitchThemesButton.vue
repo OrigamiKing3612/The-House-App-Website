@@ -25,4 +25,14 @@ const changeTheme = (done: () => void) => {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.theme-button {
+    padding: 5px 15px;
+
+    &:hover {
+        background-color: var(--background-primary);
+        border-radius: var(--border-radius);
+        transform: scale(1.05);
+    }
+}
+</style>

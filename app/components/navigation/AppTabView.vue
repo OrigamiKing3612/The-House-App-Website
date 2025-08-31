@@ -33,7 +33,7 @@ const sidebar_open = ref(false);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1; //makes it under the add points button
-    transition: display 0.1s ease;
+    transition: all 0.1s ease;
 
     .tab-view {
         width: min-content;
@@ -52,22 +52,21 @@ const sidebar_open = ref(false);
             background-color: var(--main-background);
             border-radius: 15px;
             text-decoration: none;
-            transition: background-color 0.1s ease;
+            transition: all 0.2s ease;
             margin: 3px;
 
             &:hover {
                 background-color: var(--background-primary);
+                padding: 5px 25px;
+                transform: scale(1.05);
             }
 
             &.active {
                 background-color: var(--background-primary);
+                padding: 5px 30px;
 
-                path {
-                    color: var(--primary);
-                }
-
-                :deep(svg),
-                :deep(path) {
+                :deep(path),
+                :deep(rect) {
                     color: var(--primary);
                 }
             }
@@ -75,13 +74,17 @@ const sidebar_open = ref(false);
     }
 }
 
-@media (max-width: 450px) {
+.tab {
+    cursor: pointer;
+}
+
+@media (max-width: $mobile-width) {
     .floating {
         display: none;
     }
 }
 
-@media (min-width: 451px) {
+@media (min-width: $mobile-width) {
     .sidebar {
         display: none;
     }

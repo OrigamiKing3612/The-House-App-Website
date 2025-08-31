@@ -22,7 +22,6 @@
     border-radius: var(--border-radius);
     padding: 0px 0px 30px 0px;
     border: var(--border);
-    margin-bottom: 10px;
 }
 
 .title-area {

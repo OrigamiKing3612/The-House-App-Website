@@ -1,6 +1,6 @@
 <template>
-    <div class="all">
-        <LargeTitleText>Bug<br>Tracker</LargeTitleText>
+    <LargeTitleText>Bug<br>Tracker</LargeTitleText>
+    <div class="bugs">
         <Card>
             <p>
                 Welcome to The House App bug tracker! Here, you can find a list of known issues and bugs that have been
@@ -9,12 +9,9 @@
                 feedback is invaluable in helping us improve the app and provide a better experience for all users.
             </p>
             <p>
-                For a comprehensive and up-to-date overview of reported bugs, please visit our <NuxtLink class="link"
-                    style="color: var(--primary); font-weight: bold;"
-                    to="https://github.com/OrigamiKing3612/The-House-App-Website/issues" target="_blank"
-                    rel="noopener noreferrer">
-                    GitHub Issues page
-                </NuxtLink>.
+                For a comprehensive and up-to-date overview of reported bugs, please visit our <NuxtLink
+                    class="text-link" to="https://github.com/OrigamiKing3612/The-House-App-Website/issues" external>
+                    GitHub Issues page </NuxtLink>.
             </p>
         </Card>
         <RoundedContainer>
@@ -60,7 +57,8 @@ const issues = ref<GitHubIssue[]>([]);
 const enhancements = ref<GitHubIssue[]>([]);
 
 definePageMeta({
-    layout: "tab-view"
+    layout: "tab-view",
+    title: "Bug Tracker"
 });
 
 onMounted(async () => {
@@ -70,22 +68,15 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-.title {
-    width: 85%;
-    max-width: 700px;
-}
-
-.left-aligned {
-    text-align: left;
-}
-
-.container {
+.bugs {
     display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    padding: 10px;
-    border-bottom: 0.5px solid var(--main-background);
-    width: 100%;
-    max-width: 700px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    :deep(.card) {
+        margin-bottom: 0px;
+        max-width: 700px;
+    }
 }
 </style>

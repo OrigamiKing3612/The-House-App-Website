@@ -1,6 +1,6 @@
 <template>
     <div class="setting">
-        <label :title="props.description">{{ props.label }}:</label>
+        <label :title="props.description">{{ props.label }}</label>
         <div v-if="!props.isEditing" class="value">
             <p v-if="model !== undefined && model !== null && model !== ''">
                 <slot name="display">
@@ -46,7 +46,7 @@ const showSaveButton = computed(() => {
     return JSON.stringify(model.value).toString().trim() !== JSON.stringify(initialValue.value).toString().trim();
 });
 
-watch(model, (newVal) => {
+watch(model, (newVal: any) => {
     if (!props.isEditing) {
         initialValue.value = newVal;
     }
@@ -68,6 +68,13 @@ onMounted(() => {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        text-align: right;
+        width: 50%;
+
+        :deep(span),
+        :deep(p) {
+            text-align: right;
+        }
     }
 }
 

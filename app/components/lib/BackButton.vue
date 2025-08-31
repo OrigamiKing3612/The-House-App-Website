@@ -17,7 +17,7 @@ const router = useRouter();
     .back-button {
         text-decoration: none;
         border: 0;
-        background: var(--main-background);
+        background: none;
         border-radius: 50px;
         font-weight: bold;
         color: var(--text);
@@ -29,6 +29,7 @@ const router = useRouter();
         &:hover {
             background-color: var(--background-primary);
             color: var(--primary);
+            transform: scale(1.05);
         }
     }
 }

@@ -24,10 +24,13 @@ defineProps<{
     text-decoration: none;
     padding: 10px;
     border-bottom: 0.5px solid var(--main-background);
+    text-align: left;
 
     .status-text {
         padding: 6px;
         border-radius: var(--border-radius);
+        justify-content: center;
+        align-content: center;
 
         &.closed {
             background-color: var(--house-purple);

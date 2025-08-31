@@ -65,7 +65,8 @@
 <script lang="ts" setup>
 
 definePageMeta({
-    layout: "tab-view"
+    layout: "tab-view",
+    title: "Privacy Policy"
 });
 </script>
 

@@ -19,17 +19,15 @@ const padding_top = computed(() => {
 });
 </script>
 
-
 <style lang="scss" scoped>
 .card {
     position: relative;
-    padding: v-bind(padding_top) 20px 20px 20px;
+    padding: v-bind(padding_top) 0px 20px 0px;
     background-color: var(--main-background);
     border-radius: var(--border-radius);
     border: var(--border);
-    margin-bottom: 10px;
     max-width: 450px;
-    width: 90%;
+    width: 100%;
 
     .title {
         position: absolute;
@@ -37,18 +35,25 @@ const padding_top = computed(() => {
         left: 15px;
         font-size: 1.4em;
         letter-spacing: -1px;
+        text-align: left;
     }
 
     .v-container {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        padding: 0 20px;
 
         :deep(form),
-        :deep(.card-ignore) {
+        :deep(.card-ignore),
+        :deep(.link) {
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+
+        :deep(.disclosure-group) {
+            margin: 0 -10px;
         }
     }
 }

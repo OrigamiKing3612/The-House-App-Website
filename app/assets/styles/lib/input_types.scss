@@ -20,6 +20,15 @@ textarea {
   background: var(--main-background);
 }
 
+input[type="text"],
+input[type="number"],
+input[type="username"],
+input[type="password"],
+input[type="organization_id"],
+input[type="email"] {
+  max-width: var(--text-field-width);
+}
+
 input[type="file"] {
   padding: 8px;
   font-size: 1rem;
@@ -56,6 +65,10 @@ input[type="checkbox"] {
   cursor: pointer;
   background-color: var(--main-background);
   transition: background-color 0.2s;
+
+  &:hover:not(:checked) {
+    background-color: var(--background-primary);
+  }
 
   &:checked {
     background-color: var(--primary);

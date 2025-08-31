@@ -1,21 +1,16 @@
 <template>
     <div class="setting">
-        <label>{{ props.label }}:</label>
-        <div v-if="!props.isEditing" class="value">
-            <p v-if="props.settingValue && props.settingValue.length > 0">
-                {{ text() }}
+        <label>{{ props.label }}</label>
+        <div v-if="!props.isEditing">
+            <p v-if="model !== undefined && model !== null && model !== ''">
+                <slot name="display">
+                    {{ model }}
+                </slot>
             </p>
-            <p v-else>
-                None
-            </p>
+            <p v-else>(None)</p>
         </div>
         <div v-else class="value">
-            <input v-if="props.type === 'text'" v-model="value" type="text" class="input-text"
-                @input="updateValueEvent">
-            <div v-else-if="props.type === 'user_type'">
-                <MultiDropdown :option-display="(option: string) => { return normalizeString(option) + 's' }"
-                    :options="allUserTypes" :initial-value="props.settingValue" @input="updateValue" />
-            </div>
+            <slot />
         </div>
     </div>
     <AppSubmitButton v-if="props.isEditing && showSaveButton" class="submit" @click="save">
@@ -25,79 +20,48 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
+const emit = defineEmits<{
+    save: [done: () => void]
+}>();
 
-const props = defineProps({
-    label: {
-        type: String,
-        required: true
-    },
-    settingValue: {
-        type: [Array, String],
-        required: true
-    },
-    isEditing: {
-        type: Boolean,
-        required: true
-    },
-    optionDisplay: {
-        type: Function,
-        required: true
-    },
-    type: {
-        type: String,
-        default: "toggle",
-        required: false
-    }
-});
+const props = defineProps<{
+    label: string,
+    isEditing: boolean,
+}>();
 
-const initialValue = ref(props.settingValue);
-const value = ref(getDefaultValue());
+const model = defineModel<any>({ required: true });
+const initialValue = ref<any>('');
 
 const showSaveButton = computed(() => {
-    return value.value.toString().trim() !== initialValue.value.toString().trim();
+    return model.value.toString().trim() !== initialValue.value.toString().trim();
 });
 
-function getDefaultValue() {
-    return props.settingValue;
+function save(done: () => void) {
+    emit("save", () => {
+        initialValue.value = model.value;
+        done()
+    });
 }
 
-function updateValue(newValue: string) {
-    value.value = newValue;
-    emit("input", newValue);
-}
-
-function updateValueEvent(event: Event) {
-    const newValue = (event.target as HTMLInputElement).value;
-    value.value = newValue;
-    emit("input", newValue);
-}
-
-function text() {
-    if (Array.isArray(props.settingValue)) {
-        //@ts-ignore
-        return props.settingValue.map((item: string) => props.optionDisplay(item)).join(", ");
-    } else {
-        return props.optionDisplay(props.settingValue);
+watch(model, (newVal: any) => {
+    if (!props.isEditing) {
+        initialValue.value = newVal;
     }
-}
+});
 
-function save() {
-    emit("save");
-    initialValue.value = value.value;
-}
-
-const emit = defineEmits(["input", "save"]);
+onMounted(() => {
+    initialValue.value = model.value;
+});
 </script>
 
 <style scoped lang="scss">
 .setting {
     display: flex;
     align-items: center;
-    margin-bottom: 1px;
-    margin-top: 1px;
+    justify-content: space-between;
+    text-align: left;
 
     .value {
-        flex-grow: 1;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -105,7 +69,10 @@ const emit = defineEmits(["input", "save"]);
 }
 
 .submit {
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+label {
+    text-align: left;
 }
 </style>

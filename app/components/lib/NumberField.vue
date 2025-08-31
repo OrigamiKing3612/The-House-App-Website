@@ -1,16 +1,15 @@
 <template>
     <div class="text-field">
         <label :for="label" v-if="label">{{ label }}</label>
-        <input :id="label" :type="props.type" :placeholder="placeholder" v-model="model" :readonly="props.readonly"
-            :required="props.required" :disabled="props.disabled" />
+        <input :id="label" type="number" :placeholder="`${placeholder}`" v-model="model" :readonly="props.readonly"
+            :required="props.required" :disabled="props.disabled" @input="onInput" />
     </div>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
     label?: string,
-    placeholder?: string,
-    type: 'text' | 'email' | 'search' | 'username' | 'organization_id',
+    placeholder?: string | number,
     readonly?: boolean,
     required?: boolean,
     disabled?: boolean
@@ -23,7 +22,15 @@ const props = withDefaults(defineProps<{
     disabled: false
 })
 
-const model = defineModel<string | number>({ required: true })
+const model = defineModel<number | string>({ required: true })
+
+const onInput = (event: Event) => {
+    const input = event.target as HTMLInputElement
+    // Remove any non-digit characters
+    const sanitized = input.value.replace(/[^0-9]/g, "")
+    input.value = sanitized
+    model.value = sanitized === "" ? "" : Number(sanitized)
+}
 </script>
 
 <style scoped lang="scss">

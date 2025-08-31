@@ -1,5 +1,5 @@
 <template>
-    <button class="app-submit-button" :class="{ 'loading': loading, 'danger': props.danger }" type="submit"
+    <button class="app-submit-button" :class="{ 'loading': loading, 'danger': props.danger }" :type="type ?? 'submit'"
         :disabled="loading" @click="clickAction">
         <template v-if="!loading">
             <slot />
@@ -16,18 +16,24 @@ const emit = defineEmits<{
 }>();
 const props = defineProps<{
     danger?: boolean,
+    type?: 'button' | 'submit' | 'reset' | undefined | null
 }>();
 
 const loading = ref<boolean>(false);
+const hasClickListener = getCurrentInstance()?.vnode.props?.onClick;
 
 async function clickAction() {
     if (loading.value) return;
 
     loading.value = true;
 
-    emit("click", () => {
+    if (hasClickListener) {
+        emit("click", () => {
+            loading.value = false;
+        });
+    } else {
         loading.value = false;
-    });
+    }
 }
 </script>
 
@@ -36,7 +42,7 @@ async function clickAction() {
     background-color: var(--main-background);
     color: var(--text);
     border: 3px solid var(--text);
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     padding: 10px 20px;
     cursor: pointer;
     font-size: 15px;

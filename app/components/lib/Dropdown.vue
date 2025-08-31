@@ -2,23 +2,20 @@
     <div>
         <div class="dropdown" :class="{ open: dropdownVisible }" @click="toggleDropdown">
             <div class="selected-option" :style="{ color: getColor(model) }">
-                {{ displayText(model) }}
+                <span class="selected-option-text">{{ displayText(model) }}</span>
                 <div class="selected-option-icon" :style="{ transform: dropdownVisible ? 'rotate(90deg)' : '' }">
-                    <svg width="13" height="22" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0 2.31221C0 0.60949 1.99205 -0.31442 3.29188 0.785441L11.1956 7.47323C12.1398 8.27213 12.1398 9.72787 11.1956 10.5268L3.29189 17.2146C1.99205 18.3144 0 17.3905 0 15.6878V2.31221Z"
-                            fill="currentColor" />
-                    </svg>
+                    <ChevronRightIcon />
+                </div>
+            </div>
+            <div v-if="dropdownVisible" class="options">
+                <div v-for="(option, index) in allOptions" :key="index" class="option"
+                    :style="{ color: getColor(option) }" :class="{ selected: model === option }"
+                    @click.stop="updateValue(option)">
+                    {{ displayText(option) }}
                 </div>
             </div>
         </div>
-
-        <div v-if="dropdownVisible" class="options">
-            <div v-for="(option, index) in allOptions" :key="index" class="option" :style="{ color: getColor(option) }"
-                :class="{ selected: model === option }" @click="updateValue(option)">
-                {{ displayText(option) }}
-            </div>
-        </div>
+        <div class="click-area" v-if="dropdownVisible" @click="dropdownVisible = false"></div>
     </div>
 </template>
 
@@ -70,9 +67,10 @@ const updateValue = (option: any) => {
 
 <style scoped lang="scss">
 .dropdown {
+    position: relative;
     border: var(--border);
-    border-radius: 25px;
-    width: 145px;
+    border-radius: var(--border-radius);
+    width: var(--dropdown-width);
     height: 50px;
     line-height: 50px;
     background-color: var(--main-background);
@@ -84,12 +82,9 @@ const updateValue = (option: any) => {
         padding-left: 24px;
         padding-right: 24px;
         align-items: center;
-
-        // For ellipsis
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        max-width: 100%; // ensures it fits inside the dropdown
     }
 
     &.open {
@@ -98,17 +93,24 @@ const updateValue = (option: any) => {
         border-bottom: 0px;
     }
 
+    .selected-option-text {
+        padding-right: 10px;
+    }
+
     .selected-option-icon {
         height: 50px;
         display: flex;
         align-items: center;
         color: var(--text);
         margin-right: -7px;
+        transition: transform 0.3s ease;
     }
 }
 
 .options {
-    width: 145px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
     border: var(--border);
     border-top: none;
     border-bottom-left-radius: 25px;
@@ -116,7 +118,9 @@ const updateValue = (option: any) => {
     background-color: var(--main-background);
     max-height: 188px;
     overflow-y: auto;
-    transition: transform 0.6s ease;
+    transition: all 0.6s ease;
+    z-index: 10;
+    transform: translateX(-1px); // line up the selected part and the options
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -143,5 +147,14 @@ const updateValue = (option: any) => {
             border-radius: var(--border-radius);
         }
     }
+}
+
+.click-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
 }
 </style>

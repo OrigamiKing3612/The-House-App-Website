@@ -25,12 +25,11 @@ div {
   cursor: default;
   margin-top: 35px;
   margin-bottom: 35px;
+  transition: background-color 0.3s ease;
 }
 
 :global(body) {
-  // margin-top: 35px;
   margin-bottom: 35px;
-  // overflow: hidden scroll;
 }
 
 label {
@@ -62,6 +61,12 @@ label {
 
 .link {
   text-decoration: none;
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
 }
 
 ::-webkit-scrollbar {

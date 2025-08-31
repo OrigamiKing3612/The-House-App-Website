@@ -6,7 +6,7 @@
                 :required="props.required" />
             <button v-if="!props.readonly && model != ''" type="button" class="toggle-password"
                 @click="show_password = !show_password">
-                <EyeIcon :open="show_password" />
+                <EyeIcon :open="show_password" :aria-label="show_password ? 'Hide Password' : 'Show Password'" />
             </button>
         </div>
     </div>
@@ -42,24 +42,18 @@ const type = computed(() => show_password.value ? 'text' : 'password')
 
 .input-wrapper {
     position: relative;
-    // width: 100%;
 }
 
 .toggle-password {
     position: absolute;
-    right: -15px;
-    top: 25%;
-    // transform: translateY(-50%);
+    right: 0.5rem;
+    top: 5%;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text);
-}
-
-@media (max-width: $mobile-width) {
-    .toggle-password {
-        margin-right: 2rem;
-    }
 }
 </style>
