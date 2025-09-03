@@ -15,6 +15,7 @@ export default defineNuxtConfig({
             },
             title: title,
             meta: [
+                { name: "title", content: title },
                 { name: "description", content: title },
                 { name: "publisher", content: "OrigamiKing3612" },
                 { name: "keywords", content: "The House App, The House App Desktop, The House App App" },

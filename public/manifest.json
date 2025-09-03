@@ -2,6 +2,7 @@
     "name": "The House App",
     "short_name": "The House App",
     "display": "standalone",
+    "start_url": "/",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",

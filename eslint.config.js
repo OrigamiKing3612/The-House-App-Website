@@ -1,41 +1,36 @@
 // @ts-check
+import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 
-import pluginVue from 'eslint-plugin-vue';
-import withNuxt from './.nuxt/eslint.config.mjs';
-
-export default withNuxt([
-  ...pluginVue.configs['flat/recommended'],
-  {
-    ignores: [
-      '**/.nuxt/**',
-      '**/dist/**',
-      '**/node_modules/**'
-    ],
-    rules: {
-        'vue/no-multiple-template-root': 'off',
-        'vue/multi-word-component-names': 'off',
-      'no-unused-vars': 'warn',
-      'no-undef': 'error',
-      'no-console': 'warn',
-      'no-debugger': 'warn',
-      'prefer-const': 'error',
-      // 'eqeqeq': ['error', 'always'],
-      'curly': ['error', 'all'],
-      'semi': ['error', 'always'],
-      'vue/require-v-for-key': 'warn',
-        "@typescript-eslint/ban-ts-comment": 'off',
-      'vue/define-emits-declaration': 'error',
-      'vue/no-mutating-props': 'error',
-      'vue/no-parsing-error': 'error',
-      'vue/no-export-in-script-setup': 'error',
-      'vue/max-attributes-per-line': ['error', {
-        "singleline": {
-          "max": 999,
-        },
-        "multiline": {
-          "max": 999,
+export default createConfigForNuxt({
+    features: {
+        tooling: true,
+        stylistic: {
+            commaDangle: 'never',
+            braceStyle: '1tbs'
         }
-      }]
     }
-  }
-]);
+}, {
+    rules: {
+    }
+}).overrideRules({
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/no-empty-object-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/multi-word-component-names': 'off',
+    'indent': 'off',
+    'vue/html-indent': ['error', 4],
+    '@stylistic/indent': ['error', 4, { SwitchCase: 1 }],
+    'vue/no-mutating-props': 'error',
+    'vue/no-export-in-script-setup': 'error',
+    // 'vue/max-attributes-per-line': ['error', { singleline: 99, multiline: 99 }],
+    'vue/max-attributes-per-line': 'off',
+    'vue/first-attribute-linebreak': ['error', {
+        singleline: 'ignore',
+        multiline: 'ignore'
+    }],
+    '@stylistic/max-statements-per-line': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'vue/require-toggle-inside-transition': 'off' // is this needed
+})
+
