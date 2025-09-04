@@ -60,6 +60,8 @@
 </template>
 
 <script setup lang="ts">
+import type { GitHubIssue } from '#imports';
+
 const issues = ref<GitHubIssue[]>([]);
 const enhancements = ref<GitHubIssue[]>([]);
 
