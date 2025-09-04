@@ -15,9 +15,11 @@
             </p>
         </Card>
         <div class="settings">
-            <Dropdown :options="['Issues', 'Feature Requests']" :option-display="a => a" v-model="mode" class="mode" />
+            <Dropdown :options="['Issues', 'Feature Requests']" :option-display="(a: string) => a" v-model="mode"
+                class="mode" />
             <SearchField v-model="search" v-if="!isScreenWidth && !isSmaller" />
-            <Dropdown :options="['Open', 'Closed']" :option-display="a => a" v-model="status" class="status" />
+            <Dropdown :options="['Open', 'Closed']" :option-display="(a: string) => a" v-model="status"
+                class="status" />
         </div>
         <SearchField v-model="search" v-if="isSmaller && !isScreenWidth" class="search" />
         <RoundedContainer v-if="mode === 'Issues'">
@@ -58,8 +60,6 @@
 </template>
 
 <script setup lang="ts">
-import type { GitHubIssue } from '#imports';
-
 const issues = ref<GitHubIssue[]>([]);
 const enhancements = ref<GitHubIssue[]>([]);
 

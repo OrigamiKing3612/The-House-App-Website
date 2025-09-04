@@ -1,3 +1,4 @@
+import { newGitHubIssue } from "#imports"
 import axios from "axios"
 
 const GetIssues = async () => {
@@ -8,7 +9,7 @@ const GetIssues = async () => {
             throw new Error("Expected array of issues, got: " + typeof response.data)
         }
 
-        return response.data.map((issue: any) => new GitHubIssue(
+        return response.data.map((issue: any) => newGitHubIssue(
             issue.id,
             issue.number,
             issue.title,
