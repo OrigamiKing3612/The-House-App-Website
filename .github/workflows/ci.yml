@@ -25,7 +25,7 @@ jobs:
           node-version: 22
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm nuxt prepare
+      - run: pnpm prepare
       - run: pnpm typecheck
   build:
     runs-on: ubuntu-latest
@@ -39,8 +39,8 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm build --no-minify --no-sourcemap
+      - run: pnpm install
+      - run: pnpm build --no-minify --no-sourcemap
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
