@@ -7,24 +7,27 @@
         "dev": "nuxt dev",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "postinstall": "nuxt prepare",
+        "typecheck": "nuxt typecheck",
+        "prepare": "nuxt prepare"
     },
     "dependencies": {
         "@nuxtjs/color-mode": "^3.5.2",
         "@nuxtjs/robots": "5.4.0",
         "@nuxtjs/sitemap": "7.4.3",
-        "axios": "^1.10.0",
+        "axios": "^1.11.0",
         "nuxt": "^4.1.0",
-        "vue": "^3.5.17"
+        "vue": "^3.5.21"
     },
     "devDependencies": {
-        "@eslint/js": "^9.31.0",
-        "@nuxt/eslint": "^1.5.2",
-        "eslint": "^9.31.0",
-        "eslint-plugin-vue": "^10.3.0",
-        "sass": "^1.89.2",
-        "typescript": "^5.8.3",
-        "typescript-eslint": "^8.36.0"
+        "@eslint/js": "^9.34.0",
+        "@nuxt/eslint": "^1.9.0",
+        "eslint": "^9.34.0",
+        "eslint-plugin-vue": "^10.4.0",
+        "sass": "^1.92.0",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.42.0",
+        "vue-tsc": "^3.0.6"
     },
     "packageManager": "pnpm@9.5.0"
 }

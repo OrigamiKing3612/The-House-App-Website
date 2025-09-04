@@ -1,3 +1,4 @@
+import { newGitHubIssue } from "#imports"
 import axios from "axios"
 
 const GetEnhancements = async () => {
@@ -8,7 +9,7 @@ const GetEnhancements = async () => {
             throw new Error("Expected array of enhancements, got: " + typeof response.data)
         }
 
-        return response.data.map((enhancements: any) => new GitHubIssue(
+        return response.data.map((enhancements: any) => newGitHubIssue(
             enhancements.id,
             enhancements.number,
             enhancements.title,
