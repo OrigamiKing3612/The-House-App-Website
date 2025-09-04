@@ -1,15 +1,5 @@
-import type { GitHubLabel } from "#imports";
-
-export interface GitHubIssue {
-    id: number;
-    number: number;
-    title: string;
-    html_url: string;
-    labels: GitHubLabel[];
-    state: string;
-    body: string;
-    state_reason: string;
-}
+import type { GitHubIssue } from "../types/GitHubIssue";
+import type { GitHubLabel } from "../types/GitHubLabel";
 
 export function newGitHubIssue(id: number, number: number, title: string, html_url: string, labels: GitHubLabel[], state: string, body: string, state_reason: string): GitHubIssue {
     return {
