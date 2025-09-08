@@ -1,5 +1,5 @@
 <template>
-    <TitleBar />
+    <TitleBar show-back-button />
     <div class="all">
         <slot />
     </div>

@@ -10,6 +10,7 @@
                     <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
                 </div>
             </ClientOnly>
+            <BackButton v-if="props.showBackButton" />
         </div>
         <div class="right-window-controls">
             <SwitchThemesButton />
@@ -18,6 +19,9 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps<{
+    showBackButton: boolean,
+}>();
 const leftPadding = ref("10px");
 
 const colorMode = useColorMode();

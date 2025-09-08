@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar-button">
         <button class="sidebar-button-button" @click="model = !model">
-            <ChevronLeftIcon style="width: 30px; height: 30px;" />
+            <ChevronLeftIcon style="width: 30px; height: 60px;" />
         </button>
     </div>
 </template>
