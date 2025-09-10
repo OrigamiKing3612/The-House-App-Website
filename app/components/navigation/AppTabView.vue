@@ -1,11 +1,14 @@
 <template>
     <div class="floating">
         <div class="tab-view">
-            <NuxtLink to="/" :class="{ active: route.path === '/' }">
+            <NuxtLink to="/" active-class="active">
                 <HomeIcon style="width: 30px; height: 30px;" />
             </NuxtLink>
-            <NuxtLink to="/bugs" :class="{ active: route.path === '/bugs' }">
+            <NuxtLink to="/bugs" active-class="active">
                 <BugIcon style="width: 30px; height: 30px;" />
+            </NuxtLink>
+            <NuxtLink to="/changelog" active-class="active">
+                <ChangelogIcon style="width: 30px; height: 30px;" />
             </NuxtLink>
         </div>
     </div>
@@ -18,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
-
 const sidebar_open = ref(false);
 </script>
 

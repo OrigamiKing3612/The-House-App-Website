@@ -1,10 +1,13 @@
 <template>
     <div class="sidebar" :class="{ open: model }">
-        <NuxtLink to="/" :class="{ active: route.path === '/' }" class="link">
+        <NuxtLink to="/" active-class="active" class="link">
             <h1 class="title">Home</h1>
         </NuxtLink>
-        <NuxtLink to="/bugs" :class="{ active: route.path === '/bugs' }" class="link">
+        <NuxtLink to="/bugs" active-class="active" class="link">
             <h1 class="title">Bug Tracker</h1>
+        </NuxtLink>
+        <NuxtLink to="/changelog" active-class="active" class="link">
+            <h1 class="title">Changelog</h1>
         </NuxtLink>
 
         <SwitchThemesButton class="theme-button" />
