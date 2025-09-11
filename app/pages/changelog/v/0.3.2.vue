@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 
-const title = ref("v0.3.2 - Game Mode")
+const title = ref(data.changelogs["0.3.2"].title)
 
 definePageMeta({
     layout: "default",

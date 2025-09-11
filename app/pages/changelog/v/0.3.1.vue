@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 
-const title = ref("v0.3.1 - UI fixes and improvements")
+const title = ref(data.changelogs["0.3.1"].title)
 
 definePageMeta({
     layout: "default",

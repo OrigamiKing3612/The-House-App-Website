@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 
-const title = ref("v0.3.3 - Deleting Announcements")
+const title = ref(data.changelogs["0.3.3"].title)
 
 definePageMeta({
     layout: "default",

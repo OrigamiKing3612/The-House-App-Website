@@ -1,9 +1,9 @@
 <template>
     <Card title="Changelog">
-        <div v-for="v in data.reverse()">
-            <NuxtLink :to="`/changelog/v/${v.text}`" class="link">
+        <div v-for="v in Object.values(data.changelogs).reverse()">
+            <NuxtLink :to="`/changelog/v/${v.version}`" class="link">
                 <AppSubmitButton>
-                    v{{ v.text }}
+                    v{{ v.version }}
                 </AppSubmitButton>
             </NuxtLink>
         </div>
@@ -11,21 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-const data = [
-    {
-        text: "0.3.1"
-    },
-    {
-        text: "0.3.2"
-    },
-    {
-        text: "0.3.3"
-    },
-    // {
-    //     text: "0.4.0",
-    // },
-]
-
 definePageMeta({
     layout: "tab-view",
     title: "Changelog"
