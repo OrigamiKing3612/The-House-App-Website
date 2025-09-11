@@ -13,13 +13,17 @@ const props = withDefaults(defineProps<{
     readonly?: boolean,
     required?: boolean,
     disabled?: boolean
+    min?: number,
+    max?: number
 }>(), {
     label: '',
     placeholder: '',
     type: 'text',
     readonly: false,
     required: false,
-    disabled: false
+    disabled: false,
+    min: 0,
+    max: 1000
 })
 
 const model = defineModel<number | string>({ required: true })
@@ -29,7 +33,21 @@ const onInput = (event: Event) => {
     // Remove any non-digit characters
     const sanitized = input.value.replace(/[^0-9]/g, "")
     input.value = sanitized
-    model.value = sanitized === "" ? "" : Number(sanitized)
+    const value = sanitized === "" ? 0 : Number(sanitized)
+
+    if (value < props.min || value > props.max) {
+        if (sanitized !== "") {
+            if (value < props.min) {
+                model.value = props.min
+            } else if (value > props.max) {
+                model.value = props.max
+            }
+        } else {
+            model.value = ""
+        }
+    } else {
+        model.value = value
+    }
 }
 </script>
 

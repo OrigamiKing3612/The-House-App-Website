@@ -80,5 +80,9 @@ const toggleDropdown = () => {
     &::-webkit-scrollbar {
         width: 5px;
     }
+
+    :deep(.disclosure-group) {
+        margin: 0 -10px;
+    }
 }
 </style>

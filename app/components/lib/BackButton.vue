@@ -29,7 +29,6 @@ const router = useRouter();
         &:hover {
             background-color: var(--background-primary);
             color: var(--primary);
-            transform: scale(1.05);
         }
     }
 }

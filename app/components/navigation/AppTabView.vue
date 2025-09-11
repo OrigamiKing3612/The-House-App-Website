@@ -58,8 +58,6 @@ const sidebar_open = ref(false);
 
             &:hover {
                 background-color: var(--background-primary);
-                padding: 5px 25px;
-                transform: scale(1.05);
             }
 
             &.active {
