@@ -1,18 +1,6 @@
 <template>
-    <Card :title="title">
+    <ChangelogPage :data="data.changelogs['0.3.3']">
         <p>This update adds deleting announcements. Announcements can now be deleted by pressing the pencil icon on the
             announcement.</p>
-    </Card>
+    </ChangelogPage>
 </template>
-
-<script lang="ts" setup>
-
-const title = ref(data.changelogs["0.3.3"].title)
-
-definePageMeta({
-    layout: "default",
-    title: title.value
-});
-</script>
-
-<style lang="scss" scoped></style>
