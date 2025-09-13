@@ -33,11 +33,12 @@ p {
 
 ul {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 li {
-
     text-align: left;
+    margin-left: -5px;
 }
 
 #card {

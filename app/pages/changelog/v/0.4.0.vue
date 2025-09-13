@@ -12,6 +12,9 @@
             <li>
                 <b>Admin Approval</b>: Presets can be set to require admin approval before being awarded.
             </li>
+            <li>
+                <b>Deleting Points</b>: Points can now be deleted from a house.
+            </li>
         </ul>
         <h1>Live Updating Standings Page</h1>
         <p>
