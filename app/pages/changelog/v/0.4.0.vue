@@ -41,6 +41,7 @@
         <ul>
             <li>Points in the point feed are now sorted properly</li>
             <li>Reporting bugs does not show an error everytime. It also shows the correct error message</li>
+            <li>Fix the navy house color to be more navy like</li>
         </ul>
     </ChangelogPage>
 </template>

@@ -25,6 +25,13 @@ h1 {
     text-align: left;
 }
 
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
 p {
     margin-top: 10px;
     margin-bottom: 5px;
