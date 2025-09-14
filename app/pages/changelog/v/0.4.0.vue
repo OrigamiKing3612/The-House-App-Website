@@ -37,5 +37,10 @@
             You can now receive notifications when your house receives points. You can enable/disable these in your
             profile notification settings.
         </p>
+        <h1>Bug Fixes</h1>
+        <ul>
+            <li>Points in the point feed are now sorted properly</li>
+            <li>Reporting bugs does not show an error everytime. It also shows the correct error message</li>
+        </ul>
     </ChangelogPage>
 </template>
