@@ -1,17 +1,5 @@
 <template>
-    <Card :title="title">
+    <ChangelogPage :data="data.changelogs['0.3.1']">
         <p>This update brings UI fixes and improvements.</p>
-    </Card>
+    </ChangelogPage>
 </template>
-
-<script lang="ts" setup>
-
-const title = ref(data.changelogs["0.3.1"].title)
-
-definePageMeta({
-    layout: "default",
-    title: title.value
-});
-</script>
-
-<style lang="scss" scoped></style>
