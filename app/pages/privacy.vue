@@ -57,7 +57,6 @@
             <h2>9. Contact</h2>
             If you have any questions, contact us at:
             <SupportEmail />
-            <!-- [your domain or contact form link] -->
         </div>
     </Card>
 </template>
