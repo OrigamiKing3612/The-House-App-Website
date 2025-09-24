@@ -15,6 +15,16 @@ definePageMeta({
     layout: "default",
     title: props.data.title
 });
+
+useSeoMeta({
+    title: `Changelog - ${props.data.title}`,
+    description: props.data.description,
+    ogTitle: `Changelog - ${props.data.title}`,
+    ogUrl: "https://the-house-app.com",
+    ogImage: "https://the-house-app.com/web-app-manifest-192x192.png",
+    twitterImage: "https://the-house-app.com/web-app-manifest-192x192.png",
+    twitterTitle: `Changelog - ${props.data.title}`,
+})
 </script>
 
 <style lang="scss">

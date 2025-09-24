@@ -35,6 +35,15 @@ export const data = {
             date: new Date("2025-09-15"),
             description: "Points Presets v2",
             tags: ["changelog", "points-presets", "ui"]
+        },
+        "0.4.1": {
+            title: "v0.4.1 - Bug Fixes",
+            version: "0.4.1",
+            id: "41",
+            link: "https://the-house-app.com/changelog/v/0.4.0",
+            date: new Date("2025-09-23"),
+            description: "Bug fixes",
+            tags: ["changelog", "bug-fixes"]
         }
     }
 }

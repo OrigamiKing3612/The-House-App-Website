@@ -16,7 +16,7 @@ export default defineNuxtConfig({
             title: title,
             meta: [
                 { name: "title", content: title },
-                { name: "description", content: title },
+                { name: "description", content: description },
                 { name: "publisher", content: "OrigamiKing3612" },
                 { name: "keywords", content: "The House App, The House App Desktop, The House App App" },
                 { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#ffffff" },
