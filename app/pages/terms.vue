@@ -21,7 +21,7 @@
             </ul>
 
             <h2>4. Admin Rights</h2>
-            Admins in your organization may view or manage your account, including assigning houses, marking attendance,
+            Admins in your organization may view or manage your account, including assigning house,
             or removing access.
 
             <h2>5. Modifications to the Service</h2>
