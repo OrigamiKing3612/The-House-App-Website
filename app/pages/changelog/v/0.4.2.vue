@@ -12,6 +12,7 @@
         <h1>Bug Fixes</h1>
         <ul>
             <li>Points in the points feed can now be clicked to see more infomation</li>
+            <li>Fixed a bug where points looked like they are added twice in games</li>
         </ul>
     </ChangelogPage>
 </template>

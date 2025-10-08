@@ -22,8 +22,8 @@ defineProps<{
 }>();
 
 const show = ref(false);
-const dropdownRef = ref<HTMLElement | null>(null);
-const contentRef = ref<HTMLElement | null>(null)
+const dropdownRef = useTemplateRef("dropdownRef")
+const contentRef = useTemplateRef("contentRef")
 const position = ref({ top: '0px', left: '0px' })
 
 function toggle() {
