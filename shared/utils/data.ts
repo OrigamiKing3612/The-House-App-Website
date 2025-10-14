@@ -44,6 +44,15 @@ export const data = {
             date: new Date("2025-09-23"),
             description: "Bug fixes",
             tags: ["changelog", "bug-fixes"]
+        },
+        "0.4.2": {
+            title: "v0.4.2 - New Edit Users Table",
+            version: "0.4.2",
+            id: "42",
+            link: "https://the-house-app.com/changelog/v/0.4.2",
+            date: new Date("2025-10-10"),
+            description: "New Edit Users Table and Bug Fixes",
+            tags: ["changelog", "bug-fixes", "ui"]
         }
     }
 }
