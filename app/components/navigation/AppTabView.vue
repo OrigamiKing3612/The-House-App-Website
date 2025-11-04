@@ -1,20 +1,20 @@
 <template>
-    <div class="floating">
-        <div class="tab-view">
-            <NuxtLink to="/" active-class="active">
-                <HomeIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
-            <NuxtLink to="/bugs" active-class="active">
-                <BugIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
-            <NuxtLink to="/changelog" active-class="active">
-                <ChangelogIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
-            <NuxtLink to="https://status.the-house-app.com" external active-class="active" target="_blank">
-                <StatusIcon style="width: 30px; height: 30px;" />
-            </NuxtLink>
-        </div>
-    </div>
+    <!-- <div class="floating"> -->
+    <!--     <div class="tab-view"> -->
+    <!--         <NuxtLink to="/" active-class="active"> -->
+    <!--             <HomeIcon style="width: 30px; height: 30px;" /> -->
+    <!--         </NuxtLink> -->
+    <!--         <NuxtLink to="/bugs" active-class="active"> -->
+    <!--             <BugIcon style="width: 30px; height: 30px;" /> -->
+    <!--         </NuxtLink> -->
+    <!--         <NuxtLink to="/changelog" active-class="active"> -->
+    <!--             <ChangelogIcon style="width: 30px; height: 30px;" /> -->
+    <!--         </NuxtLink> -->
+    <!--         <NuxtLink to="https://status.the-house-app.com" external active-class="active" target="_blank"> -->
+    <!--             <StatusIcon style="width: 30px; height: 30px;" /> -->
+    <!--         </NuxtLink> -->
+    <!--     </div> -->
+    <!-- </div> -->
     <ClientOnly>
         <div class="sidebar">
             <SidebarButton v-model="sidebar_open" />

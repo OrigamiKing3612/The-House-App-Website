@@ -3,14 +3,27 @@
         <div class="left-window-controls">
             <ClientOnly>
                 <div v-if="colorMode.value === 'dark'">
-                    <img src="~/assets/images/logo-icon-dark.png" width="30" class="logo"
-                        alt="House App Dark Mode Logo">
+                    <img src="~/assets/images/logo-icon-dark.png" width="30" class="logo" alt="House App Logo">
                 </div>
                 <div v-else>
                     <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
                 </div>
             </ClientOnly>
-            <BackButton v-if="props.showBackButton" />
+            <!-- <BackButton v-if="props.showBackButton" /> -->
+            <div class="tabs">
+                <NuxtLink to="/" active-class="active" class="link">
+                    <p class="title">Home</p>
+                </NuxtLink>
+                <NuxtLink to="/bugs" active-class="active" class="link">
+                    <p class="title">Bug Tracker</p>
+                </NuxtLink>
+                <NuxtLink to="/blog" active-class="active" class="link">
+                    <p class="title">Blog</p>
+                </NuxtLink>
+                <NuxtLink to="/about" active-class="active" class="link">
+                    <p class="title">About</p>
+                </NuxtLink>
+            </div>
         </div>
         <div class="right-window-controls">
             <SwitchThemesButton />
@@ -22,49 +35,39 @@
 const props = defineProps<{
     showBackButton: boolean,
 }>();
-const leftPadding = ref("10px");
-
 const colorMode = useColorMode();
 </script>
 
 <style scoped lang="scss">
 .title-bar {
     position: fixed;
-    width: 100%;
-    top: 0;
+    top: env(safe-area-inset-top, 0);
     left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 65px;
-    // background-color: var(--main-background);
+
+    height: calc(55px + env(safe-area-inset-top, 0));
+    padding-top: env(safe-area-inset-top, 0);
+
+    background-color: var(--main-background);
+    border-bottom: 1px solid var(--background-primary);
     z-index: 999;
     transition: background-color 0.3s ease;
 
-    .right-window-controls {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        top: 7px;
-        right: 10px;
-        gap: 10px;
-    }
-
     .left-window-controls {
-        position: fixed;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        top: 7px;
-        left: v-bind(leftPadding);
         gap: 10px;
+        padding-left: max(20px, env(safe-area-inset-left, 0));
     }
-}
 
-@media (max-width: 900px) {
-    .title-bar {
-        background-color: var(--main-background);
+    .right-window-controls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-right: max(20px, env(safe-area-inset-right, 0));
     }
 }
 
@@ -74,7 +77,21 @@ const colorMode = useColorMode();
     }
 }
 
-.logo {
-    margin: 10px;
+.tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .title {
+        font-size: 24px;
+        margin: 0 15px;
+        font-weight: bold;
+
+        &:hover {
+            color: var(--primary);
+            cursor: pointer;
+        }
+    }
+
 }
 </style>
