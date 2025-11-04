@@ -12,6 +12,7 @@
         "prepare": "nuxt prepare"
     },
     "dependencies": {
+        "@nuxt/image": "1.11.0",
         "@nuxtjs/color-mode": "^3.5.2",
         "@nuxtjs/robots": "5.4.0",
         "@nuxtjs/sitemap": "7.4.3",
