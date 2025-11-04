@@ -10,6 +10,9 @@
             <NuxtLink to="/changelog" active-class="active">
                 <ChangelogIcon style="width: 30px; height: 30px;" />
             </NuxtLink>
+            <NuxtLink to="https://status.the-house-app.com" external active-class="active" target="_blank">
+                <StatusIcon style="width: 30px; height: 30px;" />
+            </NuxtLink>
         </div>
     </div>
     <ClientOnly>

@@ -9,6 +9,9 @@
         <NuxtLink to="/changelog" active-class="active" class="link">
             <h1 class="title">Changelog</h1>
         </NuxtLink>
+        <NuxtLink to="https://status.the-house-app.com" external active-class="active" class="link" target="_blank">
+            <h1 class="title">Status</h1>
+        </NuxtLink>
 
         <SwitchThemesButton class="theme-button" />
         <div class="title back" @click="model = false">
