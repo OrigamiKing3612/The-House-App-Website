@@ -32,10 +32,5 @@
         "typescript-eslint": "^8.46.1",
         "vue-tsc": "^3.1.1"
     },
-    "pnpm": {
-        "overrides": {
-            "vite": "npm:rolldown-vite@latest"
-        }
-    },
     "packageManager": "pnpm@9.5.0"
 }
