@@ -12,7 +12,6 @@
 
 <script lang="ts" setup>
 definePageMeta({
-    layout: "tab-view",
     title: "Changelog"
 });
 </script>

@@ -10,7 +10,7 @@
                 </div>
             </ClientOnly>
             <!-- <BackButton v-if="props.showBackButton" /> -->
-            <div class="tabs">
+            <div class="tabs" id="tabs">
                 <NuxtLink to="/" active-class="active" class="link">
                     <p class="title">Home</p>
                 </NuxtLink>
@@ -20,8 +20,11 @@
                 <NuxtLink to="/blog" active-class="active" class="link">
                     <p class="title">Blog</p>
                 </NuxtLink>
-                <NuxtLink to="/about" active-class="active" class="link">
-                    <p class="title">About</p>
+                <!-- <NuxtLink to="/about" active-class="active" class="link"> -->
+                <!--     <p class="title">About</p> -->
+                <!-- </NuxtLink> -->
+                <NuxtLink to="/contact" active-class="active" class="link">
+                    <p class="title">Contact Us</p>
                 </NuxtLink>
             </div>
         </div>
@@ -29,6 +32,12 @@
             <SwitchThemesButton />
         </div>
     </div>
+    <ClientOnly>
+        <div class="sidebar">
+            <SidebarButton v-model="sidebar_open" />
+            <Sidebar v-model="sidebar_open" />
+        </div>
+    </ClientOnly>
 </template>
 
 <script setup lang="ts">
@@ -36,6 +45,7 @@ const props = defineProps<{
     showBackButton: boolean,
 }>();
 const colorMode = useColorMode();
+const sidebar_open = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -73,6 +83,18 @@ const colorMode = useColorMode();
 
 @media (max-width: 450px) {
     .theme-button {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    #tabs {
+        display: none;
+    }
+}
+
+@media (min-width: $mobile-width) {
+    .sidebar {
         display: none;
     }
 }

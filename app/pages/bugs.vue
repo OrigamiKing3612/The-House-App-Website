@@ -73,7 +73,6 @@ const isScreenWidth = useScreenWidth(520);
 const isSmaller = useScreenWidth(650);
 
 definePageMeta({
-    layout: "tab-view",
     title: "Bug Tracker"
 });
 

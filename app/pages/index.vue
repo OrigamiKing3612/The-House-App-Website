@@ -77,7 +77,6 @@
 <script setup lang="ts">
 
 definePageMeta({
-    layout: "tab-view",
     title: "The House App"
 });
 </script>
