@@ -3,7 +3,6 @@
     <div class="all">
         <slot />
     </div>
-    <AppTabView />
     <Footer />
 </template>
 
