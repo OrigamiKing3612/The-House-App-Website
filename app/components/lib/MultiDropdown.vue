@@ -60,7 +60,7 @@ const getColor = (option: any | string) => {
     if (props.optionColor) {
         return props.optionColor(option);
     } else {
-        return "var(--text-0)";
+        return "var(--text-1)";
     }
 };
 
@@ -73,7 +73,7 @@ const isSelected = (option: any) => {
 <style scoped lang="scss">
 .dropdown {
     position: relative;
-    border: 1px solid var(--text-0);
+    border: 1px solid var(--text-1);
     border-radius: var(--border-radius);
     width: var(--dropdown-width);
     height: 50px;
@@ -106,7 +106,7 @@ const isSelected = (option: any) => {
         height: 50px;
         display: flex;
         align-items: center;
-        color: var(--text-0);
+        color: var(--text-1);
         margin-right: -7px;
         transition: transform 0.3s ease;
     }

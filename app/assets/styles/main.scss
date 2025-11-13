@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-0);
+  color: var(--text-1);
   transition: margin-top 0.3s ease;
 }
 
@@ -50,6 +50,10 @@
   text-decoration: none;
   color: var(--accent);
   font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -71,5 +75,5 @@
 
 ::selection {
   background: var(--accent);
-  color: var(--text-1);
+  color: var(--text-0);
 }

@@ -40,8 +40,8 @@ async function clickAction() {
 <style scoped lang="scss">
 .app-submit-button {
     background-color: var(--background-0);
-    color: var(--text-0);
-    border: 3px solid var(--text-0);
+    color: var(--text-1);
+    border: 3px solid var(--text-1);
     border-radius: var(--border-radius);
     padding: 10px 20px;
     cursor: pointer;
@@ -73,7 +73,7 @@ async function clickAction() {
 .spinner {
     width: 1em;
     height: 1em;
-    border: 2px solid var(--text-0);
+    border: 2px solid var(--text-1);
     border-top-color: transparent;
     border-radius: 50%;
     display: inline-block;

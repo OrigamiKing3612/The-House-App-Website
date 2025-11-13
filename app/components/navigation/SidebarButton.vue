@@ -19,7 +19,7 @@ const model = defineModel<boolean>({ required: true });
 
     .sidebar-button-button {
         background-color: var(--background-0);
-        color: var(--text-0);
+        color: var(--text-1);
         border: var(--border);
         border-radius: var(--border-radius) 0 0 var(--border-radius);
         cursor: pointer;

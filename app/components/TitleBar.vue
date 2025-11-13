@@ -3,10 +3,10 @@
         <div class="left-window-controls">
             <ClientOnly>
                 <div v-if="colorMode.value === 'dark'">
-                    <img src="~/assets/images/logo-icon-dark.png" width="30" class="logo" alt="House App Logo">
+                    <NuxtImg src="/logo/icon-dark.png" width="30" class="logo" alt="House App Logo" />
                 </div>
                 <div v-else>
-                    <img src="~/assets/images/logo-icon.png" width="30" class="logo" alt="House App Logo">
+                    <NuxtImg src="/logo/icon.png" width="30" class="logo" alt="House App Logo" />
                 </div>
             </ClientOnly>
             <!-- <BackButton v-if="props.showBackButton" /> -->
@@ -108,7 +108,7 @@ const sidebar_open = ref(false);
         font-size: 24px;
         margin: 0 15px;
         font-weight: bold;
-        color: var(--text-primary);
+        color: var(--text-0);
 
         &:hover {
             color: var(--accent);

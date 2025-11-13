@@ -22,6 +22,6 @@ h3 {
     margin-top: 15px;
     margin-bottom: 5px;
     text-align: left;
-    color: var(--text-1)
+    color: var(--text-0)
 }
 </style>

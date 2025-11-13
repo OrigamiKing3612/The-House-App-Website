@@ -77,7 +77,7 @@
 
             a {
                 display: block;
-                color: var(--text-2);
+                color: var(--text-1);
                 font-size: 0.9rem;
                 text-decoration: none;
                 margin: 0.25rem 0;

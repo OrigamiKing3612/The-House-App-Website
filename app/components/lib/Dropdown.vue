@@ -46,7 +46,7 @@ const getColor = (option: any | string) => {
     if (props.optionColor && option) {
         return props.optionColor(option);
     } else {
-        return "var(--text-0)";
+        return "var(--text-1)";
     }
 };
 
@@ -99,7 +99,7 @@ const updateValue = (option: any) => {
         height: 50px;
         display: flex;
         align-items: center;
-        color: var(--text-0);
+        color: var(--text-1);
         margin-right: -7px;
         transition: transform 0.3s ease;
     }

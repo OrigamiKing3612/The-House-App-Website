@@ -40,7 +40,7 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    color: var(--text-0);
+    color: var(--text-1);
     padding: 7px;
     font-size: 0.9rem;
     margin-right: 13px;

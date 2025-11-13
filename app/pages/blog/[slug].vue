@@ -32,14 +32,14 @@ useSeoMeta({
 
 <style scoped lang="scss">
 .blog {
-    max-width: max-content;
+    width: 80vw;
 
     .header {
         margin-bottom: 1rem;
         text-align: left;
 
         .description {
-            color: var(--text-2);
+            color: var(--subtext-0);
         }
     }
 }

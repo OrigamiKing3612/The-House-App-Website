@@ -60,7 +60,7 @@ const toggleDropdown = () => {
         height: 50px;
         display: flex;
         align-items: center;
-        color: var(--text-0);
+        color: var(--text-1);
         margin-right: -7px;
         transition: transform 0.3s ease;
     }

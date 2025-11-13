@@ -20,7 +20,7 @@ const router = useRouter();
         background: none;
         border-radius: 50px;
         font-weight: bold;
-        color: var(--text-0);
+        color: var(--text-1);
         // padding: 10px;
         width: 40px;
         height: 40px;

@@ -6,9 +6,13 @@ $mobile-width: 450px;
 :root {
   --accent: #00b8fb;
 
-  --text-0: hsl(197, 20%, 12%);
-  --text-1: hsl(210, 20%, 10%);
-  --text-2: hsl(197 20% 20%);
+  --text-0: hsl(210, 20%, 10%);
+  --text-1: hsl(197, 20%, 12%);
+  // --text-2: hsl(197 20% 20%);
+
+  --subtext-0: hsl(197, 20%, 20%);
+
+  --always-white: hsl(196 100% 98%);
 
   --background-0: hsl(196 100% 98%);
   --background-1: hsl(196 100% 90%);
@@ -35,15 +39,19 @@ $mobile-width: 450px;
 
   --border-radius: 20px;
   --border-radius-small: 4px;
-  --border: 1px solid var(--text-0);
+  --border: 1px solid var(--text-1);
   --hover-shadow: 3px 3px 0px var(--accent);
 }
 
 /*  MARK: Dark theme */
 :root.dark {
-  --text-0: hsl(0, 0%, 85%);
-  --text-1: hsl(0, 0%, 95%);
-  --text-2: hsl(0 0% 40%);
+  --text-0: hsl(0, 0%, 93%);
+  --text-1: hsl(0, 0%, 83%);
+  // --text-2: hsl(0 0% 40%);
+
+  --subtext-0: hsl(0, 0%, 70%);
+
+  --always-white: hsl(0, 0%, 95%);
 
   --background-0: hsl(196 19% 0%);
   --background-1: hsl(196 19% 20%);
