@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         logLevel: 3,
     },
     ssr: true,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image"],
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content"],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
@@ -85,5 +85,24 @@ export default defineNuxtConfig({
     },
     robots: {
         sitemap: '/sitemap.xml',
+    },
+    content: {
+
     }
+    // content: {
+    //     build: {
+    //         markdown: {
+    //             highlight: {
+    //                 theme: {
+    //                     default: 'material-theme-lighter',
+    //                     dark: 'material-theme-palenight'
+    //                 },
+    //                 langs: ['sql', 'diff', 'ini']
+    //             }
+    //         }
+    //     },
+    //     preview: {
+    //         api: 'https://api.nuxt.studio'
+    //     }
+    // },
 })

@@ -3,20 +3,9 @@
 @use "./lib/_housecolors.scss" as *;
 @use "./lib/_variables.scss" as *;
 @use "./lib/input_types.scss" as *;
+@use "./lib/tags.scss" as *;
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-.link,
-label,
-div {
-  color: var(--text);
-}
 
 :global(html) {
   background-color: var(--main-background) !important;
@@ -30,11 +19,6 @@ div {
 
 :global(body) {
   margin-bottom: 35px;
-}
-
-label {
-  padding-right: 10px;
-  margin-top: 5px;
 }
 
 .all {

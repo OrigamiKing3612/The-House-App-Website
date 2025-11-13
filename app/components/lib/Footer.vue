@@ -39,7 +39,7 @@
 .footer {
     margin-top: 6.5rem;
     padding: 2rem;
-    border-top: 1px solid var(--background-primary);
+    border-top: var(--divider-thin);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -7,15 +7,15 @@ export default defineEventHandler(async (event) => {
         site_url: 'https://the-house-app.com/',
         feed_url: 'https://the-house-app.com/rss',
     });
-    for (const post of Object.values(data.changelogs)) {
-        feed.item({
-            title: post.title,
-            url: post.link,
-            description: post.description,
-            date: post.date,
-            categories: post.tags,
-        });
-    }
+    // for (const post of Object.values(data.changelogs)) {
+    // feed.item({
+    //     title: post.title,
+    //     url: post.link,
+    //     description: post.description,
+    //     date: post.date,
+    //     categories: post.tags,
+    // });
+    // }
     const feedString = feed.xml({ indent: true });
 
     event.node.res.setHeader('content-type', 'text/xml');

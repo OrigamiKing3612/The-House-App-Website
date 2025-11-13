@@ -1,8 +1,8 @@
 <template>
     <div class="card">
-        <h4 v-if="props.title" class="title">
+        <div v-if="props.title" class="title">
             {{ props.title }}
-        </h4>
+        </div>
         <div class="v-container">
             <slot />
         </div>
@@ -30,12 +30,19 @@ const padding_top = computed(() => {
     width: 100%;
 
     .title {
+        display: block;
+        margin-top: 1.33em;
+        margin-bottom: 1.33em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
         position: absolute;
         top: -18px;
         left: 15px;
         font-size: 1.4em;
         letter-spacing: -1px;
         text-align: left;
+        color: var(--text-primary);
     }
 
     .v-container {

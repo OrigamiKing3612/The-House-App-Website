@@ -62,7 +62,7 @@ const sidebar_open = ref(false);
     padding-top: env(safe-area-inset-top, 0);
 
     background-color: var(--main-background);
-    border-bottom: 1px solid var(--background-primary);
+    border-bottom: var(--divider-thin);
     z-index: 999;
     transition: background-color 0.3s ease;
 

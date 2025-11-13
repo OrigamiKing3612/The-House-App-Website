@@ -2,10 +2,13 @@
 
 /*  MARK: Light theme */
 :root {
-  --text: #384c53;
-  --text-secondary: #243136;
+  --text-primary: hsl(210, 20%, 10%);
+  --text: hsl(197, 20%, 12%);
+  --text-secondary: hsl(197 20% 20%);
 
-  --main-background: #ffffff;
+  --main-background: hsl(216 100% 98%);
+
+  --background: hsla(0 0% 0% / 0.01);
 
   --background-primary: #C3EFFF;
   --background-secondary: #adf;
@@ -23,15 +26,21 @@
   --gold: #FFD700;
 
   --transparent: rgba(0, 0, 0, 0.8);
+
+  --divider: 3px solid var(--background-primary);
+  --divider-thin: 1px solid var(--background-primary);
 }
 
 /*  MARK: Dark theme */
 :root.dark {
   // Only change the colors that are different from the light theme
-  --text: #ffffff;
-  --text-secondary: #4d4d4d;
+  --text-primary: hsl(0, 0%, 95%);
+  --text: hsl(0, 0%, 85%);
+  --text-secondary: hsl(0 0% 40%);
 
-  --main-background: #000000;
+  --background: hsla(184 100% 96% / 0.025);
+
+  --main-background: hsl(0 0% 0%);
 
   --background-primary: #384c53;
   --background-secondary: rgb(32, 38, 43);
