@@ -44,7 +44,7 @@ defineProps<{
     }
 
     &:hover {
-        background-color: var(--background-secondary);
+        background-color: var(--background-2);
         border-radius: var(--border-radius);
         cursor: pointer;
     }

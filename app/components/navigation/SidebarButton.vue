@@ -18,8 +18,8 @@ const model = defineModel<boolean>({ required: true });
     z-index: 2; //makes it above the footer
 
     .sidebar-button-button {
-        background-color: var(--main-background);
-        color: var(--text);
+        background-color: var(--background-0);
+        color: var(--text-0);
         border: var(--border);
         border-radius: var(--border-radius) 0 0 var(--border-radius);
         cursor: pointer;

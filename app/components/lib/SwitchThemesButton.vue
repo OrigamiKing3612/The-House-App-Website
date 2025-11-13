@@ -30,7 +30,7 @@ const changeTheme = (done: () => void) => {
     padding: 5px 15px;
 
     &:hover {
-        color: var(--primary);
+        color: var(--accent);
         transform: scale(1.05);
     }
 }

@@ -23,7 +23,7 @@ const padding_top = computed(() => {
 .card {
     position: relative;
     padding: v-bind(padding_top) 0px 20px 0px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     border-radius: var(--border-radius);
     border: var(--border);
     max-width: 450px;
@@ -42,7 +42,7 @@ const padding_top = computed(() => {
         font-size: 1.4em;
         letter-spacing: -1px;
         text-align: left;
-        color: var(--text-primary);
+        color: var(--text-1);
     }
 
     .v-container {

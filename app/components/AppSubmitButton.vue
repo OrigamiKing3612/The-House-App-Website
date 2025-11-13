@@ -39,19 +39,19 @@ async function clickAction() {
 
 <style scoped lang="scss">
 .app-submit-button {
-    background-color: var(--main-background);
-    color: var(--text);
-    border: 3px solid var(--text);
+    background-color: var(--background-0);
+    color: var(--text-0);
+    border: 3px solid var(--text-0);
     border-radius: var(--border-radius);
     padding: 10px 20px;
     cursor: pointer;
     font-size: 15px;
-    box-shadow: 0 0 0 var(--primary);
+    box-shadow: 0 0 0 var(--accent);
     transition: box-shadow 0.1s;
 
     &:hover {
-        background-color: var(--background-primary);
-        box-shadow: 3px 3px 0px var(--primary);
+        background-color: var(--background-1);
+        box-shadow: 3px 3px 0px var(--accent);
     }
 
     &.loading {
@@ -73,7 +73,7 @@ async function clickAction() {
 .spinner {
     width: 1em;
     height: 1em;
-    border: 2px solid var(--text);
+    border: 2px solid var(--text-0);
     border-top-color: transparent;
     border-radius: 50%;
     display: inline-block;

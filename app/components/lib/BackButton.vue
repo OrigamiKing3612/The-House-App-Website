@@ -20,15 +20,15 @@ const router = useRouter();
         background: none;
         border-radius: 50px;
         font-weight: bold;
-        color: var(--text);
+        color: var(--text-0);
         // padding: 10px;
         width: 40px;
         height: 40px;
         font-size: 16px;
 
         &:hover {
-            background-color: var(--background-primary);
-            color: var(--primary);
+            background-color: var(--background-1);
+            color: var(--accent);
         }
     }
 }

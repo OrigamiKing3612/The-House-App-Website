@@ -34,7 +34,7 @@ const toggleDropdown = () => {
     border-radius: var(--border-radius);
     height: 55px;
     line-height: 50px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     cursor: pointer;
 
     .closed-content {
@@ -60,7 +60,7 @@ const toggleDropdown = () => {
         height: 50px;
         display: flex;
         align-items: center;
-        color: var(--text);
+        color: var(--text-0);
         margin-right: -7px;
         transition: transform 0.3s ease;
     }
@@ -70,7 +70,7 @@ const toggleDropdown = () => {
     border: var(--border);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     height: max-content;
     max-height: 300px;
     overflow-y: auto;

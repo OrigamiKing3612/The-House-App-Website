@@ -77,14 +77,14 @@
 
             a {
                 display: block;
-                color: var(--text-secondary);
+                color: var(--text-2);
                 font-size: 0.9rem;
                 text-decoration: none;
                 margin: 0.25rem 0;
                 transition: color 0.2s ease;
 
                 &:hover {
-                    color: var(--primary);
+                    color: var(--accent);
                 }
             }
         }
@@ -92,7 +92,7 @@
 }
 
 .link {
-    color: var(--primary);
+    color: var(--accent);
     font-weight: bold;
 }
 </style>

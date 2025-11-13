@@ -1,16 +1,15 @@
 @use "sass:color";
 @use "./lib/_colors.scss" as *;
 @use "./lib/_housecolors.scss" as *;
-@use "./lib/_variables.scss" as *;
 @use "./lib/input_types.scss" as *;
 @use "./lib/tags.scss" as *;
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 
 :global(html) {
-  background-color: var(--main-background) !important;
+  background-color: var(--background-0) !important;
   font-family: 'DM Sans', sans-serif;
-  user-select: none;
+  // user-select: none;
   cursor: default;
   margin-top: 55px;
   margin-bottom: 35px;
@@ -27,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text);
+  color: var(--text-0);
   transition: margin-top 0.3s ease;
 }
 
@@ -49,18 +48,18 @@
 
 .text-link {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--accent);
   font-weight: bold;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--main-background);
+  background-color: var(--background-0);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: var(--border-radius);
-  background-color: var(--background-primary);
+  background-color: var(--background-1);
 }
 
 .horizontal-align {
@@ -68,4 +67,9 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--text-1);
 }

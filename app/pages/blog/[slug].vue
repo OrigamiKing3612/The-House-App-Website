@@ -39,7 +39,7 @@ useSeoMeta({
         text-align: left;
 
         .description {
-            color: var(--text-secondary);
+            color: var(--text-2);
         }
     }
 }

@@ -7,7 +7,7 @@
 
 <style lang="scss" scoped>
 svg {
-    color: var(--text);
+    color: var(--text-0);
     transition: all 0.2s ease;
 
     &:hover {

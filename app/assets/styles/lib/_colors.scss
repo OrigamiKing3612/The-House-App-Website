@@ -1,19 +1,22 @@
 @use "sass:color";
 
+$mobile-width: 450px;
+
 /*  MARK: Light theme */
 :root {
-  --text-primary: hsl(210, 20%, 10%);
-  --text: hsl(197, 20%, 12%);
-  --text-secondary: hsl(197 20% 20%);
+  --accent: #00b8fb;
 
-  --main-background: hsl(216 100% 98%);
+  --text-0: hsl(197, 20%, 12%);
+  --text-1: hsl(210, 20%, 10%);
+  --text-2: hsl(197 20% 20%);
 
-  --background: hsla(0 0% 0% / 0.01);
+  --background-0: hsl(196 100% 98%);
+  --background-1: hsl(196 100% 90%);
+  --background-2: hsl(196 100% 85%);
 
-  --background-primary: #C3EFFF;
-  --background-secondary: #adf;
+  --surface-0: #C3EFFF;
+  --surface-1: #adf;
 
-  --primary: #00b8fb;
   --submit-button: #007bff;
   --submit-button-hover: #{color.adjust(#007bff, $lightness: -10%)};
 
@@ -21,29 +24,31 @@
   --submit-button-loading-hover: #{color.adjust(#5a6363, $lightness: -10%)};
 
   --submit-button-danger: #ff1e00;
-  --submit-button-danger-hover: #ff1e00;
+  --submit-button-danger-hover: #{color.adjust(#ff1e00, $lightness: -10%)};
 
   --gold: #FFD700;
 
   --transparent: rgba(0, 0, 0, 0.8);
 
-  --divider: 3px solid var(--background-primary);
-  --divider-thin: 1px solid var(--background-primary);
+  --divider: 3px solid var(--background-1);
+  --divider-thin: 1px solid var(--background-1);
+
+  --border-radius: 20px;
+  --border-radius-small: 4px;
+  --border: 1px solid var(--text-0);
+  --hover-shadow: 3px 3px 0px var(--accent);
 }
 
 /*  MARK: Dark theme */
 :root.dark {
-  // Only change the colors that are different from the light theme
-  --text-primary: hsl(0, 0%, 95%);
-  --text: hsl(0, 0%, 85%);
-  --text-secondary: hsl(0 0% 40%);
+  --text-0: hsl(0, 0%, 85%);
+  --text-1: hsl(0, 0%, 95%);
+  --text-2: hsl(0 0% 40%);
 
-  --background: hsla(184 100% 96% / 0.025);
+  --background-0: hsl(196 19% 0%);
+  --background-1: hsl(196 19% 20%);
+  --background-2: hsl(196 19% 40%);
 
-  --main-background: hsl(0 0% 0%);
-
-  --background-primary: #384c53;
-  --background-secondary: rgb(32, 38, 43);
-
-  --primary: #00b8fb;
+  --surface-0: var(--background-1);
+  --surface-1: var(--background-2);
 }

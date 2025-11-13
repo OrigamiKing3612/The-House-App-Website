@@ -60,7 +60,7 @@ const getColor = (option: any | string) => {
     if (props.optionColor) {
         return props.optionColor(option);
     } else {
-        return "var(--text)";
+        return "var(--text-0)";
     }
 };
 
@@ -73,12 +73,12 @@ const isSelected = (option: any) => {
 <style scoped lang="scss">
 .dropdown {
     position: relative;
-    border: 1px solid var(--text);
+    border: 1px solid var(--text-0);
     border-radius: var(--border-radius);
     width: var(--dropdown-width);
     height: 50px;
     line-height: 50px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
 
     .selected-option {
         display: flex;
@@ -106,7 +106,7 @@ const isSelected = (option: any) => {
         height: 50px;
         display: flex;
         align-items: center;
-        color: var(--text);
+        color: var(--text-0);
         margin-right: -7px;
         transition: transform 0.3s ease;
     }
@@ -121,7 +121,7 @@ const isSelected = (option: any) => {
     border-top: none;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     max-height: 188px;
     overflow-y: auto;
     transition: all 0.6s ease;
@@ -140,11 +140,11 @@ const isSelected = (option: any) => {
         line-height: 10px;
 
         &.selected {
-            background-color: var(--background-primary);
+            background-color: var(--surface-0);
         }
 
         &:hover {
-            background-color: var(--background-secondary);
+            background-color: var(--surface-1);
             border-radius: 10px;
         }
     }

@@ -23,7 +23,7 @@ defineProps<{
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
-    border-bottom: 0.5px solid var(--main-background);
+    border-bottom: 0.5px solid var(--background-0);
     text-align: left;
 
     .status-text {
@@ -43,6 +43,6 @@ defineProps<{
 }
 
 .container:nth-child(odd) {
-    background-color: var(--background-primary);
+    background-color: var(--background-1);
 }
 </style>

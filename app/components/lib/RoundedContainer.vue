@@ -18,7 +18,7 @@
 .rounded-card {
     width: 100%;
     max-width: 700px;
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     border-radius: var(--border-radius);
     padding: 0px 0px 30px 0px;
     border: var(--border);
@@ -40,14 +40,14 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    color: var(--text);
+    color: var(--text-0);
     padding: 7px;
     font-size: 0.9rem;
     margin-right: 13px;
 
     &:hover {
-        background-color: var(--background-primary);
-        color: var(--primary);
+        background-color: var(--background-1);
+        color: var(--accent);
     }
 
     .more {

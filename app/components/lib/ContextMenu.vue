@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
     position: absolute;
     top: v-bind('position.top');
     left: v-bind('position.left');
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     border: var(--border);
     border-radius: var(--border-radius);
     padding: 10px;

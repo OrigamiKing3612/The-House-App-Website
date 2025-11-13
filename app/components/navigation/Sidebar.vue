@@ -39,12 +39,12 @@ watch(route, () => {
     width: 85%;
     max-width: 550px;
     height: 100%;
-    background-color: var(--main-background);
-    color: var(--text);
+    background-color: var(--background-0);
+    color: var(--text-0);
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    border: 1px solid var(--text);
+    border: 1px solid var(--text-0);
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     text-align: right;
     transition: all 0.5s ease;
@@ -54,7 +54,7 @@ watch(route, () => {
     }
 
     &.active {
-        color: var(--primary);
+        color: var(--accent);
         box-shadow: var(--hover-shadow);
     }
 }
@@ -78,7 +78,7 @@ watch(route, () => {
         width: 30px;
         height: 30px;
         margin-left: 15px;
-        fill: var(--text);
+        fill: var(--text-0);
     }
 }
 

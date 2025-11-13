@@ -22,6 +22,6 @@ h1 {
     margin-top: 20px;
     margin-bottom: 5px;
     text-align: left;
-    color: var(--text-primary)
+    color: var(--text-1)
 }
 </style>

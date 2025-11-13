@@ -54,6 +54,6 @@ const type = computed(() => show_password.value ? 'text' : 'password')
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text);
+    color: var(--text-0);
 }
 </style>

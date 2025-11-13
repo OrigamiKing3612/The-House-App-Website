@@ -61,7 +61,7 @@ const sidebar_open = ref(false);
     height: calc(55px + env(safe-area-inset-top, 0));
     padding-top: env(safe-area-inset-top, 0);
 
-    background-color: var(--main-background);
+    background-color: var(--background-0);
     border-bottom: var(--divider-thin);
     z-index: 999;
     transition: background-color 0.3s ease;
@@ -108,9 +108,10 @@ const sidebar_open = ref(false);
         font-size: 24px;
         margin: 0 15px;
         font-weight: bold;
+        color: var(--text-primary);
 
         &:hover {
-            color: var(--primary);
+            color: var(--accent);
             cursor: pointer;
         }
     }
