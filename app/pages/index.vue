@@ -109,4 +109,15 @@ definePageMeta({
     width: 100%;
     text-align: left;
 }
+
+@media (max-width: $mobile-width) {
+    .intro {
+        flex-direction: column;
+        margin: 5em;
+
+        .logo {
+            margin-bottom: 2em;
+        }
+    }
+}
 </style>

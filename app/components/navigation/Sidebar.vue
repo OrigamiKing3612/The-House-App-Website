@@ -1,16 +1,19 @@
 <template>
     <div class="sidebar" :class="{ open: model }">
         <NuxtLink to="/" active-class="active" class="link">
-            <h1 class="title">Home</h1>
+            <p class="title">Home</p>
         </NuxtLink>
         <NuxtLink to="/bugs" active-class="active" class="link">
-            <h1 class="title">Bug Tracker</h1>
+            <p class="title">Bug Tracker</p>
         </NuxtLink>
-        <NuxtLink to="/changelog" active-class="active" class="link">
-            <h1 class="title">Changelog</h1>
+        <NuxtLink to="/blog" active-class="active" class="link">
+            <p class="title">Blog</p>
         </NuxtLink>
-        <NuxtLink to="https://status.the-house-app.com" external active-class="active" class="link" target="_blank">
-            <h1 class="title">Status</h1>
+        <!-- <NuxtLink to="/about" active-class="active" class="link"> -->
+        <!--     <p class="title">About</p> -->
+        <!-- </NuxtLink> -->
+        <NuxtLink to="/contact" active-class="active" class="link">
+            <p class="title">Contact Us</p>
         </NuxtLink>
 
         <SwitchThemesButton class="theme-button" />

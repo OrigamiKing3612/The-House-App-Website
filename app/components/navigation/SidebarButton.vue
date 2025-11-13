@@ -27,7 +27,7 @@ const model = defineModel<boolean>({ required: true });
         box-shadow: var(--hover-shadow);
 
         &:hover {
-            background-color: var(--background-primary);
+            background-color: var(--background-1);
         }
     }
 }
