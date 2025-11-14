@@ -23,6 +23,8 @@ $mobile-width: 650px;
     // --text-2: hsl(197 20% 20%);
 
     --subtext-0: hsl(197, 20%, 20%);
+    --subtext-1: hsl(197, 20%, 15%);
+    --subtext-2: hsl(197, 20%, 10%);
 
     --always-white: hsl(196 100% 98%);
 
@@ -45,6 +47,8 @@ $mobile-width: 650px;
     --border: 1px solid var(--text-1);
     --hover-shadow: 3px 3px 0px var(--accent);
 
+    --accent-border: 1px solid var(--accent);
+
     --text-field-width: 210px;
     --dropdown-width: 220px;
 }
@@ -56,6 +60,8 @@ $mobile-width: 650px;
     // --text-2: hsl(0 0% 40%);
 
     --subtext-0: hsl(0, 0%, 70%);
+    --subtext-1: hsl(0, 0%, 60%);
+    --subtext-2: hsl(0, 0%, 50%);
 
     --always-white: hsl(0, 0%, 95%);
 
