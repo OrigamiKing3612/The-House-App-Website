@@ -2,7 +2,7 @@ export const useBlog = () => {
     const { data: articles, refresh } = useAsyncData<BlogArticle[]>('blog', async () => {
         return queryCollection('blog')
             .where('extension', '=', 'md')
-            .where('draft', '<>', true)
+            // .where('draft', '<>', true)
             .order('timestamp', 'DESC')
             .all()
             .then(res => res.filter(article => article.path !== '/blog'))

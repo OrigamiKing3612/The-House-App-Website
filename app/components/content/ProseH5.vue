@@ -15,3 +15,17 @@ const props = defineProps<{ id?: string }>()
 const { headings } = useRuntimeConfig().public.mdc
 const generate = computed(() => props.id && ((typeof headings?.anchorLinks === 'boolean' && headings?.anchorLinks === true) || (typeof headings?.anchorLinks === 'object' && headings?.anchorLinks?.h5)))
 </script>
+
+<style lang="scss" scoped>
+h5 {
+    font-size: 7px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+
+    :deep(a) {
+        color: var(--text-0);
+        text-decoration: none;
+    }
+}
+</style>

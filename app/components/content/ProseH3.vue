@@ -19,9 +19,13 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === '
 <style lang="scss" scoped>
 h3 {
     font-size: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 5px;
     text-align: left;
-    color: var(--text-0)
+
+    :deep(a) {
+        color: var(--text-0);
+        text-decoration: none;
+    }
 }
 </style>

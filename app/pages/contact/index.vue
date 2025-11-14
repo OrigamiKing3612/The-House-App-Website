@@ -13,7 +13,7 @@
             <TextField v-if="hear === 'Other'" label="Please specify" type="text" v-model="howDidYouHearAboutUs"
                 required placeholder="Tell us where you heard about us" />
             <TextArea label="What would you like to know more about? (optional)" v-model="question"
-                placeholder="Tell us what interests you or any questions you have" />
+                placeholder="Tell us what interests you or any questions you have" class="text-area" />
             <AppSubmitButton type="submit">Submit</AppSubmitButton>
         </form>
     </Card>
@@ -41,3 +41,12 @@ const submit = async () => {
     await SubmitContact(name.value, email.value, organization.value, hearValue, question.value.trim() === '' ? undefined : question.value.trim());
 }
 </script>
+
+<style lang="scss" scoped>
+.text-area {
+    :deep(label) {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+</style>

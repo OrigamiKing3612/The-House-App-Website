@@ -11,6 +11,13 @@ export default defineContentConfig({
                 draft: z.boolean().default(false),
                 tags: z.array(z.string())
             })
+        }),
+        docs: defineCollection({
+            type: 'page',
+            source: 'docs/*',
+            schema: z.object({
+                draft: z.boolean().default(false),
+            })
         })
     }
 })

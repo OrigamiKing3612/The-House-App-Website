@@ -22,6 +22,10 @@ h2 {
     margin-top: 20px;
     margin-bottom: 5px;
     text-align: left;
-    color: var(--text-0)
+
+    :deep(a) {
+        color: var(--text-0);
+        text-decoration: none;
+    }
 }
 </style>

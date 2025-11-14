@@ -19,3 +19,11 @@ const props = defineProps({
     },
 })
 </script>
+
+<style lang="scss" scoped>
+a {
+    text-align: left;
+    color: var(--text-0);
+    text-decoration: none;
+}
+</style>

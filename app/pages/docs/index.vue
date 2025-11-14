@@ -1,26 +1,14 @@
 <template>
-    <!-- <Card title="Blog"> -->
     <LargeTitleText>
-        Blog
+        Docs
     </LargeTitleText>
     <div class="container">
-        <div v-for="a in articles" :key="a.id">
+        <div v-for="a in docs" :key="a.id">
             <NuxtLink :to="`${a.path}`" class="link">
-                <!-- <AppSubmitButton> -->
                 <div class="item">
                     <div class="title">{{ a.title }}</div>
                     <div class="description">{{ a.description }}</div>
-                    <div class="extra">
-                        <span class="type">{{ normalizeString(a.type) }}</span>
-                        <div class="tags">
-                            <div v-for="tag in a.tags" :key="tag" class="tag">
-                                {{ tag }}
-                            </div>
-                        </div>
-                    </div>
-                    <NuxtTime class="timestamp" :datetime="a.timestamp" />
                 </div>
-                <!-- </AppSubmitButton> -->
             </NuxtLink>
         </div>
     </div>
@@ -29,10 +17,10 @@
 
 <script setup lang="ts">
 
-const { fetchList, articles } = useBlog()
+const { fetchList, docs } = useDocs()
 
 definePageMeta({
-    title: "Blog"
+    title: "Docs"
 });
 
 await fetchList()
