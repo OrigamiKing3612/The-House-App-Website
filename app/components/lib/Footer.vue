@@ -52,7 +52,7 @@
             align-items: center;
 
             .footer-logo {
-                border-radius: 8px;
+                border-radius: .5rem;
                 margin-right: 1rem;
             }
 
@@ -94,5 +94,29 @@
 .link {
     color: var(--accent);
     font-weight: bold;
+}
+
+@media (max-width: $mobile-width) {
+    .footer {
+        padding: 1rem;
+
+        .footer-left {
+            transform: scale(.8);
+        }
+
+        .footer-right {
+            .footer-columns {
+                gap: 1rem;
+
+                h4 {
+                    font-size: 0.9rem;
+                }
+
+                a {
+font-size: 0.6rem;
+                }
+            }
+        }
+    }
 }
 </style>
