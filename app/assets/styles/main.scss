@@ -7,73 +7,73 @@
 
 
 :global(html) {
-  background-color: var(--background-0) !important;
-  font-family: 'DM Sans', sans-serif;
-  // user-select: none;
-  cursor: default;
-  margin-top: 55px;
-  margin-bottom: 35px;
-  transition: background-color 0.3s ease;
+    background-color: var(--background-0) !important;
+    font-family: 'DM Sans', sans-serif;
+    // user-select: none;
+    cursor: default;
+    margin-top: 55px;
+    margin-bottom: 35px;
+    transition: background-color 0.3s ease;
 }
 
 :global(body) {
-  margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .all {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-1);
-  transition: margin-top 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-1);
+    transition: margin-top 0.3s ease;
 }
 
 @media (min-width: $mobile-width) {
-  :global(body) {
-    margin-bottom: 80px;
-  }
+    :global(body) {
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 900px) {
-  :global(body) {
-    margin-top: 40px;
-  }
+    :global(body) {
+        margin-top: 40px;
+    }
 }
 
 .link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .text-link {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: bold;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: var(--background-0);
+    width: 10px;
+    background-color: var(--background-0);
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: var(--border-radius);
-  background-color: var(--background-1);
+    border-radius: var(--border-radius);
+    background-color: var(--background-1);
 }
 
 .horizontal-align {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--text-0);
+    background: var(--accent);
+    color: var(--text-0);
 }

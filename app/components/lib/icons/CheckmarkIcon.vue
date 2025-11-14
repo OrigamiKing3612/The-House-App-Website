@@ -11,7 +11,7 @@ svg {
     transition: all 0.2s ease;
 
     &:hover {
-        color: var(--checkmark-hover);
+        color: var(--success-hover);
         transform: scale(1.1);
     }
 }

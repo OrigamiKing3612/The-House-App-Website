@@ -4,59 +4,65 @@ $mobile-width: 650px;
 
 /*  MARK: Light theme */
 :root {
-  --accent: #00b8fb;
+    --accent: #00b8fb;
 
-  --text-0: hsl(210, 20%, 10%);
-  --text-1: hsl(197, 20%, 12%);
-  // --text-2: hsl(197 20% 20%);
+    --loading: hsl(180 4.8% 37%);
+    --loading-hover: hsl(180 4.8% 35%);
 
-  --subtext-0: hsl(197, 20%, 20%);
+    --danger: hsl(7 100% 50%);
+    --danger-hover: hsl(7 100% 48%);
 
-  --always-white: hsl(196 100% 98%);
+    --warning: hsl(48 100% 47%);
+    --warning-hover: hsl(48 100% 45%);
 
-  --background-0: hsl(196 100% 98%);
-  --background-1: hsl(196 100% 90%);
-  --background-2: hsl(196 100% 85%);
+    --success: hsl(129 65.2% 50%);
+    --success-hover: hsl(129 65.2% 48%);
 
-  --surface-0: #C3EFFF;
-  --surface-1: #adf;
+    --text-0: hsl(210, 20%, 10%);
+    --text-1: hsl(197, 20%, 12%);
+    // --text-2: hsl(197 20% 20%);
 
-  --submit-button: #007bff;
-  --submit-button-hover: #{color.adjust(#007bff, $lightness: -10%)};
+    --subtext-0: hsl(197, 20%, 20%);
 
-  --submit-button-loading: #5a6363;
-  --submit-button-loading-hover: #{color.adjust(#5a6363, $lightness: -10%)};
+    --always-white: hsl(196 100% 98%);
 
-  --submit-button-danger: #ff1e00;
-  --submit-button-danger-hover: #{color.adjust(#ff1e00, $lightness: -10%)};
+    --background-0: hsl(196 100% 98%);
+    --background-1: hsl(196 100% 90%);
+    --background-2: hsl(196 100% 85%);
 
-  --gold: #FFD700;
+    --surface-0: #C3EFFF;
+    --surface-1: #adf;
 
-  --transparent: rgba(0, 0, 0, 0.8);
+    --gold: #FFD700;
 
-  --divider: 3px solid var(--background-1);
-  --divider-thin: 1px solid var(--background-1);
+    --transparent: rgba(0, 0, 0, 0.8);
 
-  --border-radius: 20px;
-  --border-radius-small: 4px;
-  --border: 1px solid var(--text-1);
-  --hover-shadow: 3px 3px 0px var(--accent);
+    --divider: 3px solid var(--background-1);
+    --divider-thin: 1px solid var(--background-1);
+
+    --border-radius: 20px;
+    --border-radius-small: 4px;
+    --border: 1px solid var(--text-1);
+    --hover-shadow: 3px 3px 0px var(--accent);
+
+    --text-field-width: 210px;
+    --dropdown-width: 220px;
 }
 
 /*  MARK: Dark theme */
 :root.dark {
-  --text-0: hsl(0, 0%, 93%);
-  --text-1: hsl(0, 0%, 83%);
-  // --text-2: hsl(0 0% 40%);
+    --text-0: hsl(0, 0%, 93%);
+    --text-1: hsl(0, 0%, 83%);
+    // --text-2: hsl(0 0% 40%);
 
-  --subtext-0: hsl(0, 0%, 70%);
+    --subtext-0: hsl(0, 0%, 70%);
 
-  --always-white: hsl(0, 0%, 95%);
+    --always-white: hsl(0, 0%, 95%);
 
-  --background-0: hsl(196 19% 0%);
-  --background-1: hsl(196 19% 20%);
-  --background-2: hsl(196 19% 40%);
+    --background-0: hsl(196 19% 0%);
+    --background-1: hsl(196 19% 20%);
+    --background-2: hsl(196 19% 40%);
 
-  --surface-0: var(--background-1);
-  --surface-1: var(--background-2);
+    --surface-0: var(--background-1);
+    --surface-1: var(--background-2);
 }

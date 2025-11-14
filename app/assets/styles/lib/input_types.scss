@@ -12,12 +12,12 @@ input[type="datetime-local"],
 input[type="time"],
 select,
 textarea {
-  padding: 8px;
-  font-size: 1rem;
-  border: var(--border);
-  border-radius: var(--border-radius);
-  color: var(--text-1) !important;
-  background: var(--background-0);
+    padding: 8px;
+    font-size: 1rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--text-1) !important;
+    background: var(--background-0);
 }
 
 input[type="text"],
@@ -26,63 +26,63 @@ input[type="username"],
 input[type="password"],
 input[type="organization_id"],
 input[type="email"] {
-  max-width: var(--text-field-width);
+    max-width: var(--text-field-width);
 }
 
 input[type="file"] {
-  padding: 8px;
-  font-size: 1rem;
-  border: var(--border);
-  border-radius: var(--border-radius);
-  color: var(--text-1) !important;
-
-  &::-webkit-file-upload-button {
-    background: var(--background-0);
-    color: var(--text-1);
+    padding: 8px;
+    font-size: 1rem;
     border: var(--border);
     border-radius: var(--border-radius);
-    padding: 8px 12px;
-    cursor: pointer;
-  }
+    color: var(--text-1) !important;
 
-  &::file-selector-button {
-    background: var(--background-0);
-    color: var(--text-1);
-    border: var(--border);
-    border-radius: var(--border-radius);
-    padding: 8px 12px;
-    cursor: pointer;
-  }
+    &::-webkit-file-upload-button {
+        background: var(--background-0);
+        color: var(--text-1);
+        border: var(--border);
+        border-radius: var(--border-radius);
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+    &::file-selector-button {
+        background: var(--background-0);
+        color: var(--text-1);
+        border: var(--border);
+        border-radius: var(--border-radius);
+        padding: 8px 12px;
+        cursor: pointer;
+    }
 }
 
 input[type="checkbox"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: var(--border);
-  border-radius: var(--border-radius-small);
-  position: relative;
-  cursor: pointer;
-  background-color: var(--background-0);
-  transition: background-color 0.2s;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+    position: relative;
+    cursor: pointer;
+    background-color: var(--background-0);
+    transition: background-color 0.2s;
 
-  &:hover:not(:checked) {
-    background-color: var(--background-1);
-  }
+    &:hover:not(:checked) {
+        background-color: var(--background-1);
+    }
 
-  &:checked {
-    background-color: var(--accent);
-  }
+    &:checked {
+        background-color: var(--accent);
+    }
 
-  &:checked::after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 6px;
-    width: 3px;
-    height: 6px;
-    border: solid var(--background-1);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
+    &:checked::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 3px;
+        height: 6px;
+        border: solid var(--background-1);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
 }

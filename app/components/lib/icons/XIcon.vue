@@ -12,7 +12,7 @@ svg {
     transition: all 0.2s ease;
 
     &:hover {
-        color: var(--x-hover);
+        color: var(--danger);
         transform: scale(1.1);
     }
 }
