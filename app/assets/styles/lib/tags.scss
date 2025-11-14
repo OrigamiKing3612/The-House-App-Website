@@ -33,3 +33,29 @@ strong {
 ul li::marker {
     color: var(--text-0);
 }
+
+.prose-h {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+
+    a {
+        color: var(--text-0);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    }
+}
+
+.text-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,5 +1,5 @@
 <template>
-    <h1 :id="props.id">
+    <h1 :id="props.id" class="prose-h">
         <a v-if="generate" :href="`#${props.id}`">
             <slot />
         </a>
@@ -18,13 +18,5 @@ const generate = computed(() => props.id && ((typeof headings?.anchorLinks === '
 <style lang="scss" scoped>
 h1 {
     font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    text-align: left;
-
-    :deep(a) {
-        color: var(--text-0);
-        text-decoration: none;
-    }
 }
 </style>

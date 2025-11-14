@@ -46,16 +46,6 @@
     text-decoration: none;
 }
 
-.text-link {
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: bold;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 10px;
     background-color: var(--background-0);
