@@ -74,5 +74,8 @@ export default defineNuxtConfig({
     },
     content: {
 
+    },
+    origamiSystemsShared: {
+        mode: 'house'
     }
 })
