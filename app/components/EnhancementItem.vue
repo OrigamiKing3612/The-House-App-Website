@@ -3,7 +3,7 @@
     <NuxtLink :to="enhancement.html_url" class="link">
         <div class="container">
             <span class="title">#{{ enhancement.number }}: {{ enhancement.title }}</span>
-            <span class="status-text" style="color: #ffffff;" :class="{ [enhancement.state]: true }">{{
+            <span class="status-text" style="color: var(--always-white);" :class="{ [enhancement.state]: true }">{{
                 normalizeString(enhancement.state) }}</span>
         </div>
     </NuxtLink>
@@ -23,7 +23,7 @@ defineProps<{
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
-    border-bottom: 0.5px solid var(--main-background);
+    border-bottom: 0.5px solid var(--background-0);
 
     .status-text {
         padding: 6px;
@@ -40,6 +40,6 @@ defineProps<{
 }
 
 .container:nth-child(odd) {
-    background-color: var(--background-primary);
+    background-color: var(--background-1);
 }
 </style>

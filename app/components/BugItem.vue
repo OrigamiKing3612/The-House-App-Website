@@ -3,7 +3,7 @@
     <NuxtLink :to="issue.html_url" external class="link">
         <div class="container">
             <span class="title">#{{ issue.number }}: {{ issue.title }}</span>
-            <span class="status-text" style="color: #ffffff;" :class="{ [issue.state]: true }">{{
+            <span class="status-text" style="color: var(--always-white);" :class="{ [issue.state]: true }">{{
                 normalizeString(issue.state) }}</span>
         </div>
     </NuxtLink>
@@ -23,7 +23,7 @@ defineProps<{
     justify-content: space-between;
     text-decoration: none;
     padding: 10px;
-    border-bottom: 0.5px solid var(--main-background);
+    border-bottom: 0.5px solid var(--background-0);
     text-align: left;
 
     .status-text {
@@ -43,6 +43,6 @@ defineProps<{
 }
 
 .container:nth-child(odd) {
-    background-color: var(--background-primary);
+    background-color: var(--background-1);
 }
 </style>

@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   pages: write
+  packages: read
   id-token: write
 concurrency:
   group: "pages"
@@ -24,6 +25,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
       - run: pnpm install
       - run: pnpm prepare
       - run: pnpm typecheck
@@ -39,6 +41,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
       - run: pnpm install
       - run: pnpm build --no-minify --no-sourcemap
       - name: Upload build output
