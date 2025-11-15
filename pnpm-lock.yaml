@@ -23,6 +23,9 @@ importers:
       '@nuxtjs/sitemap':
         specifier: 7.4.3
         version: 7.4.3(h3@1.15.4)(magicast@0.5.1)(rolldown-vite@7.2.1(@types/node@24.0.13)(esbuild@0.25.11)(jiti@2.6.1)(sass@1.93.2)(terser@5.44.0)(yaml@2.8.1))(vue@3.5.22(typescript@5.9.3))
+      '@origami-systems/nuxt-shared':
+        specifier: 0.0.14
+        version: 0.0.14(magicast@0.5.1)
       axios:
         specifier: ^1.12.2
         version: 1.12.2
@@ -825,6 +828,9 @@ packages:
   '@nuxtjs/color-mode@3.5.2':
     resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
 
+  '@nuxtjs/color-mode@4.0.0':
+    resolution: {integrity: sha512-xyaVR/TPLdMuRa2VOgH6b75jvmFEsn9QKL6ISldaAw38ooFJfWY1ts2F3ye43wcT/goCbcuvPuskF2f8yUZhlw==}
+
   '@nuxtjs/mdc@0.18.3':
     resolution: {integrity: sha512-Fl64a9OZBH3J7ZpqzSWkrS64oFmLLvledZMcnYH3UzVtgFPo/GaICdJN3Ml83NSs/J9At6HHaP0k3+nrxu2qJw==}
 
@@ -834,6 +840,9 @@ packages:
   '@nuxtjs/sitemap@7.4.3':
     resolution: {integrity: sha512-edJ0bVuKS87PefTnKVMqcEwSZbur0yLg2eCKU2kjNDI1jC9tOnCHwXMHQficiKPXZolzqmlK7+U23Tv95OzVbg==}
     engines: {node: '>=18.0.0'}
+
+  '@origami-systems/nuxt-shared@0.0.14':
+    resolution: {integrity: sha512-EacqCgd79N/33PypLCwSUTCyFfm66DJk+2J2cwisl5c09GlomgY3goMVxA3UzeOso6WQU89L1ObaX4AF+B7yIQ==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/0.0.14/5f727280f2b840964016b4441496ea844ae61b32}
 
   '@oxc-minify/binding-android-arm64@0.95.0':
     resolution: {integrity: sha512-ck0NakTt3oBWTMQjxKf5ZW1GzCs0y1kETzJdh8h8NAWTutlMfeWiuUxCgG4FMF4XiTnCdLq/dFAKFcdbiwcoqg==}
@@ -6537,6 +6546,16 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
+  '@nuxtjs/color-mode@4.0.0(magicast@0.5.1)':
+    dependencies:
+      '@nuxt/kit': 4.2.1(magicast@0.5.1)
+      exsolve: 1.0.8
+      pathe: 2.0.3
+      pkg-types: 2.3.0
+      semver: 7.7.3
+    transitivePeerDependencies:
+      - magicast
+
   '@nuxtjs/mdc@0.18.3(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
@@ -6626,6 +6645,13 @@ snapshots:
       - magicast
       - vite
       - vue
+
+  '@origami-systems/nuxt-shared@0.0.14(magicast@0.5.1)':
+    dependencies:
+      '@nuxt/kit': 4.2.1(magicast@0.5.1)
+      '@nuxtjs/color-mode': 4.0.0(magicast@0.5.1)
+    transitivePeerDependencies:
+      - magicast
 
   '@oxc-minify/binding-android-arm64@0.95.0':
     optional: true

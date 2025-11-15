@@ -1,6 +1,5 @@
 <template>
     <footer class="footer">
-        <!-- <Card class="footer-card"> -->
         <div class="footer-left">
             <div class="footer-info">
                 <img src="https://the-house-app.com/apple-touch-icon.png" alt="The House App Logo" title="The House App"
@@ -31,7 +30,6 @@
                 </div>
             </div>
         </div>
-        <!-- </Card> -->
     </footer>
 </template>
 
@@ -96,12 +94,28 @@
     font-weight: bold;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: 650px) {
     .footer {
         padding: 1rem;
 
         .footer-left {
-            transform: scale(.8);
+            .footer-info {
+                display: flex;
+                align-items: center;
+
+                .footer-logo {
+                    border-radius: .5rem;
+                    margin-right: .5rem;
+                }
+
+                .footer-text {
+                    font-size: 0.8rem;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
         }
 
         .footer-right {

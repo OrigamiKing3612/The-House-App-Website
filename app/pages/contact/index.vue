@@ -1,6 +1,6 @@
 <template>
     <Card title="Contact Us">
-        <form @submit.prevent="submit">
+        <form @submit.prevent>
             <p>We would love to hear from you! Please fill out the form and we will get back to you shortly .</p>
             <TextField label="Name" type="text" v-model="name" required placeholder="Enter your name" />
             <TextField label="Email Address" type="email" v-model="email" required placeholder="Enter your email" />
@@ -14,7 +14,7 @@
                 required placeholder="Tell us where you heard about us" />
             <TextArea label="What would you like to know more about? (optional)" v-model="question"
                 placeholder="Tell us what interests you or any questions you have" class="text-area" />
-            <AppSubmitButton type="submit">Submit</AppSubmitButton>
+            <AppSubmitButton type="submit" @click="submit">Submit</AppSubmitButton>
         </form>
     </Card>
 </template>
@@ -36,9 +36,13 @@ const hear = ref('Website');
 const howDidYouHearAboutUs = ref("");
 const question = ref("");
 
-const submit = async () => {
-    const hearValue = hear.value === 'Other' ? howDidYouHearAboutUs.value : hear.value;
-    await SubmitContact(name.value, email.value, organization.value, hearValue, question.value.trim() === '' ? undefined : question.value.trim());
+const submit = async (done: () => void) => {
+    try {
+        const hearValue = hear.value === 'Other' ? howDidYouHearAboutUs.value : hear.value;
+        await SubmitContact(name.value, email.value, organization.value, hearValue, question.value.trim() === '' ? undefined : question.value.trim());
+    } finally {
+        done();
+    }
 }
 </script>
 

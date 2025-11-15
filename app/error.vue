@@ -28,4 +28,3 @@ const props = defineProps({
 <style scoped lang="scss">
 .all {}
 </style>
-

@@ -87,13 +87,13 @@ const sidebar_open = ref(false);
     }
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: 650px) {
     #tabs {
         display: none;
     }
 }
 
-@media (min-width: $mobile-width) {
+@media (min-width: 650px) {
     .sidebar {
         display: none;
     }

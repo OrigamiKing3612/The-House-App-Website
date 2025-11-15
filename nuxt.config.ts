@@ -54,25 +54,12 @@ export default defineNuxtConfig({
         logLevel: 3,
     },
     ssr: true,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content"],
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared"],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
         { path: "~/components/", pathPrefix: false }
     ],
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: `
-                        @use "@/assets/styles/lib/_colors.scss" as *;
-                        @use "@/assets/styles/lib/_housecolors.scss" as *;
-                    `
-                }
-            }
-        }
-
-    },
     colorMode: {
         classSuffix: "",
         preference: "system",
@@ -88,20 +75,4 @@ export default defineNuxtConfig({
     content: {
 
     }
-    // content: {
-    //     build: {
-    //         markdown: {
-    //             highlight: {
-    //                 theme: {
-    //                     default: 'material-theme-lighter',
-    //                     dark: 'material-theme-palenight'
-    //                 },
-    //                 langs: ['sql', 'diff', 'ini']
-    //             }
-    //         }
-    //     },
-    //     preview: {
-    //         api: 'https://api.nuxt.studio'
-    //     }
-    // },
 })

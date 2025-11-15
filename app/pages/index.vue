@@ -110,7 +110,7 @@ definePageMeta({
     text-align: left;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: 650px) {
     .intro {
         flex-direction: column;
         margin: 5em;
