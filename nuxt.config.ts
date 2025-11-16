@@ -77,8 +77,5 @@ export default defineNuxtConfig({
     },
     origamiSystemsShared: {
         mode: 'house'
-    },
-    hub: {
-        database: true,
     }
 })
