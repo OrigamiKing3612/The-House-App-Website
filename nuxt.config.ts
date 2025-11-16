@@ -79,6 +79,6 @@ export default defineNuxtConfig({
         mode: 'house'
     },
     hub: {
-
+        database: true,
     }
 })
