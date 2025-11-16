@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         logLevel: 3,
     },
     ssr: true,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared", "@nuxthub/core"],
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared"],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
