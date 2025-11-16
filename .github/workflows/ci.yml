@@ -44,10 +44,10 @@ jobs:
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
       - run: pnpm install
       - run: pnpm build --no-minify --no-sourcemap
-      - name: Upload build output
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-frontend
-          path: .output
-          if-no-files-found: error
-          include-hidden-files: true
+    # - name: Upload build output
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: built-frontend
+    #     path: .output
+    #     if-no-files-found: error
+    #     include-hidden-files: true
