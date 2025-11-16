@@ -22,4 +22,4 @@ jobs:
       - name: Build & Deploy to NuxtHub
         uses: nuxt-hub/action@v2
         with:
-          build-command: pnpm build:production
+          build-command: pnpm build
