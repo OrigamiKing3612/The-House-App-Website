@@ -62,15 +62,16 @@
 <script setup lang="ts">
 import type { GitHubIssue } from '#imports';
 
-const issues = ref<GitHubIssue[]>([]);
-const enhancements = ref<GitHubIssue[]>([]);
-
 const mode = ref<'Issues' | 'Feature Requests'>('Issues');
 const status = ref<'Open' | 'Closed'>('Open');
 const search = ref<string>('');
 
 const isScreenWidth = useScreenWidth(520);
 const isSmaller = useScreenWidth(650);
+const store = useStore();
+
+const issues = computed<GitHubIssue[]>(() => store.issues);
+const enhancements = computed<GitHubIssue[]>(() => store.enhancements);
 
 definePageMeta({
     title: "Bug Tracker"
@@ -101,8 +102,7 @@ const filtered = computed<GitHubIssue[]>(() => {
 })
 
 onMounted(async () => {
-    issues.value = await GetIssues()
-    enhancements.value = await GetEnhancements()
+    await store.getIssues();
 });
 </script>
 

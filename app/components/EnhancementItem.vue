@@ -1,6 +1,5 @@
 <template>
-    <!-- <NuxtLink :to="'/bugs/' + enhancement.number" class="link"> -->
-    <NuxtLink :to="enhancement.html_url" class="link">
+    <NuxtLink :to="`/bugs/${enhancement.number}`" class="link">
         <div class="container">
             <span class="title">#{{ enhancement.number }}: {{ enhancement.title }}</span>
             <span class="status-text" style="color: var(--always-white);" :class="{ [enhancement.state]: true }">{{

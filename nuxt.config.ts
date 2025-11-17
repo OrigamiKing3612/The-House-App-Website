@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         logLevel: 3,
     },
     ssr: true,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared"],
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared", ["@pinia/nuxt", { autoImports: ['defineStore', 'acceptHMRUpdate'] }]],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
@@ -73,6 +73,9 @@ export default defineNuxtConfig({
         sitemap: '/sitemap.xml',
     },
     content: {
+
+    },
+    pinia: {
 
     },
     origamiSystemsShared: {

@@ -5,10 +5,10 @@
             <TextField label="Name" type="text" v-model="name" required placeholder="Enter your name" />
             <TextField label="Email Address" type="email" v-model="email" required placeholder="Enter your email" />
             <TextField label="Organization" type="text" v-model="organization"
-                placeholder="Your company, school, or group" />
+                placeholder="Your company, school, or group" required />
             <WithLabel label="How did you hear about us?">
-                <Dropdown type="text" v-model="hear" :option-display="(a) => a"
-                    :options="howDidYouHearAboutUsOptions" />
+                <Dropdown type="text" v-model="hear" :option-display="(a) => a" :options="howDidYouHearAboutUsOptions"
+                    required />
             </WithLabel>
             <TextField v-if="hear === 'Other'" label="Please specify" type="text" v-model="howDidYouHearAboutUs"
                 required placeholder="Tell us where you heard about us" />
