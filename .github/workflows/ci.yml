@@ -40,7 +40,7 @@ jobs:
           node-version: 22
           cache: "pnpm"
       - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
-      - run: pnpm install
+      - run: pnpm install --no-optional=false
       - run: pnpm build --no-minify --no-sourcemap
     # - name: Upload build output
     #   uses: actions/upload-artifact@v4
