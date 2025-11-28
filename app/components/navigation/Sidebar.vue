@@ -3,7 +3,7 @@
         <NuxtLink to="/" active-class="active" class="link">
             <p class="title">Home</p>
         </NuxtLink>
-        <NuxtLink to="/bugs" active-class="active" class="link">
+        <NuxtLink to="/bugs-tracker" active-class="active" class="link">
             <p class="title">Bug Tracker</p>
         </NuxtLink>
         <NuxtLink to="/blog" active-class="active" class="link">
