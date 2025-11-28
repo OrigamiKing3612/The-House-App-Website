@@ -15,27 +15,27 @@
         "@nuxt/content": "3.8.1",
         "@nuxt/image": "^2.0.0",
         "@nuxtjs/color-mode": "^3.5.2",
-        "@nuxtjs/robots": "5.4.0",
-        "@nuxtjs/sitemap": "7.4.3",
-        "@origami-systems/nuxt-shared": "1.0.10",
+        "@nuxtjs/robots": "^5.5.6",
+        "@nuxtjs/sitemap": "^7.4.7",
+        "@origami-systems/nuxt-shared": "1.0.12",
         "@pinia/nuxt": "^0.11.3",
-        "axios": "^1.12.2",
-        "better-sqlite3": "^12.4.1",
+        "axios": "^1.13.2",
+        "better-sqlite3": "^12.4.6",
         "nuxt": "^4.2.1",
         "pinia": "^3.0.4",
         "rss": "^1.2.2",
-        "vue": "^3.5.22"
+        "vue": "^3.5.25"
     },
     "devDependencies": {
-        "@eslint/js": "^9.37.0",
-        "@nuxt/eslint": "^1.9.0",
+        "@eslint/js": "^9.39.1",
+        "@nuxt/eslint": "^1.11.0",
         "@types/rss": "^0.0.32",
-        "eslint": "^9.37.0",
-        "eslint-plugin-vue": "^10.5.1",
-        "sass": "^1.93.2",
+        "eslint": "^9.39.1",
+        "eslint-plugin-vue": "^10.6.2",
+        "sass": "^1.94.2",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.46.1",
-        "vue-tsc": "^3.1.1"
+        "typescript-eslint": "^8.48.0",
+        "vue-tsc": "^3.1.5"
     },
     "packageManager": "pnpm@10.18.2"
 }

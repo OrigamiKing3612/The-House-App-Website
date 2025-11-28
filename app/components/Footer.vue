@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <h4>Support</h4>
-                    <NuxtLink to="/about">About</NuxtLink>
+                    <!-- <NuxtLink to="/about">About</NuxtLink> -->
                     <NuxtLink to="https://status.the-house-app.com" external target="_blank">
                         Status
                     </NuxtLink>
