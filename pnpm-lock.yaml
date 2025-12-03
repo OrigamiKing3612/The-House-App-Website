@@ -24,8 +24,8 @@ importers:
         specifier: ^7.4.7
         version: 7.4.7(h3@1.15.4)(magicast@0.5.1)(vite@7.2.4(@types/node@24.0.13)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.94.2)(terser@5.44.1)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.3))
       '@origami-systems/nuxt-shared':
-        specifier: 1.0.12
-        version: 1.0.12(magicast@0.5.1)
+        specifier: 1.0.15
+        version: 1.0.15(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3))
       '@pinia/nuxt':
         specifier: ^0.11.3
         version: 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3)))
@@ -992,8 +992,8 @@ packages:
     resolution: {integrity: sha512-DUhX92lnCJD6tpghUmfmRIsSIoiXMS2SQ2Yd9Tg1+SnZskiKX+DGwLeAeHX8r0/9Pl/bTDpmYhs1snWcCoIkXA==}
     engines: {node: '>=18.0.0'}
 
-  '@origami-systems/nuxt-shared@1.0.12':
-    resolution: {integrity: sha512-FjWahqOW+uHfG13TEVh1NKG49l70yR+9xHweXMvTY50JHLSPbFOlnueJ4UHu9IAf2SO+th+wzzpOQaOlIPUa/Q==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.0.12/447f6b9996b08b9518d2a7e0667f44e75ff236f0}
+  '@origami-systems/nuxt-shared@1.0.15':
+    resolution: {integrity: sha512-D2L4ETaCzoMMiPsMJSGusWThTDzJkz7ZCZlhdno05N1A/quicG5ouGbR1n9jg4ulyTEBa7oqX9s+yz/B1zfDuQ==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.0.15/7c9d60fcc659422dba259619d9a00c5c8bbc2b0f}
 
   '@oxc-minify/binding-android-arm64@0.96.0':
     resolution: {integrity: sha512-lzeIEMu/v6Y+La5JSesq4hvyKtKBq84cgQpKYTYM/yGuNk2tfd5Ha31hnC+mTh48lp/5vZH+WBfjVUjjINCfug==}
@@ -6743,13 +6743,17 @@ snapshots:
       - vite
       - vue
 
-  '@origami-systems/nuxt-shared@1.0.12(magicast@0.5.1)':
+  '@origami-systems/nuxt-shared@1.0.15(magicast@0.5.1)(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3))':
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
       '@nuxtjs/color-mode': 4.0.0(magicast@0.5.1)
+      '@pinia/nuxt': 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3)))
       defu: 6.1.4
+      pinia: 3.0.4(typescript@5.9.3)(vue@3.5.25(typescript@5.9.3))
     transitivePeerDependencies:
       - magicast
+      - typescript
+      - vue
 
   '@oxc-minify/binding-android-arm64@0.96.0':
     optional: true
