@@ -7,40 +7,43 @@
             schools, churches, and other organizations.
 
             <h2>2. What We Collect</h2>
-            We collect only the data necessary to provide our service:
+            We collect only the data necessary to provide and secure our service:
             <ul>
-                <li>Names and emails of users</li>
-                <li>Group/house affiliation</li>
-                <li>Admin-created organization info</li>
+                <li>Names and email addresses of users</li>
+                <li>Admin-created organization information</li>
+                <li>Security-related technical data such as login timestamps and IP addresses</li>
             </ul>
 
             <h2>3. How We Use Your Data</h2>
             We use your data only to:
             <ul>
-                <li>Display progress to your group or organization</li>
-                <li>Provide reporting tools to leaders</li>
-                <li>We may collect anonymized usage data if you opt-in to help improve the app.</li>
-                <li>We retain your data only as long as necessary to provide the service.</li>
+                <li>Provide core app functionality and display progress to your group or organization</li>
+                <li>Provide reporting and administrative tools to organization leaders</li>
+                <li>Secure accounts, prevent abuse, and investigate suspicious activity</li>
             </ul>
+
+            We retain data only as long as necessary to operate and secure the service.
 
             We do not:
             <ul>
                 <li>Sell your data</li>
-                <li>Use your data for advertising</li>
-                <li>Share your data outside your organization</li>
+                <li>Use your data for advertising or tracking</li>
+                <li>Share your data outside your organization except as required to operate the service</li>
             </ul>
 
             <h2>4. Who Can See Your Data</h2>
             <ul>
-                <li>Organization admins can view all progress and participation data from their organization.</li>
-                <li>Personal data may be visible only to admins or optionally shared with a group.
-                </li>
+                <li>Organization administrators can view participation and progress data for users within their
+                    organization.</li>
+                <li>Personal account information is visible only to the user and authorized administrators.</li>
+                <li>Security logs (such as login history) are accessible only to system administrators for safety and
+                    abuse prevention.</li>
             </ul>
 
             <h2>5. Cookies and Analytics</h2>
-            We may use cookies or analytics tools to improve the app experience. No personal data is shared with third
-            parties
-            for advertising.
+            We may use cookies or similar technologies that are required for authentication and application
+            functionality. Optional analytics may be used to improve the app experience, and any such data is anonymized
+            and not used for advertising.
 
             <h2>6. Your Rights</h2>
             If you are a user and want your data removed, contact your organization admin or email us at
