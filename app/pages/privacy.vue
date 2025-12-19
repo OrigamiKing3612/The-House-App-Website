@@ -3,8 +3,7 @@
         <div class="container">
             <h2>1. Who We Are</h2>
             This app (“we”, “our”, or “us”) is a platform for tracking progress and participation across houses/groups
-            within
-            schools, churches, and other organizations.
+            within schools, churches, and other organizations.
 
             <h2>2. What We Collect</h2>
             We collect only the data necessary to provide and secure our service:
@@ -19,10 +18,12 @@
             <ul>
                 <li>Provide core app functionality and display progress to your group or organization</li>
                 <li>Provide reporting and administrative tools to organization leaders</li>
-                <li>Secure accounts, prevent abuse, and investigate suspicious activity</li>
+                <li>Security-related technical data (such as login timestamps and IP addresses) collected solely for
+                    authentication, fraud prevention, and abuse detection</li>
             </ul>
 
-            We retain data only as long as necessary to operate and secure the service.
+            We retain data only as long as necessary to operate and secure the service. Security-related data is
+            retained only as long as necessary and for no more than 180 days.
 
             We do not:
             <ul>
@@ -33,8 +34,6 @@
 
             <h2>4. Who Can See Your Data</h2>
             <ul>
-                <li>Organization administrators can view participation and progress data for users within their
-                    organization.</li>
                 <li>Personal account information is visible only to the user and authorized administrators.</li>
                 <li>Security logs (such as login history) are accessible only to system administrators for safety and
                     abuse prevention.</li>
@@ -42,8 +41,7 @@
 
             <h2>5. Cookies and Analytics</h2>
             We may use cookies or similar technologies that are required for authentication and application
-            functionality. Optional analytics may be used to improve the app experience, and any such data is anonymized
-            and not used for advertising.
+            functionality.
 
             <h2>6. Your Rights</h2>
             If you are a user and want your data removed, contact your organization admin or email us at

@@ -2,10 +2,10 @@
     <div class="title-bar">
         <div class="left-window-controls">
             <ClientOnly>
-                <div v-if="colorMode.value === 'dark'">
+                <div v-if="colorMode.value === 'dark'" class="icon">
                     <NuxtImg src="/logo/icon-dark.png" width="30" class="logo" alt="House App Logo" />
                 </div>
-                <div v-else>
+                <div v-else class="icon">
                     <NuxtImg src="/logo/icon.png" width="30" class="logo" alt="House App Logo" />
                 </div>
             </ClientOnly>
@@ -116,5 +116,10 @@ const sidebar_open = ref(false);
         }
     }
 
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
 }
 </style>
