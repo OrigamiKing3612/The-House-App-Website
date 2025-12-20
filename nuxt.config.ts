@@ -39,7 +39,7 @@ export default defineNuxtConfig({
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
                 { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
                 { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap" },
-                { rel: "alternate", type: "application/rss+xml", title: "The House App RSS Feed", href: "/rss.xml" },
+                { rel: "alternate", type: "application/rss+xml", title: "The House App RSS Feed", href: "/blog/rss.xml" },
             ]
         },
         viewTransition: true
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
         prerender: {
             failOnError: true,
             crawlLinks: true,
-            routes: ["/sitemap.xml", "/robots.txt", "/rss.xml", "/status"],
+            routes: ["/sitemap.xml", "/robots.txt", "/blog/rss.xml", "/status"],
             ignore: ["/bugs"]
         },
         logLevel: 3,
