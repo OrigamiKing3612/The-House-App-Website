@@ -1,11 +1,12 @@
 <template>
-    <Card title="Privacy Policy">
+    <LargeTitleText>Privacy<br>Policy</LargeTitleText>
+    <Card class="card">
         <div class="container">
-            <h2>1. Who We Are</h2>
+            <h2>Who We Are</h2>
             This app (“we”, “our”, or “us”) is a platform for tracking progress and participation across houses/groups
             within schools, churches, and other organizations.
 
-            <h2>2. What We Collect</h2>
+            <h2>What We Collect</h2>
             We collect only the data necessary to provide and secure our service:
             <ul>
                 <li>Names and email addresses of users</li>
@@ -13,7 +14,7 @@
                 <li>Security-related technical data such as login timestamps and IP addresses</li>
             </ul>
 
-            <h2>3. How We Use Your Data</h2>
+            <h2>How We Use Your Data</h2>
             We use your data only to:
             <ul>
                 <li>Provide core app functionality and display progress to your group or organization</li>
@@ -32,30 +33,30 @@
                 <li>Share your data outside your organization except as required to operate the service</li>
             </ul>
 
-            <h2>4. Who Can See Your Data</h2>
+            <h2>Who Can See Your Data</h2>
             <ul>
                 <li>Personal account information is visible only to the user and authorized administrators.</li>
                 <li>Security logs (such as login history) are accessible only to system administrators for safety and
                     abuse prevention.</li>
             </ul>
 
-            <h2>5. Cookies and Analytics</h2>
+            <h2>Cookies and Analytics</h2>
             We may use cookies or similar technologies that are required for authentication and application
             functionality.
 
-            <h2>6. Your Rights</h2>
+            <h2>Your Rights</h2>
             If you are a user and want your data removed, contact your organization admin or email us at
-            <Email />
+            <SupportEmail />
 
-            <h2>7. Data Security</h2>
+            <h2>Data Security</h2>
             We follow reasonable security practices to protect your data, including encryption and secure
             authentication.
 
-            <h2>8. Children</h2>
+            <h2>Children</h2>
             This app may be used by students, including minors, under the supervision of their organization. We do not
             knowingly collect personal data directly from children under 13 without organization consent.
 
-            <h2>9. Contact</h2>
+            <h2>Contact</h2>
             If you have any questions, contact us at:
             <SupportEmail />
         </div>
@@ -71,7 +72,26 @@ definePageMeta({
 
 
 <style lang="scss" scoped>
+.card {
+    width: 100%;
+    max-width: 700px;
+}
+
 .container {
     text-align: left;
+    counter-reset: section;
+}
+
+.container h2 {
+    counter-increment: section;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.container h2::before {
+    content: counter(section) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
 }
 </style>

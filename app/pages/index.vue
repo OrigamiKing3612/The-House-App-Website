@@ -88,6 +88,7 @@ definePageMeta({
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    max-width: 100%;
 }
 
 .intro {
@@ -99,10 +100,6 @@ definePageMeta({
     text-align: center;
     justify-content: space-evenly;
     margin: 10em;
-
-    .image {}
-
-    h1 {}
 }
 
 .index-card {
@@ -118,6 +115,7 @@ definePageMeta({
 
         .logo {
             margin-bottom: 2em;
+            transform: scale(0.9);
         }
     }
 }

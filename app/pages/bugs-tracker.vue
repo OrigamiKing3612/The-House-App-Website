@@ -15,13 +15,12 @@
             </p>
         </Card>
         <div class="settings">
+            <SearchField v-model="search" class="search" />
             <Dropdown :options="['Issues', 'Feature Requests']" :option-display="(a: string) => a" v-model="mode"
                 class="mode" />
-            <SearchField v-model="search" v-if="!isScreenWidth && !isSmaller" />
             <Dropdown :options="['Open', 'Closed']" :option-display="(a: string) => a" v-model="status"
                 class="status" />
         </div>
-        <SearchField v-model="search" v-if="isSmaller && !isScreenWidth" class="search" />
         <RoundedContainer v-if="mode === 'Issues'">
             <template #title>
                 Known Issues
@@ -56,7 +55,6 @@
             </template>
         </RoundedContainer>
     </div>
-    <SearchField v-if="isScreenWidth" v-model="search" class="mobile search-field" />
 </template>
 
 <script setup lang="ts">
@@ -66,8 +64,6 @@ const mode = ref<'Issues' | 'Feature Requests'>('Issues');
 const status = ref<'Open' | 'Closed'>('Open');
 const search = ref<string>('');
 
-const isScreenWidth = useScreenWidth(520);
-const isSmaller = useScreenWidth(650);
 const store = useStore();
 
 const issues = computed<GitHubIssue[]>(() => store.issues);
@@ -85,13 +81,7 @@ const filtered = computed<GitHubIssue[]>(() => {
         result = enhancements.value;
     }
 
-    if (mode.value === 'Issues') {
-        result = result.filter(u => u.state == status.value.toLowerCase());
-    }
-
-    if (mode.value === 'Feature Requests') {
-        result = result.filter(u => u.state == status.value.toLowerCase());
-    }
+    result = result.filter(u => u.state == status.value.toLowerCase());
 
     if (search.value.trim() !== "") {
         result = result.filter(u =>
@@ -122,56 +112,31 @@ onMounted(async () => {
 .settings {
     width: 100%;
     max-width: 700px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .6rem;
+    align-items: center;
+    justify-items: center;
+    transition: all 0.3s ease;
+}
 
-
-    .mode {
-        min-width: 200px;
-        justify-content: flex-end;
+@media (max-width: 720px) {
+    .settings {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .status {
-        justify-content: flex-start;
+    .search {
+        grid-column: span 2;
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
     .settings {
-        justify-content: center;
-        gap: 10px;
+        grid-template-columns: 1fr;
 
-        .mode,
-        .status {
-            width: 100%;
-            justify-content: space-between;
+        .search {
+            grid-column: span 1;
         }
     }
-}
-
-@media (max-width: 650px) {
-    .settings {
-        justify-content: center;
-        gap: 10px;
-
-        .mode,
-        .status {
-            width: 100%;
-            justify-content: space-between;
-        }
-    }
-}
-
-.mobile {
-    position: fixed;
-    bottom: 10px;
-    background: none;
-    text-align: center;
-    padding: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.1s ease;
-    z-index: 999;
 }
 </style>

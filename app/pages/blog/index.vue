@@ -99,7 +99,7 @@ await fetchList()
     .timestamp {
         position: absolute;
         right: 15px;
-        top: 15px;
+        top: 10px;
         color: var(--subtext-1);
         font-size: 0.8rem;
     }

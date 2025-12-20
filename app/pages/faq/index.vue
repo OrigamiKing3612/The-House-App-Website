@@ -54,7 +54,7 @@ const allQuestions = ref<answers[]>([
             },
             {
                 q: "How do I reset my password?",
-                a: "You can reset your password on the profile page. If you are locked out of your account, or contact your admin to have your password reset."
+                a: "You can reset your password on the account page under the 'Manage Account Security' page. If you are locked out of your account, or contact your admin to have your password reset."
             },
             {
                 q: "Can I use the same account for multiple organizations?",
@@ -71,11 +71,11 @@ const allQuestions = ref<answers[]>([
             },
             {
                 q: "Why am I not receiving notifications?",
-                a: "You may have notifications disabled in your profile settings or on your device. Please check both to ensure notifications are enabled."
+                a: "You may have notifications disabled in your account settings or on your device. Please check both to ensure notifications are enabled."
             },
             {
                 q: "How do I enable or disable notifications?",
-                a: "You can enable or disable notifications in the profile settings under the Notifications section."
+                a: "You can enable or disable notifications in the account settings under the Notifications section."
             },
         ]
     },
@@ -122,6 +122,40 @@ const allQuestions = ref<answers[]>([
         ]
     },
     {
+        name: "Year Management",
+        questions: [
+            {
+                q: "What is year management?",
+                a: "Year management allows organization admins to create and manage different academic or calendar years within the app, organizing events, points, and activities specific to each year."
+            },
+            {
+                q: "How do I create a new year?",
+                a: "Organization admins can create a new year by navigating to the Year Management section in the admin page and clicking on 'Create New Year' under the 'Year Management' secion."
+            },
+            {
+                q: "Can I archive previous years?",
+                a: "The app will automatically archive previous years when a new year is created. Archived years can be viewed but not modified."
+            },
+            {
+                q: "How do I switch between years?",
+                // a: "You can not switch between years. Admins can only view previous years in an archived state."
+                a: "You can not switch between years."
+            },
+            {
+                q: "What happens to points and events from previous years?",
+                a: "Points and events from previous years are archived and can be viewed in a read-only format. They do not affect the current year's standings."
+            },
+            {
+                q: "Can I delete a year?",
+                a: "If you need a year deleted, please contact support."
+            },
+            {
+                q: "Can I undo creating a new year?",
+                a: "If this is absolutely necessary, please contact support."
+            }
+        ],
+    },
+    {
         name: "Technical",
         questions: [
             {
@@ -134,11 +168,11 @@ const allQuestions = ref<answers[]>([
             },
             {
                 q: "What devices does the app support?",
-                a: "The App supports any device with a web browser and internet connection."
+                a: "The House App supports any device with a web browser and internet connection."
             },
             {
                 q: "How do I report a bug or request a feature?",
-                a: "You can report bugs or feature requests in the profile page under the Support Area. If you do not have an account, you can report bugs on the example organization."
+                a: "You can report bugs or feature requests in the account page under the Support area. If you do not have an account, you can report bugs on the example organization."
             },
             {
                 q: "How often is the app updated?",
@@ -150,10 +184,10 @@ const allQuestions = ref<answers[]>([
             },
             {
                 q: "Does the app support dark mode?",
-                a: "Yes, the app supports dark mode. You can enable it in your profile settings."
+                a: "Yes, the app supports dark mode. You can enable it in your account settings."
             },
             {
-                q: "Does the app work offline at all?",
+                q: "Does the app work offline?",
                 a: "No, the app does not work offline. An internet connection is required to access all features and data."
             },
         ],

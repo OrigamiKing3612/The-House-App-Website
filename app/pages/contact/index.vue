@@ -1,5 +1,5 @@
 <template>
-    <Card title="Contact Us">
+    <Card title="Contact Us" class="card">
         <form @submit.prevent>
             <p>We would love to hear from you! Please fill out the form and we will get back to you shortly .</p>
             <TextField label="Name" type="text" v-model="name" required placeholder="Enter your name" />
@@ -47,6 +47,11 @@ const submit = async (done: () => void) => {
 </script>
 
 <style lang="scss" scoped>
+.card {
+    width: 100%;
+    max-width: 700px;
+}
+
 .text-area {
     :deep(label) {
         text-align: left;
