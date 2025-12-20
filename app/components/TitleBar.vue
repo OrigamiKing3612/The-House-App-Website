@@ -42,7 +42,6 @@
 
 <script setup lang="ts">
 defineProps<{
-    showBackButton: boolean,
 }>();
 const colorMode = useColorMode();
 const sidebar_open = ref(false);
