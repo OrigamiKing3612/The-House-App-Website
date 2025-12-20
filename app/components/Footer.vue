@@ -6,7 +6,7 @@
                     width="64" height="64" class="footer-logo" />
                 <div class="footer-text">
                     <strong>OrigamiKing3612</strong><br />
-                    &copy; 2024-2025 The House App. All rights reserved.
+                    &copy; 2024-{{ new Date().getFullYear() }} The House App. All rights reserved.
                 </div>
             </div>
         </div>
