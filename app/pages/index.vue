@@ -3,7 +3,7 @@
         <section class="intro">
             <ClientOnly>
                 <div class="logo">
-                    <NuxtImg v-if="$colorMode.value === 'dark'" src="/logo-wordmark-dark.png" alt="House App Logo" />
+                    <NuxtImg v-if="colorMode.value === 'dark'" src="/logo-wordmark-dark.png" alt="House App Logo" />
                     <NuxtImg v-else src="/logo-wordmark.png" alt="House App Logo" />
                 </div>
             </ClientOnly>
@@ -75,6 +75,7 @@
 </template>
 
 <script setup lang="ts">
+const colorMode = useColorMode();
 
 definePageMeta({
     title: "The House App"

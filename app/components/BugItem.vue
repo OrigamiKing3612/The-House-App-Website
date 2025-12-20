@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { GitHubIssue } from '#imports';
+import { normalizeString, type GitHubIssue } from '#imports';
 
 defineProps<{
     issue: GitHubIssue,

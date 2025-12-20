@@ -28,6 +28,7 @@
 </template>
 
 <script setup lang="ts">
+import { normalizeString } from '#imports';
 
 const { fetchList, articles } = useBlog()
 
