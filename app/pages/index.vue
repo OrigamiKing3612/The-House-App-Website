@@ -108,7 +108,14 @@ definePageMeta({
     text-align: left;
 }
 
-@media (max-width: 650px) {
+.logo {
+    img {
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+@media (max-width:750px) {
     .intro {
         flex-direction: column;
         margin: 5em;
