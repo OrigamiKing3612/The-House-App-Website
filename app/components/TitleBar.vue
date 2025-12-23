@@ -3,10 +3,10 @@
         <div class="left-window-controls">
             <ClientOnly>
                 <div v-if="colorMode.value === 'dark'" class="icon">
-                    <NuxtImg src="/logo/icon-dark.png" width="30" class="logo" alt="House App Logo" />
+                    <img src="/logo/icon-dark.png" width="30" class="logo" alt="House App Logo" />
                 </div>
                 <div v-else class="icon">
-                    <NuxtImg src="/logo/icon.png" width="30" class="logo" alt="House App Logo" />
+                    <img src="/logo/icon.png" width="30" class="logo" alt="House App Logo" />
                 </div>
             </ClientOnly>
             <!-- <BackButton v-if="props.showBackButton" /> -->
