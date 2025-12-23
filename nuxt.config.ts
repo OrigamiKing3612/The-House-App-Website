@@ -19,9 +19,9 @@ export default defineNuxtConfig({
                 { name: "description", content: description },
                 { name: "publisher", content: "OrigamiKing3612" },
                 { name: "keywords", content: "The House App, The House App Desktop, The House App App" },
-                { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#ffffff" },
+                { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#f5fcff" },
                 { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#000000" },
-                { name: "background-color", media: "(prefers-color-scheme: light)", content: "#ffffff" },
+                { name: "background-color", media: "(prefers-color-scheme: light)", content: "#f5fcff" },
                 { name: "background-color", media: "(prefers-color-scheme: dark)", content: "#000000" },
                 { property: "og:locale", content: "en_US" },
                 { property: "og:type", content: "website" },
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
                 { rel: "preconnect", href: "https://fonts.googleapis.com" },
                 { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
                 { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap" },
-                { rel: "alternate", type: "application/rss+xml", title: "The House App RSS Feed", href: "/rss.xml" },
+                { rel: "alternate", type: "application/rss+xml", title: "The House App RSS Feed", href: "/blog/rss.xml" },
             ]
         },
         viewTransition: true
@@ -48,32 +48,18 @@ export default defineNuxtConfig({
         prerender: {
             failOnError: true,
             crawlLinks: true,
-            routes: ["/sitemap.xml", "/robots.txt", "/rss.xml", "/status"],
+            routes: ["/sitemap.xml", "/robots.txt", "/blog/rss.xml", "/status"],
             ignore: ["/bugs"]
         },
         logLevel: 3,
     },
     ssr: true,
-    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap"],
+    modules: ["@nuxtjs/color-mode", "@nuxt/eslint", "@nuxtjs/robots", "@nuxtjs/sitemap", "@nuxt/image", "@nuxt/content", "@origami-systems/nuxt-shared", ["@pinia/nuxt", { autoImports: ['defineStore', 'acceptHMRUpdate'] }]],
     devtools: { enabled: true },
     css: ['~/assets/styles/main.scss'],
     components: [
         { path: "~/components/", pathPrefix: false }
     ],
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: `
-                        @use "@/assets/styles/lib/_variables.scss" as *;
-                        @use "@/assets/styles/lib/_colors.scss" as *;
-                        @use "@/assets/styles/lib/_housecolors.scss" as *;
-                    `
-                }
-            }
-        }
-
-    },
     colorMode: {
         classSuffix: "",
         preference: "system",
@@ -85,5 +71,14 @@ export default defineNuxtConfig({
     },
     robots: {
         sitemap: '/sitemap.xml',
+    },
+    content: {
+
+    },
+    pinia: {
+
+    },
+    origamiSystemsShared: {
+        mode: 'house'
     }
 })

@@ -1,12 +1,11 @@
 name: Build site
 on:
-  push:
-    branches-ignore:
-      - master
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
+  packages: read
   id-token: write
 concurrency:
   group: "pages"
@@ -22,8 +21,9 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 25
           cache: "pnpm"
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
       - run: pnpm install
       - run: pnpm prepare
       - run: pnpm typecheck
@@ -37,25 +37,15 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 25
           cache: "pnpm"
-      - run: pnpm install
+      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.ORIGAMI_SYSTEMS_PACKAGES }}" >> .npmrc
+      - run: pnpm install --no-optional=false
       - run: pnpm build --no-minify --no-sourcemap
-      - name: Upload build output
-        uses: actions/upload-artifact@v4
-        with:
-          name: built-frontend
-          path: .output
-          if-no-files-found: error
-          include-hidden-files: true
-    # - name: Nuxt build
-    #   run: |
-    #     pnpm build --preset github_pages
-    # - name: Setup Pages
-    #   uses: actions/configure-pages@v5
+    # - name: Upload build output
+    #   uses: actions/upload-artifact@v4
     #   with:
-    #     static_site_generator: nuxt
-    # - name: Upload artifact
-    #   uses: actions/upload-pages-artifact@v3
-    #   with:
-    #     path: ./dist
+    #     name: built-frontend
+    #     path: .output
+    #     if-no-files-found: error
+    #     include-hidden-files: true

@@ -1,16 +1,19 @@
 <template>
     <div class="sidebar" :class="{ open: model }">
         <NuxtLink to="/" active-class="active" class="link">
-            <h1 class="title">Home</h1>
+            <p class="title">Home</p>
         </NuxtLink>
-        <NuxtLink to="/bugs" active-class="active" class="link">
-            <h1 class="title">Bug Tracker</h1>
+        <NuxtLink to="/bugs-tracker" active-class="active" class="link">
+            <p class="title">Bug Tracker</p>
         </NuxtLink>
-        <NuxtLink to="/changelog" active-class="active" class="link">
-            <h1 class="title">Changelog</h1>
+        <NuxtLink to="/blog" active-class="active" class="link">
+            <p class="title">Blog</p>
         </NuxtLink>
-        <NuxtLink to="https://status.the-house-app.com" external active-class="active" class="link" target="_blank">
-            <h1 class="title">Status</h1>
+        <!-- <NuxtLink to="/about" active-class="active" class="link"> -->
+        <!--     <p class="title">About</p> -->
+        <!-- </NuxtLink> -->
+        <NuxtLink to="/contact" active-class="active" class="link">
+            <p class="title">Contact Us</p>
         </NuxtLink>
 
         <SwitchThemesButton class="theme-button" />
@@ -39,12 +42,12 @@ watch(route, () => {
     width: 85%;
     max-width: 550px;
     height: 100%;
-    background-color: var(--main-background);
-    color: var(--text);
+    background-color: var(--background-0);
+    color: var(--text-1);
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    border: 1px solid var(--text);
+    border: 1px solid var(--text-1);
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     text-align: right;
     transition: all 0.5s ease;
@@ -54,7 +57,7 @@ watch(route, () => {
     }
 
     &.active {
-        color: var(--primary);
+        color: var(--accent);
         box-shadow: var(--hover-shadow);
     }
 }
@@ -78,7 +81,7 @@ watch(route, () => {
         width: 30px;
         height: 30px;
         margin-left: 15px;
-        fill: var(--text);
+        fill: var(--text-1);
     }
 }
 
