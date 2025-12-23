@@ -18,8 +18,8 @@
             <SearchField v-model="search" class="search" />
             <Dropdown :options="['Issues', 'Feature Requests']" :option-display="(a: string) => a" v-model="mode"
                 class="mode" />
-            <Dropdown :options="['Open', 'Closed']" :option-display="(a: string) => a" v-model="status"
-                class="status" />
+            <Dropdown :options="['Open', 'Closed']" :option-display="(a: string) => a" v-model="status" class="status"
+                width="140px" />
         </div>
         <RoundedContainer v-if="mode === 'Issues'">
             <template #title>
@@ -130,7 +130,7 @@ onMounted(async () => {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 460px) {
     .settings {
         grid-template-columns: 1fr;
 

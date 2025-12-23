@@ -41,6 +41,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0;
+    margin-bottom: -35px;
 
     .footer-left {
         margin-bottom: 1rem;
