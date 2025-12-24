@@ -48,7 +48,7 @@ export default defineNuxtConfig({
         prerender: {
             failOnError: true,
             crawlLinks: true,
-            routes: ["/sitemap.xml", "/robots.txt", "/blog/rss.xml", "/status"],
+            routes: ["/sitemap.xml", "/robots.txt", "/blog/rss.xml", "/status", "/blog"],
             ignore: ["/bugs"]
         },
         logLevel: 3,

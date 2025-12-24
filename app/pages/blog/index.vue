@@ -1,12 +1,10 @@
 <template>
-    <!-- <Card title="Blog"> -->
     <LargeTitleText>
         Blog
     </LargeTitleText>
     <div class="container">
         <div v-for="a in articles" :key="a.id">
             <NuxtLink :to="`${a.path}`" class="link">
-                <!-- <AppSubmitButton> -->
                 <div class="item">
                     <div class="title">{{ a.title }}</div>
                     <div class="description">{{ a.description }}</div>
@@ -20,11 +18,9 @@
                     </div>
                     <NuxtTime class="timestamp" :datetime="a.timestamp" />
                 </div>
-                <!-- </AppSubmitButton> -->
             </NuxtLink>
         </div>
     </div>
-    <!-- </Card> -->
 </template>
 
 <script setup lang="ts">
@@ -36,7 +32,9 @@ definePageMeta({
     title: "Blog"
 });
 
-await fetchList()
+onMounted(async () => {
+    await fetchList()
+})
 </script>
 
 <style lang="scss" scoped>

@@ -19,13 +19,13 @@ const { data: doc } = await useAsyncData(`docs-${slug}`, () => {
 })
 
 useSeoMeta({
-    title: `Changelog - ${doc.value?.seo.title}`,
+    title: `${doc.value?.seo.title} - Docs`,
     description: doc.value?.description,
-    ogTitle: `Changelog - ${doc.value?.title}`,
+    ogTitle: `${doc.value?.title} - Docs`,
     ogUrl: "https://the-house-app.com",
     ogImage: "https://the-house-app.com/web-app-manifest-192x192.png",
     twitterImage: "https://the-house-app.com/web-app-manifest-192x192.png",
-    twitterTitle: `Changelog - ${doc.value?.title}`,
+    twitterTitle: `${doc.value?.title} - Docs`,
 })
 </script>
 

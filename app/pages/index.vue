@@ -14,7 +14,6 @@
         </section>
         <Card title="About the House System" class="index-card">
             <section class="about-section">
-                <h2></h2>
                 <p>Originating in British Commonwealth boarding schools, the house system has evolved into a
                     cornerstone of educational institutions worldwide. It not only provides organizational structure
                     but also cultivates leadership and community among students.</p>

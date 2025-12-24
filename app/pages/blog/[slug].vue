@@ -20,13 +20,13 @@ const { data: post } = await useAsyncData(`blog-${slug}`, () => {
 })
 
 useSeoMeta({
-    title: `Changelog - ${post.value?.seo.title}`,
+    title: `${post.value?.seo.title} - ${normalizeString(post.value?.type ?? 'changelog')}`,
     description: post.value?.description,
-    ogTitle: `Changelog - ${post.value?.title}`,
+    ogTitle: `${post.value?.seo.title} - ${normalizeString(post.value?.type ?? 'changelog')}`,
     ogUrl: "https://the-house-app.com",
     ogImage: "https://the-house-app.com/web-app-manifest-192x192.png",
     twitterImage: "https://the-house-app.com/web-app-manifest-192x192.png",
-    twitterTitle: `Changelog - ${post.value?.title}`,
+    twitterTitle: `${post.value?.seo.title} - ${normalizeString(post.value?.type ?? 'changelog')}`,
 })
 </script>
 
