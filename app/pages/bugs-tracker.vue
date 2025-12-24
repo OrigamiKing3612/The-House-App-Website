@@ -10,7 +10,8 @@
             </p>
             <p>
                 For a comprehensive and up-to-date overview of reported bugs, please visit our <NuxtLink
-                    class="text-link" to="https://github.com/OrigamiKing3612/The-House-App-Website/issues" external>
+                    class="text-link" to="https://github.com/OrigamiKing3612/The-House-App-Website/issues" external
+                    target="_blank">
                     GitHub Issues page </NuxtLink>.
             </p>
         </Card>

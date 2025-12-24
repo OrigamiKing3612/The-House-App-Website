@@ -2,8 +2,8 @@
     <footer class="footer">
         <div class="footer-left">
             <div class="footer-info">
-                <img src="https://the-house-app.com/apple-touch-icon.png" alt="The House App Logo" title="The House App"
-                    width="64" height="64" class="footer-logo" />
+                <img src="/icons/light/icon.png" alt="The House App Logo" title="The House App" width="64" height="64"
+                    class="footer-logo" />
                 <div class="footer-text">
                     <strong>OrigamiKing3612</strong><br />
                     &copy; 2024-{{ new Date().getFullYear() }} The House App. All rights reserved.
