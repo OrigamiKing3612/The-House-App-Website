@@ -3,8 +3,8 @@
         <section class="intro">
             <ClientOnly>
                 <div class="logo">
-                    <img v-if="colorMode.value === 'dark'" src="/logo-wordmark-dark.png" alt="House App Logo" />
-                    <img v-else src="/logo-wordmark.png" alt="House App Logo" />
+                    <img v-if="colorMode.value === 'dark'" src="/logo-wordmark-dark.png" alt="The House App Logo" />
+                    <img v-else src="/logo-wordmark.png" alt="The House App Logo" />
                 </div>
             </ClientOnly>
 
