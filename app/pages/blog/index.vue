@@ -32,6 +32,14 @@ definePageMeta({
     title: "Blog"
 });
 
+useHead({
+    link: [{
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'The House App Blog RSS',
+        href: 'https://the-house-app.com/blog/rss.xml'
+    }]
+})
 onMounted(async () => {
     await fetchList()
 })
