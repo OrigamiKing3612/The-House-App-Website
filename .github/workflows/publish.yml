@@ -1,5 +1,7 @@
 name: Build and publish site
 on:
+  push:
+    branches: ["master"]
   workflow_dispatch:
 permissions:
   contents: read
