@@ -9,7 +9,7 @@
                     <div class="title">{{ a.title }}</div>
                     <div class="description">{{ a.description }}</div>
                     <div class="extra">
-                        <span class="type">{{ normalizeString(a.type) }}</span>
+                        <Badge>{{ normalizeString(a.type) }}</Badge>
                         <div class="tags">
                             <div v-for="tag in a.tags" :key="tag" class="tag">
                                 {{ tag }}
@@ -81,13 +81,6 @@ onMounted(async () => {
         justify-content: space-between;
         align-items: center;
         margin-top: 15px;
-
-        .type {
-            color: var(--accent);
-            border-radius: var(--border-radius);
-            border: var(--accent-border);
-            padding: 2px 5px;
-        }
 
         .tags {
             display: flex;
