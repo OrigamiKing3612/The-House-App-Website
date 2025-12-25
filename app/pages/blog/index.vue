@@ -2,7 +2,7 @@
     <LargeTitleText>
         Blog
     </LargeTitleText>
-    <div class="container">
+    <CardGrid>
         <div v-for="a in articles" :key="a.id">
             <NuxtLink :to="`${a.path}`" class="link">
                 <div class="item">
@@ -20,7 +20,7 @@
                 </div>
             </NuxtLink>
         </div>
-    </div>
+    </CardGrid>
 </template>
 
 <script setup lang="ts">
@@ -46,20 +46,11 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    display: grid;
-    gap: 10px;
-    // grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    width: 90%;
-}
-
 .item {
     position: relative;
     padding: 20px;
     text-align: left;
     border: var(--border);
-    // background-color: var(--background-1);
     border-radius: var(--border-radius);
     flex: 1;
 
