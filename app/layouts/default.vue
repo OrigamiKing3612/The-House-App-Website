@@ -1,5 +1,5 @@
 <template>
-    <TitleBar />
+    <AppTitleBar />
     <div class="all">
         <slot />
     </div>
