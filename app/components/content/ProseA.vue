@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :href="props.href" :target="props.target">
+    <NuxtLink :href="props.href" :target="props.target" class="text-link">
         <slot />
     </NuxtLink>
 </template>
@@ -20,10 +20,4 @@ const props = defineProps({
 })
 </script>
 
-<style lang="scss" scoped>
-a {
-    text-align: left;
-    color: var(--text-0);
-    text-decoration: none;
-}
-</style>
+<style lang="scss" scoped></style>
