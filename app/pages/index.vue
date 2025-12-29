@@ -1,12 +1,12 @@
 <template>
     <div id="index">
         <section class="intro">
-            <ClientOnly>
-                <div class="logo">
+            <div class="logo">
+                <ClientOnly>
                     <img v-if="colorMode.value === 'dark'" src="/icons/dark/wordmark.png" alt="The House App Logo" />
                     <img v-else src="/icons/light/wordmark.png" alt="The House App Logo" />
-                </div>
-            </ClientOnly>
+                </ClientOnly>
+            </div>
 
             <h1 class="tagline">
                 Building community through friendly competition
@@ -114,6 +114,10 @@ definePageMeta({
     }
 }
 
+.bold {
+    font-weight: bold;
+}
+
 @media (max-width:750px) {
     .intro {
         flex-direction: column;
@@ -121,7 +125,10 @@ definePageMeta({
 
         .logo {
             margin-bottom: 2em;
-            transform: scale(0.9);
+
+            img {
+                width: 100%;
+            }
         }
     }
 }
