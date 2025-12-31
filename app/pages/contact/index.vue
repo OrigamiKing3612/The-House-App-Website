@@ -14,7 +14,7 @@
                 required placeholder="Tell us where you heard about us" />
             <TextArea label="What would you like to know more about? (optional)" v-model="question"
                 placeholder="Tell us what interests you or any questions you have" class="text-area" />
-            <TextField v-model="hp_field" name="hp_field" autocomplete="off" tabindex="-1" style="display: inline;" />
+            <TextField v-model="hp_field" name="hp_field" autocomplete="off" tabindex="-1" style="display: none;" />
             <AppSubmitButton type="submit" @click="submit">Submit</AppSubmitButton>
         </form>
     </Card>
