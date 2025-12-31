@@ -14,6 +14,7 @@
                 required placeholder="Tell us where you heard about us" />
             <TextArea label="What would you like to know more about? (optional)" v-model="question"
                 placeholder="Tell us what interests you or any questions you have" class="text-area" />
+            <TextField v-model="hp_field" name="hp_field" autocomplete="off" tabindex="-1" style="display: inline;" />
             <AppSubmitButton type="submit" @click="submit">Submit</AppSubmitButton>
         </form>
     </Card>
@@ -22,6 +23,7 @@
 <script setup lang="ts">
 import SubmitContact from '~/composables/SubmitContact';
 
+const hp_field = ref('');
 const name = ref('');
 const email = ref('');
 const organization = ref('');
@@ -35,11 +37,31 @@ const howDidYouHearAboutUsOptions = [
 const hear = ref('Website');
 const howDidYouHearAboutUs = ref("");
 const question = ref("");
+const notifications = useNotifications();
 
 const submit = async (done: () => void) => {
     try {
+        if (!name.value || !email.value || !organization.value || !hear.value) {
+            notifications.error('Please fill out all required fields.');
+            return;
+        }
+        if (hp_field.value !== '') {
+            // Honeypot field filled out, likely a bot
+            notifications.error('Submission failed. Please try again.');
+            return;
+        }
         const hearValue = hear.value === 'Other' ? howDidYouHearAboutUs.value : hear.value;
-        await SubmitContact(name.value, email.value, organization.value, hearValue, question.value.trim() === '' ? undefined : question.value.trim());
+        const result = await SubmitContact(name.value, email.value, organization.value, hearValue, question.value.trim() === '' ? undefined : question.value.trim());
+        if (result) {
+            notifications.success('Your message has been sent successfully. We will get back to you shortly.');
+            hp_field.value = '';
+            name.value = '';
+            email.value = '';
+            organization.value = '';
+            hear.value = 'Website';
+            howDidYouHearAboutUs.value = '';
+            question.value = '';
+        }
     } finally {
         done();
     }
