@@ -2,7 +2,7 @@ import axios from "axios"
 
 const SubmitContact = async (name: string, email: string, organization: string, hear: string, question?: string) => {
     try {
-        const response = await axios.post("https://n8n.origamiking3612.com/webhook/the-house-app/contact", {
+        await axios.post("https://n8n.origamiking3612.com/webhook/the-house-app/contact", {
             name: name,
             email: email,
             organization: organization,
@@ -10,7 +10,7 @@ const SubmitContact = async (name: string, email: string, organization: string, 
             question: question
         })
 
-        return response.status == 200
+        return true;
     } catch (error: any) {
         console.error("API error:", error.message)
         return []

@@ -26,6 +26,7 @@
                     <NuxtLink to="https://status.the-house-app.com" external target="_blank">
                         Status
                     </NuxtLink>
+                    <NuxtLink to="/docs">Docs</NuxtLink>
                     <NuxtLink to="/faq">FAQ</NuxtLink>
                 </div>
             </div>
