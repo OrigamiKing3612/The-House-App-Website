@@ -3,7 +3,7 @@
         Blog
     </LargeTitleText>
     <CardGrid>
-        <div v-for="a in articles" :key="a.id">
+        <template v-for="a in articles" :key="a.id">
             <NuxtLink :to="`${a.path}`" class="link">
                 <div class="item">
                     <div class="title">{{ a.title }}</div>
@@ -19,7 +19,7 @@
                     <NuxtTime class="timestamp" :datetime="a.timestamp" />
                 </div>
             </NuxtLink>
-        </div>
+        </template>
     </CardGrid>
 </template>
 
@@ -46,52 +46,56 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-.item {
-    position: relative;
-    padding: 20px;
-    text-align: left;
-    border: var(--border);
-    border-radius: var(--border-radius);
+.link {
+    display: grid;
     flex: 1;
 
-    .title {
-        color: var(--text-0);
-        font-weight: bold;
-        margin-bottom: 20px;
-        font-size: 1.2rem;
-    }
+    .item {
+        position: relative;
+        padding: 20px;
+        text-align: left;
+        border: var(--border);
+        border-radius: var(--border-radius);
 
-    .description {
-        color: var(--subtext-0);
-    }
+        .title {
+            color: var(--text-0);
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
-    .extra {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
+        .description {
+            color: var(--subtext-0);
+        }
 
-        .tags {
+        .extra {
             display: flex;
+            width: 100%;
             flex-direction: row;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 0.9rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
 
-            .tag {
-                color: var(--subtext-2);
+            .tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                font-size: 0.9rem;
+
+                .tag {
+                    color: var(--subtext-2);
+                }
             }
         }
-    }
 
-    .timestamp {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        color: var(--subtext-1);
-        font-size: 0.8rem;
+        .timestamp {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            color: var(--subtext-1);
+            font-size: 0.8rem;
+        }
     }
 }
 </style>
