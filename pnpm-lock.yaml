@@ -21,8 +21,8 @@ importers:
         specifier: ^7.4.7
         version: 7.4.7(h3@1.15.4)(magicast@0.5.1)(vite@7.3.0(@types/node@24.0.13)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.94.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
       '@origami-systems/nuxt-shared':
-        specifier: 1.0.69
-        version: 1.0.69(magicast@0.5.1)(typescript@5.9.3)
+        specifier: 1.0.93
+        version: 1.0.93(magicast@0.5.1)(typescript@5.9.3)
       '@pinia/nuxt':
         specifier: ^0.11.3
         version: 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))
@@ -864,8 +864,8 @@ packages:
     resolution: {integrity: sha512-DUhX92lnCJD6tpghUmfmRIsSIoiXMS2SQ2Yd9Tg1+SnZskiKX+DGwLeAeHX8r0/9Pl/bTDpmYhs1snWcCoIkXA==}
     engines: {node: '>=18.0.0'}
 
-  '@origami-systems/nuxt-shared@1.0.69':
-    resolution: {integrity: sha512-exbfWlGOph5+MQcSR3pHWRoiy4+xh9YhU6MymlUBKTBqQN6O9dbNuIeczZDWi3r2LmF6EqUgKRabOrpf1nU2Jg==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.0.69/ce1a7f85486cdd90f956aea197a5b6881d931841}
+  '@origami-systems/nuxt-shared@1.0.93':
+    resolution: {integrity: sha512-E1A2ai4fUJ8BUAHSV6zoiblDCtZzSxdZio1Hs09L48161EVHtb96UaiAjLdUOc3AQQ1izMEJKSju9Bl5bRhrCA==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.0.93/db4be29b45f73389c383e8e0d0fbf68516eaf3e3}
 
   '@oxc-minify/binding-android-arm64@0.102.0':
     resolution: {integrity: sha512-pknM+ttJTwRr7ezn1v5K+o2P4RRjLAzKI10bjVDPybwWQ544AZW6jxm7/YDgF2yUbWEV9o7cAQPkIUOmCiW8vg==}
@@ -6510,9 +6510,8 @@ snapshots:
       - vite
       - vue
 
-  '@origami-systems/nuxt-shared@1.0.69(magicast@0.5.1)(typescript@5.9.3)':
+  '@origami-systems/nuxt-shared@1.0.93(magicast@0.5.1)(typescript@5.9.3)':
     dependencies:
-      '@nuxt/kit': 4.2.2(magicast@0.5.1)
       '@nuxtjs/color-mode': 4.0.0(magicast@0.5.1)
       '@pinia/nuxt': 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3)))
       defu: 6.1.4
