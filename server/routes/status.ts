@@ -1,3 +1,3 @@
 export default defineEventHandler((event) => {
-    return sendRedirect(event, "https://status.the-house-app.com", 301)
+    return sendRedirect(event, "https://status.origamisystems.org", 301)
 })

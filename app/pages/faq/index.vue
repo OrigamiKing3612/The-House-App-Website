@@ -197,7 +197,7 @@ const allQuestions = ref<answers[]>([
         questions: [
             {
                 q: "How can I contact support?",
-                a: "Email support@the-house-app.com"
+                a: "Email support@origamisystems.org"
             },
             {
                 q: "How long does support typically take to respond?",

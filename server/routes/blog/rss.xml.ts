@@ -13,7 +13,12 @@ export default defineEventHandler(async (event) => {
         .where('draft', '<>', true)
         .order('timestamp', 'DESC')
         .all()
-        .then((res: any) => res.filter((article: any) => article.path !== '/blog'))
+        .then(res =>
+            res.filter(article =>
+                article.path !== '/blog' &&
+                (!article.releaseDate || new Date(article.releaseDate) <= new Date())
+            )
+        )
 
     for (const a of articles) {
         feed.item({

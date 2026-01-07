@@ -24,7 +24,7 @@
                 <p>The House App is a cutting-edge tool designed to enrich the educational journey for students and
                     teachers alike. It offers insights to track house-related activities and achievements, fostering
                     engagement within the school community. There is also a <NuxtLink class="text-link"
-                        to="https://desktop.the-house-app.com/example" external>full example of the
+                        to="https://app.the-house-app.com/example" external>full example of the
                         app</NuxtLink>.</p>
             </section>
         </Card>
@@ -66,7 +66,7 @@
             <section class="login-section">
                 <p>
                     If you're part of a school or organization using The House App, you can <NuxtLink class="text-link"
-                        to="https://desktop.the-house-app.com" external>log in </NuxtLink>.
+                        to="https://app.the-house-app.com" external>log in </NuxtLink>.
                 </p>
             </section>
         </Card>

@@ -1,3 +1,3 @@
 <template>
-    <a class="text-link" href="mailto:info@the-house-app.com">info@the-house-app.com</a>
+    <a class="text-link" href="mailto:info@origamisystems.org">info@origamisystems.org</a>
 </template>
