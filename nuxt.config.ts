@@ -68,6 +68,9 @@ export default defineNuxtConfig({
         url: 'https://the-house-app.com',
         name: title,
     },
+    sitemap: {
+        zeroRuntime: true,
+    },
     robots: {
         sitemap: '/sitemap.xml',
     },
