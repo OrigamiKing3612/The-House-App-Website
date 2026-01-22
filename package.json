@@ -12,28 +12,29 @@
         "prepare": "nuxt prepare"
     },
     "dependencies": {
-        "@nuxt/content": "^3.10.0",
+        "@nuxt/content": "^3.11.0",
         "@nuxtjs/color-mode": "^3.5.2",
         "@nuxtjs/robots": "^5.6.7",
         "@nuxtjs/sitemap": "^7.5.2",
         "@origami-systems/nuxt-shared": "1.2.2",
         "@pinia/nuxt": "^0.11.3",
         "axios": "^1.13.2",
-        "better-sqlite3": "^12.6.0",
+        "better-sqlite3": "^12.6.2",
         "nuxt": "^4.2.2",
         "pinia": "^3.0.4",
         "rss": "^1.2.2",
-        "vue": "^3.5.26"
+        "vue": "^3.5.27"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.2",
         "@nuxt/eslint": "^1.12.1",
         "@types/rss": "^0.0.32",
+        "baseline-browser-mapping": "^2.9.17",
         "eslint": "^9.39.2",
-        "eslint-plugin-vue": "^10.6.2",
-        "sass": "^1.97.2",
+        "eslint-plugin-vue": "^10.7.0",
+        "sass": "^1.97.3",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.53.0",
+        "typescript-eslint": "^8.53.1",
         "vue-tsc": "^3.2.2"
     },
     "pnpm": {
