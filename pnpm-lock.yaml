@@ -21,8 +21,8 @@ importers:
         specifier: ^7.5.2
         version: 7.5.2(magicast@0.5.1)(vite@7.3.1(@types/node@24.0.13)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))(zod@3.25.76)
       '@origami-systems/nuxt-shared':
-        specifier: 1.2.2
-        version: 1.2.2(magicast@0.5.1)(typescript@5.9.3)
+        specifier: 1.2.5
+        version: 1.2.5(magicast@0.5.1)(typescript@5.9.3)
       '@pinia/nuxt':
         specifier: ^0.11.3
         version: 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))
@@ -716,8 +716,8 @@ packages:
       zod:
         optional: true
 
-  '@origami-systems/nuxt-shared@1.2.2':
-    resolution: {integrity: sha512-VH0KIqw9a5DZgcI1tLzwVGk6+Ikh3Knqt0IjZmv66pSE8CSemflD/aA2Kt/D7oX3Fq4d0nB6pcE2yYrFqwbtsw==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.2.2/bcd12e18ab58fceacf2bb6ec48dcd15b58d39a3e}
+  '@origami-systems/nuxt-shared@1.2.5':
+    resolution: {integrity: sha512-Fz+Mev1b3bUFaySk05HT6JgvzxyDJ5MxX68GaMU/6e2xu/jd7Hw9Jwqv3z6JajCQSKnmMtblj5A0OpDq8jtvrg==, tarball: https://npm.pkg.github.com/download/@origami-systems/nuxt-shared/1.2.5/034dce6c179add3e055f6c963a587c7bae835ee0}
 
   '@oxc-minify/binding-android-arm64@0.102.0':
     resolution: {integrity: sha512-pknM+ttJTwRr7ezn1v5K+o2P4RRjLAzKI10bjVDPybwWQ544AZW6jxm7/YDgF2yUbWEV9o7cAQPkIUOmCiW8vg==}
@@ -6323,7 +6323,7 @@ snapshots:
       - vite
       - vue
 
-  '@origami-systems/nuxt-shared@1.2.2(magicast@0.5.1)(typescript@5.9.3)':
+  '@origami-systems/nuxt-shared@1.2.5(magicast@0.5.1)(typescript@5.9.3)':
     dependencies:
       '@nuxtjs/color-mode': 4.0.0(magicast@0.5.1)
       '@pinia/nuxt': 0.11.3(magicast@0.5.1)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3)))
