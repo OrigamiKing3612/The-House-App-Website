@@ -1,0 +1,4 @@
+:root {
+    --accent: var(--house-app);
+    --accent-dark: var(--house-app-dark);
+}

@@ -1,0 +1,28 @@
+---
+interface Props {
+    title?: string;
+}
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.vue";
+const { title = "The House App" } = Astro.props;
+import "../styles/global.css";
+import "@origami-systems/ui/style.css";
+---
+
+<html lang="en" class="dark">
+    <head>
+        <title>{title}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+    </head>
+    <body>
+        <Header />
+        <main class="all">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

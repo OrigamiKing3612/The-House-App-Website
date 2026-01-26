@@ -1,8 +1,15 @@
 {
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "id": "/",
     "name": "The House App",
     "short_name": "The House App",
+    "theme_color": "#000001",
+    "background_color": "#f5fcff",
     "display": "standalone",
     "start_url": "/",
+    "shortcuts": [],
+    "prefer_related_applications": false,
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/web-app-manifest-192x192.png",

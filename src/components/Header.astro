@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import { TitleBar } from "@origami-systems/ui";
+import LocalSwitchThemes from "./LocalSwitchThemes.vue";
+import faviconDark from "../assets/icons/dark/favicon.svg";
+import faviconLight from "../assets/icons/light/favicon.svg";
+---
+
+<header>
+    <TitleBar>
+        <div slot="icon">
+            <a href="/">
+                <Image
+                    src={faviconDark}
+                    alt="The House App Logo"
+                    class="icon icon-dark"
+                    width="30"
+                />
+                <Image
+                    src={faviconLight}
+                    alt="The House App Logo"
+                    class="icon icon-light"
+                    width="30"
+                />
+            </a>
+        </div>
+        <div slot="right-side">
+            <LocalSwitchThemes client:only="vue" />
+        </div>
+    </TitleBar>
+</header>
+<style>
+    .icon {
+        user-select: none;
+    }
+    .icon-dark {
+        display: none;
+    }
+
+    :global(html.dark) .icon-light {
+        display: none;
+    }
+
+    :global(html.dark) .icon-dark {
+        display: inline;
+    }
+</style>
