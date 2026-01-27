@@ -1,0 +1,67 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="publisher" content="OrigamiKing3612" />
+<meta
+    name="keywords"
+    content="The House App, The House App Desktop, The House App App"
+/>
+<meta
+    name="theme-color"
+    media="(prefers-color-scheme: light)"
+    content="#f5fcff"
+/>
+<meta
+    name="theme-color"
+    media="(prefers-color-scheme: dark)"
+    content="#000000"
+/>
+<meta
+    name="background-color"
+    media="(prefers-color-scheme: light)"
+    content="#f5fcff"
+/>
+<meta
+    name="background-color"
+    media="(prefers-color-scheme: dark)"
+    content="#000000"
+/>
+<meta property="og:title" content={title} />
+<meta property="og:site_name" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://the-house-app.com" />
+<meta
+    property="og:image"
+    content="https://the-house-app.com/web-app-manifest-192x192.png"
+/>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+<link rel="manifest" href="/manifest.json" />
+<link
+    rel="icon"
+    type="image/png"
+    href="/icons/favicon-96x96.png"
+    sizes="96x96"
+/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+/>

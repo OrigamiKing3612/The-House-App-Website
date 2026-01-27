@@ -11,18 +11,27 @@ importers:
       '@astrojs/node':
         specifier: ^9.5.2
         version: 9.5.2(astro@6.0.0-beta.3(@types/node@25.0.10)(rollup@4.56.0)(sass@1.97.3)(typescript@5.9.3))
+      '@astrojs/rss':
+        specifier: ^4.0.15
+        version: 4.0.15
       '@astrojs/vue':
         specifier: ^6.0.0-beta.0
         version: 6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.3(@types/node@25.0.10)(rollup@4.56.0)(sass@1.97.3)(typescript@5.9.3))(rollup@4.56.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))
       '@origami-systems/ui':
-        specifier: ^0.0.5
-        version: 0.0.5(typescript@5.9.3)
+        specifier: ^0.0.6
+        version: 0.0.6(typescript@5.9.3)
       astro:
         specifier: ^6.0.0-beta.3
         version: 6.0.0-beta.3(@types/node@25.0.10)(rollup@4.56.0)(sass@1.97.3)(typescript@5.9.3)
+      rss:
+        specifier: ^1.2.2
+        version: 1.2.2
       sass:
         specifier: ^1.97.3
         version: 1.97.3
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
       typescript:
         specifier: ^5
         version: 5.9.3
@@ -30,6 +39,9 @@ importers:
         specifier: ^3.5.26
         version: 3.5.27(typescript@5.9.3)
     devDependencies:
+      '@types/rss':
+        specifier: ^0.0.32
+        version: 0.0.32
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -62,6 +74,9 @@ packages:
   '@astrojs/prism@4.0.0-beta.2':
     resolution: {integrity: sha512-3snR85nTXnXvgmFJ43AacCQcylk+mpsiQ5Gmr9hcR5IrEA6+EvaYfaF9jlxZqJIZYey/9ubSRmaERtwDhV/FeA==}
     engines: {node: ^20.19.1 || >=22.12.0}
+
+  '@astrojs/rss@4.0.15':
+    resolution: {integrity: sha512-uXO/k6AhRkIDXmRoc6xQpoPZrimQNUmS43X4+60yunfuMNHtSRN5e/FiSi7NApcZqmugSMc5+cJi8ovqgO+qIg==}
 
   '@astrojs/telemetry@3.3.0':
     resolution: {integrity: sha512-UFBgfeldP06qu6khs/yY+q1cDAaArM2/7AEIqQ9Cuvf7B1hNLq0xDrZkct+QoIGyjq56y8IaE2I3CTvG99mlhQ==}
@@ -686,8 +701,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@origami-systems/ui@0.0.5':
-    resolution: {integrity: sha512-v8Vg6x194U/ZpLheJkr03Von+ULOHhN2HSikYYRAiCmDXyWNfZ5IaL1/dme1sFfNY436Hpr8hfTDKrs6Zzzc4w==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/0.0.5/05210310e8189baa5276912791c23c8dff71a512}
+  '@origami-systems/ui@0.0.6':
+    resolution: {integrity: sha512-Kon8MyuybALELWrcxDRbKB5o5P/7kVVUvneoJPnEmlD5JEYaq+AGKmFUPnFO11xZS0bwJKCgA1dMkyxBc09lFw==, tarball: https://npm.pkg.github.com/download/@origami-systems/ui/0.0.6/32f52afa077f9be33095e077663e90835f304fff}
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -962,6 +977,9 @@ packages:
 
   '@types/node@25.0.10':
     resolution: {integrity: sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==}
+
+  '@types/rss@0.0.32':
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1355,6 +1373,10 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
+  fast-xml-parser@5.3.3:
+    resolution: {integrity: sha512-2O3dkPAAC6JavuMm8+4+pgTk+5hoAs+CjZ+sWcQLkX9+/tHRuTkQh/Oaifr8qDmZ8iEHb771Ea6G8CdwkrgvYA==}
+    hasBin: true
+
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
     engines: {node: '>=12.0.0'}
@@ -1697,8 +1719,16 @@ packages:
   micromark@4.0.2:
     resolution: {integrity: sha512-zpe98Q6kvavpCr1NPVSCMebCKfD7CA2NqZ+rykeNhONIJBpc1tFKt9hucLGwha3jNTNI8lHpctWJWoimVF4PfA==}
 
+  mime-db@1.25.0:
+    resolution: {integrity: sha512-5k547tI4Cy+Lddr/hdjNbBEWBwSl8EBc5aSdKvedav8DReADgWJzcYiktaRIw3GtGC1jjwldXtTzvqJZmtvC7w==}
+    engines: {node: '>= 0.6'}
+
   mime-db@1.54.0:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
+    engines: {node: '>= 0.6'}
+
+  mime-types@2.1.13:
+    resolution: {integrity: sha512-ryBDp1Z/6X90UvjUK3RksH0IBPM137T7cmg4OgD5wQBojlAiUwuok0QeELkim/72EtcYuNlmbkrcGuxj3Kl0YQ==}
     engines: {node: '>= 0.6'}
 
   mime-types@3.0.2:
@@ -1928,6 +1958,9 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  rss@1.2.2:
+    resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
+
   run-applescript@7.1.0:
     resolution: {integrity: sha512-DPe5pVFaAsinSaV6QjQ6gdiedWDcRCbUuiQfQa2wmWV7+xC9bGulGI8+TdRmoFkAPaBXk8CrAbnlY2ISniJ47Q==}
     engines: {node: '>=18'}
@@ -2033,6 +2066,9 @@ packages:
   strip-final-newline@4.0.0:
     resolution: {integrity: sha512-aulFJcD6YK8V1G7iRB5tigAP4TsHBZZrOV8pjV++zdUwmeV8uzbY7yn6h9MswN62adStNZFuCIx4haBnRuMDaw==}
     engines: {node: '>=18'}
+
+  strnum@2.1.2:
+    resolution: {integrity: sha512-l63NF9y/cLROq/yqKXSLtcMeeyOfnSQlfMSlzFt/K73oIaD8DGaQWd7Z34X9GPiKqP5rbSh84Hl4bOlLcjiSrQ==}
 
   suf-log@2.5.3:
     resolution: {integrity: sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==}
@@ -2329,6 +2365,9 @@ packages:
     resolution: {integrity: sha512-h3Fbisa2nKGPxCpm89Hk33lBLsnaGBvctQopaBSOW/uIs6FTe1ATyAnKFJrzVs9vpGdsTe73WF3V4lIsk4Gacw==}
     engines: {node: '>=18'}
 
+  xml@1.0.1:
+    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
+
   xxhash-wasm@1.1.0:
     resolution: {integrity: sha512-147y/6YNh+tlp6nd/2pWq38i9h6mz/EuQ6njIrmW8D1BS5nCqs0P6DG+m6zTGnNz5I+uhZ0SHxBs9BsPrwcKDA==}
 
@@ -2404,6 +2443,11 @@ snapshots:
   '@astrojs/prism@4.0.0-beta.2':
     dependencies:
       prismjs: 1.30.0
+
+  '@astrojs/rss@4.0.15':
+    dependencies:
+      fast-xml-parser: 5.3.3
+      piccolore: 0.1.3
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -2798,8 +2842,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.2':
     optional: true
 
-  '@img/colour@1.0.0':
-    optional: true
+  '@img/colour@1.0.0': {}
 
   '@img/sharp-darwin-arm64@0.34.5':
     optionalDependencies:
@@ -2914,7 +2957,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@origami-systems/ui@0.0.5(typescript@5.9.3)':
+  '@origami-systems/ui@0.0.6(typescript@5.9.3)':
     dependencies:
       lucide-vue-next: 0.563.0(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
@@ -3132,6 +3175,8 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
     optional: true
+
+  '@types/rss@0.0.32': {}
 
   '@types/unist@3.0.3': {}
 
@@ -3522,8 +3567,7 @@ snapshots:
 
   destr@2.0.5: {}
 
-  detect-libc@2.1.2:
-    optional: true
+  detect-libc@2.1.2: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -3665,6 +3709,10 @@ snapshots:
       yoctocolors: 2.1.2
 
   extend@3.0.2: {}
+
+  fast-xml-parser@5.3.3:
+    dependencies:
+      strnum: 2.1.2
 
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
@@ -4220,7 +4268,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  mime-db@1.25.0: {}
+
   mime-db@1.54.0: {}
+
+  mime-types@2.1.13:
+    dependencies:
+      mime-db: 1.25.0
 
   mime-types@3.0.2:
     dependencies:
@@ -4502,6 +4556,11 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.56.0
       fsevents: 2.3.3
 
+  rss@1.2.2:
+    dependencies:
+      mime-types: 2.1.13
+      xml: 1.0.1
+
   run-applescript@7.1.0: {}
 
   s.color@0.0.15: {}
@@ -4574,7 +4633,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.5
       '@img/sharp-win32-ia32': 0.34.5
       '@img/sharp-win32-x64': 0.34.5
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:
@@ -4639,6 +4697,8 @@ snapshots:
       ansi-regex: 6.2.2
 
   strip-final-newline@4.0.0: {}
+
+  strnum@2.1.2: {}
 
   suf-log@2.5.3:
     dependencies:
@@ -4888,6 +4948,8 @@ snapshots:
   wsl-utils@0.1.0:
     dependencies:
       is-wsl: 3.1.0
+
+  xml@1.0.1: {}
 
   xxhash-wasm@1.1.0: {}
 
