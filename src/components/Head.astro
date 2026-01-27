@@ -44,7 +44,7 @@ const { title, description } = Astro.props;
 <meta property="og:url" content="https://the-house-app.com" />
 <meta
     property="og:image"
-    content="https://the-house-app.com/web-app-manifest-192x192.png"
+    content="https://the-house-app.com/icons/192x192.png"
 />
 
 <meta charset="utf-8" />
@@ -64,9 +64,16 @@ const { title, description } = Astro.props;
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="preload"
+    href="https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
 />
+<!-- <link -->
+<!--     rel="stylesheet" -->
+<!--     href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" -->
+<!-- /> -->
 <link rel="sitemap" href="/sitemap-index.xml" />
 <script is:inline>
     (function () {

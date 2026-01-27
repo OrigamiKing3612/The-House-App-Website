@@ -22,7 +22,7 @@ const posts = await getCollection("blog");
     <LargeTitleText> Blog </LargeTitleText>
     <CardGrid>
         {
-            posts.toReversed().map((a) => (
+            posts.map((a) => (
                 <article>
                     <a href={`/blog/${a.id}`} class="link">
                         <div class="item">
@@ -30,7 +30,9 @@ const posts = await getCollection("blog");
                             <div class="description">{a.data.description}</div>
                             <div class="extra">
                                 <Badge client:only="vue">
-                                    {normalizeString(a.data.type)}
+                                    <span class="capitalize">
+                                        {a.data.type}
+                                    </span>
                                 </Badge>
                                 <div class="tags">
                                     {a.data.tags.map((tag) => (
@@ -77,9 +79,10 @@ const posts = await getCollection("blog");
                 display: flex;
                 width: 100%;
                 flex-direction: row;
-                justify-content: space-between;
+                // justify-content: flex-end;
                 align-items: center;
                 margin-top: 15px;
+                height: 1rem;
 
                 .tags {
                     display: flex;
@@ -87,6 +90,7 @@ const posts = await getCollection("blog");
                     flex-wrap: wrap;
                     gap: 10px;
                     font-size: 0.9rem;
+                    margin-left: auto;
 
                     .tag {
                         color: var(--subtext-2);

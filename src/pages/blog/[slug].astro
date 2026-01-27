@@ -1,6 +1,9 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import ContentH1 from "../../components/content/ContentH1.astro";
+import ContentP from "../../components/content/ContentP.astro";
+import { components } from "../../components/ContentComponents.astro";
 
 export type Props = {
     post: CollectionEntry<"blog">;
@@ -8,15 +11,6 @@ export type Props = {
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
-    // const postsWithSlugs = posts.map((post) => {
-    //     const fileName = post.file.split("/").pop();
-    //     const slug = fileName?.replace(/\.md$/, "");
-    //
-    //     return {
-    //         ...post,
-    //         slug,
-    // };
-    //         });
     return posts.map((post) => ({
         params: { slug: post.id },
         props: { post },
@@ -42,8 +36,15 @@ const { Content } = await render(post);
             <div class="description">{data.description}</div>
         </div>
         <hr />
-        <Content />
+        <div class="content">
+            <Content components={components} />
+        </div>
         <!-- <ReleaseFooter v-if="post.type == 'release'" /> -->
+        <ContentH1>Bugs and Feedback</ContentH1>
+        <ContentP
+            >As always, if you notice any bugs or have feedback, please share it
+            on the account page.</ContentP
+        >
     </div>
 </MainLayout>
 

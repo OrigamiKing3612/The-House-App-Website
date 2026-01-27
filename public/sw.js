@@ -12,7 +12,7 @@ self.addEventListener('push', function (event) {
     const title = data.title || 'Notification';
     const options = {
         body: data.body || 'You have a new notification.',
-        icon: '/web-app-manifest-192x192.png',
+        icon: '/icons/192x192.png',
     };
 
     event.waitUntil(

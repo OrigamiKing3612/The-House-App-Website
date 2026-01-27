@@ -9,7 +9,8 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/rss": "^4.0.15-beta.2",
+        "@astrojs/mdx": "^4.3.13",
+        "@astrojs/rss": "4.0.15-beta.2",
         "@astrojs/sitemap": "^3.7.0",
         "@astrojs/vue": "6.0.0-beta.0",
         "@origami-systems/ui": "^0.0.6",
