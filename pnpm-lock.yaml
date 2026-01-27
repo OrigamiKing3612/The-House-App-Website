@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^4.3.13
-        version: 4.3.13(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3))
+        specifier: 5.0.0-beta.2
+        version: 5.0.0-beta.2(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3))
       '@astrojs/rss':
         specifier: 4.0.15-beta.2
         version: 4.0.15-beta.2
       '@astrojs/sitemap':
-        specifier: ^3.7.0
-        version: 3.7.0
+        specifier: 3.6.1-beta.2
+        version: 3.6.1-beta.2
       '@astrojs/vue':
         specifier: 6.0.0-beta.0
         version: 6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3))(rollup@4.57.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))
@@ -60,21 +60,14 @@ packages:
   '@astrojs/internal-helpers@0.7.5':
     resolution: {integrity: sha512-vreGnYSSKhAjFJCWAwe/CNhONvoc5lokxtRoZims+0wa3KbHBdPHSSthJsKxPd8d/aic6lWKpRTYGY/hsgK6EA==}
 
-  '@astrojs/markdown-remark@6.3.10':
-    resolution: {integrity: sha512-kk4HeYR6AcnzC4QV8iSlOfh+N8TZ3MEStxPyenyCtemqn8IpEATBFMTJcfrNW32dgpt6MY3oCkMM/Tv3/I4G3A==}
-
   '@astrojs/markdown-remark@7.0.0-beta.2':
     resolution: {integrity: sha512-3WWCLbMkB/DtX3yckTuGjZu5MVuVfWVfszjMqyA6Rj2OUFy0wn8/dLa16cXC39fCi88yArfu0SQcJAWddedsIw==}
 
-  '@astrojs/mdx@4.3.13':
-    resolution: {integrity: sha512-IHDHVKz0JfKBy3//52JSiyWv089b7GVSChIXLrlUOoTLWowG3wr2/8hkaEgEyd/vysvNQvGk+QhysXpJW5ve6Q==}
-    engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
+  '@astrojs/mdx@5.0.0-beta.2':
+    resolution: {integrity: sha512-zWBvE2g+MGvBhdweqlXnRHbB3eFFHinH9fT/uB28U/2mQiL6i/3pIWIkZAxf8LC/6ttD8E5pmeAKiT/xqhkuAw==}
+    engines: {node: ^20.19.1 || >=22.12.0}
     peerDependencies:
-      astro: ^5.0.0
-
-  '@astrojs/prism@3.3.0':
-    resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
-    engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
+      astro: ^6.0.0-alpha.0
 
   '@astrojs/prism@4.0.0-beta.2':
     resolution: {integrity: sha512-3snR85nTXnXvgmFJ43AacCQcylk+mpsiQ5Gmr9hcR5IrEA6+EvaYfaF9jlxZqJIZYey/9ubSRmaERtwDhV/FeA==}
@@ -83,8 +76,8 @@ packages:
   '@astrojs/rss@4.0.15-beta.2':
     resolution: {integrity: sha512-1mJXyt7HgRrlaPRy/vjbLgR3Pp8nf9sd3jrzNlq0QG1VjsjSof9noAFxWI++sUB094Pyqu7AxsoCtKOgbz4CMg==}
 
-  '@astrojs/sitemap@3.7.0':
-    resolution: {integrity: sha512-+qxjUrz6Jcgh+D5VE1gKUJTA3pSthuPHe6Ao5JCxok794Lewx8hBFaWHtOnN0ntb2lfOf7gvOi9TefUswQ/ZVA==}
+  '@astrojs/sitemap@3.6.1-beta.2':
+    resolution: {integrity: sha512-vM6YrDoRh2Rj9N09zc5EJ+kRsn1fiJpHhILT3iglgf/6VIBkAFD14JM2kI730a59xm/jmHOYwn56s7ustqLJYA==}
 
   '@astrojs/telemetry@3.3.0':
     resolution: {integrity: sha512-UFBgfeldP06qu6khs/yY+q1cDAaArM2/7AEIqQ9Cuvf7B1hNLq0xDrZkct+QoIGyjq56y8IaE2I3CTvG99mlhQ==}
@@ -1545,9 +1538,6 @@ packages:
   immutable@5.1.4:
     resolution: {integrity: sha512-p6u1bG3YSnINT5RQmx/yRZBpenIl30kVxkTLDyHLIMk0gict704Q9n+thfDI7lTRm9vXdDYutVzXhzcThxTnXA==}
 
-  import-meta-resolve@4.2.0:
-    resolution: {integrity: sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg==}
-
   inline-style-parser@0.2.7:
     resolution: {integrity: sha512-Nb2ctOyNR8DqQoR0OwRG95uNWIC0C1lCgf5Naz5H6Ji72KZ8OcFZLz2P5sNgwlyoJ8Yif11oMuYs5pBQa86csA==}
 
@@ -2514,32 +2504,6 @@ snapshots:
 
   '@astrojs/internal-helpers@0.7.5': {}
 
-  '@astrojs/markdown-remark@6.3.10':
-    dependencies:
-      '@astrojs/internal-helpers': 0.7.5
-      '@astrojs/prism': 3.3.0
-      github-slugger: 2.0.0
-      hast-util-from-html: 2.0.3
-      hast-util-to-text: 4.0.2
-      import-meta-resolve: 4.2.0
-      js-yaml: 4.1.1
-      mdast-util-definitions: 6.0.0
-      rehype-raw: 7.0.0
-      rehype-stringify: 10.0.1
-      remark-gfm: 4.0.1
-      remark-parse: 11.0.0
-      remark-rehype: 11.1.2
-      remark-smartypants: 3.0.2
-      shiki: 3.21.0
-      smol-toml: 1.6.0
-      unified: 11.0.5
-      unist-util-remove-position: 5.0.0
-      unist-util-visit: 5.1.0
-      unist-util-visit-parents: 6.0.2
-      vfile: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@astrojs/markdown-remark@7.0.0-beta.2':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
@@ -2565,9 +2529,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.13(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3))':
+  '@astrojs/mdx@5.0.0-beta.2(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3))':
     dependencies:
-      '@astrojs/markdown-remark': 6.3.10
+      '@astrojs/markdown-remark': 7.0.0-beta.2
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
       astro: 6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)
@@ -2584,10 +2548,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/prism@3.3.0':
-    dependencies:
-      prismjs: 1.30.0
-
   '@astrojs/prism@4.0.0-beta.2':
     dependencies:
       prismjs: 1.30.0
@@ -2598,7 +2558,7 @@ snapshots:
       piccolore: 0.1.3
       zod: 4.3.6
 
-  '@astrojs/sitemap@3.7.0':
+  '@astrojs/sitemap@3.6.1-beta.2':
     dependencies:
       sitemap: 8.0.2
       stream-replace-string: 2.0.0
@@ -4154,8 +4114,6 @@ snapshots:
   human-signals@8.0.1: {}
 
   immutable@5.1.4: {}
-
-  import-meta-resolve@4.2.0: {}
 
   inline-style-parser@0.2.7: {}
 

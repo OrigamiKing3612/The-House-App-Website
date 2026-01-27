@@ -17,4 +17,11 @@ export default defineConfig({
         contentIntellisense: true,
     },
     prefetch: true,
+    csp: {
+        scriptDirective: {
+            resources: [
+                "'self'"
+            ]
+        }
+    }
 });
