@@ -2,8 +2,8 @@ import type { APIRoute } from "astro";
 import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 
-function sortPosts(a: { data: { timestamp: Date } }, b: { data: { timestamp: Date } }) {
-    return Number(b.data.timestamp) - Number(a.data.timestamp);
+function sortPosts(a: Date, b: Date) {
+    return Number(b) - Number(a);
 }
 
 function formatDate(date: Date) {
@@ -12,8 +12,8 @@ function formatDate(date: Date) {
 }
 
 export const GET: APIRoute = async (context) => {
-    const unsortedPosts = [...(await getCollection('blog'))];
-    const posts = unsortedPosts.sort((a, b) => sortPosts(a, b));
+    const unsortedPosts = await getCollection('blog');
+    const posts = unsortedPosts.sort((a, b) => sortPosts(a.data.timestamp, b.data.timestamp));
 
     return rss({
         title: "The House App",

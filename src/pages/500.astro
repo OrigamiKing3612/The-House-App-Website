@@ -6,7 +6,6 @@ const { error } = Astro.props;
 
 <MainLayout title="An Error Occurred">
     <h1>An Error Occurred</h1>
-    <h2>{error.code}</h2>
     <p>
         Message: {error instanceof Error ? error.message : "Unknown error"}
     </p>

@@ -9,22 +9,20 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/node": "^9.5.2",
-        "@astrojs/rss": "^4.0.15",
-        "@astrojs/vue": "^6.0.0-beta.0",
+        "@astrojs/rss": "^4.0.15-beta.2",
+        "@astrojs/sitemap": "^3.7.0",
+        "@astrojs/vue": "6.0.0-beta.0",
         "@origami-systems/ui": "^0.0.6",
-        "astro": "^6.0.0-beta.3",
-        "rss": "^1.2.2",
+        "astro": "6.0.0-beta.4",
         "sass": "^1.97.3",
         "sharp": "^0.34.5",
-        "vue": "^3.5.26"
+        "vue": "^3.5.27"
     },
     "private": true,
     "peerDependencies": {
         "typescript": "^5"
     },
     "devDependencies": {
-        "@types/rss": "^0.0.32",
         "prettier": "3.8.1",
         "prettier-plugin-astro": "0.14.1"
     },

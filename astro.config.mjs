@@ -3,16 +3,14 @@
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 
-import node from "@astrojs/node";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+    site: "https://the-house-app.com",
     output: "static",
-    integrations: [vue()],
+    integrations: [vue(), sitemap()],
     experimental: {
         contentIntellisense: true,
     },
-
-    // adapter: node({
-    //     mode: "standalone",
-    // }),
+    prefetch: true,
 });

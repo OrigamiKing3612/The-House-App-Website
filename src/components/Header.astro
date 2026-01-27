@@ -1,13 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import { TitleBar } from "@origami-systems/ui";
+import { TitleBar, SidebarItem } from "@origami-systems/ui";
 import LocalSwitchThemes from "./LocalSwitchThemes.vue";
+import TitleBarItem from "./TitleBarItem.astro";
 import faviconDark from "../assets/icons/dark/favicon.svg";
 import faviconLight from "../assets/icons/light/favicon.svg";
 ---
 
 <header>
-    <TitleBar client:only="vue">
+    <TitleBar>
         <div slot="icon">
             <a href="/">
                 <Image
@@ -24,9 +25,18 @@ import faviconLight from "../assets/icons/light/favicon.svg";
                 />
             </a>
         </div>
+        <div slot="tabs" class="ignore-div">
+            <TitleBarItem href="/" data-astro-prefetch>Home</TitleBarItem>
+            <TitleBarItem href="/bugs" data-astro-prefetch>Bugs</TitleBarItem>
+            <TitleBarItem href="/blog" data-astro-prefetch>Blog</TitleBarItem>
+            <TitleBarItem href="/contact" data-astro-prefetch
+                >Contact</TitleBarItem
+            >
+        </div>
         <div slot="right-side">
             <LocalSwitchThemes client:only="vue" />
         </div>
+        <div slot="sidebar-items"></div>
     </TitleBar>
 </header>
 <style>
