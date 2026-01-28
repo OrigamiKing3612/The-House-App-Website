@@ -16,7 +16,7 @@
         "@astrojs/sitemap": "3.6.1-beta.2",
         "@astrojs/vue": "6.0.0-beta.0",
         "@origami-systems/ui": "^0.0.10",
-        "astro": "6.0.0-beta.4",
+        "astro": "6.0.0-beta.5",
         "sass": "^1.97.3",
         "sharp": "^0.34.5",
         "vue": "^3.5.27"

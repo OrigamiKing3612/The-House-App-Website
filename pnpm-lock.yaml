@@ -13,7 +13,7 @@ importers:
         version: 0.9.7-beta.1(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)
       '@astrojs/mdx':
         specifier: 5.0.0-beta.2
-        version: 5.0.0-beta.2(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))
+        version: 5.0.0-beta.2(astro@6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))
       '@astrojs/rss':
         specifier: 4.0.15-beta.2
         version: 4.0.15-beta.2
@@ -22,13 +22,13 @@ importers:
         version: 3.6.1-beta.2
       '@astrojs/vue':
         specifier: 6.0.0-beta.0
-        version: 6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.57.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)
+        version: 6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.57.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)
       '@origami-systems/ui':
         specifier: ^0.0.10
         version: 0.0.10(typescript@5.9.3)
       astro:
-        specifier: 6.0.0-beta.4
-        version: 6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
+        specifier: 6.0.0-beta.5
+        version: 6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
       sass:
         specifier: ^1.97.3
         version: 1.97.3
@@ -1240,8 +1240,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@6.0.0-beta.4:
-    resolution: {integrity: sha512-/gYKt5T3WoUAJXtz0SbH/D0pGcqeaU8+0jF2vtjnBpekqDa5kZK+3lK31aWJvvS0xBhEgiubujEXVS1voILenA==}
+  astro@6.0.0-beta.5:
+    resolution: {integrity: sha512-McqRZLQIbxR5cV/zkfgqIkytDCXIMRx09jkbXw2NsTiV+w/AQMKWRSN/q//0b8qgaafy8qIh0qjlN3Sm39PF/w==}
     engines: {node: ^20.19.1 || >=22.12.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2875,12 +2875,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@5.0.0-beta.2(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))':
+  '@astrojs/mdx@5.0.0-beta.2(astro@6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       '@astrojs/markdown-remark': 7.0.0-beta.2
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2922,12 +2922,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vue@6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.57.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)':
+  '@astrojs/vue@6.0.0-beta.0(@types/node@25.0.10)(astro@6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2))(rollup@4.57.0)(sass@1.97.3)(vue@3.5.27(typescript@5.9.3))(yaml@2.8.2)':
     dependencies:
       '@vitejs/plugin-vue': 5.2.4(vite@7.3.1(@types/node@25.0.10)(sass@1.97.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@vitejs/plugin-vue-jsx': 4.2.0(vite@7.3.1(@types/node@25.0.10)(sass@1.97.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       '@vue/compiler-sfc': 3.5.27
-      astro: 6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2)
       vite: 7.3.1(@types/node@25.0.10)(sass@1.97.3)(yaml@2.8.2)
       vite-plugin-vue-devtools: 7.7.9(rollup@4.57.0)(vite@7.3.1(@types/node@25.0.10)(sass@1.97.3)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
@@ -3932,7 +3932,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.0.0-beta.4(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2):
+  astro@6.0.0-beta.5(@types/node@25.0.10)(rollup@4.57.0)(sass@1.97.3)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 0.0.0-render-script-20251003120459
       '@astrojs/internal-helpers': 0.7.5
