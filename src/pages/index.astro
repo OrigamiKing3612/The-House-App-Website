@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import { Card } from "@origami-systems/ui";
 import MainLayout from "../layouts/MainLayout.astro";
-import wordmarkDark from "../assets/icons/dark/wordmark.svg";
-import wordmarkLight from "../assets/icons/light/wordmark.svg";
+import wordmarkDark from "../assets/icons/dark/wordmark.png";
+import wordmarkLight from "../assets/icons/light/wordmark.png";
 ---
 
 <MainLayout>
@@ -114,6 +114,10 @@ import wordmarkLight from "../assets/icons/light/wordmark.svg";
         max-width: 100%;
     }
     .logo {
+        img {
+            height: auto;
+            max-width: 400px;
+        }
         user-select: none;
     }
 
@@ -148,5 +152,20 @@ import wordmarkLight from "../assets/icons/light/wordmark.svg";
         max-width: 80%;
         width: 100%;
         text-align: left;
+    }
+
+    @media (max-width: 750px) {
+        .intro {
+            flex-direction: column;
+            margin: 5em;
+
+            .logo {
+                margin-bottom: 2em;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
 </style>

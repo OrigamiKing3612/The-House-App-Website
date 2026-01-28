@@ -24,7 +24,15 @@
             ],
             "@utils/*": [
                 "./src/utils/*"
+            ],
+            "@assets/*": [
+                "./src/assets/*"
             ]
-        }
+        },
+        "plugins": [
+            {
+                "name": "@vue/typescript-plugin"
+            }
+        ]
     }
 }

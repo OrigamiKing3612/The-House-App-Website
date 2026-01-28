@@ -70,28 +70,25 @@ const { title, description } = Astro.props;
     type="font/woff2"
     crossorigin
 />
-<!-- <link -->
-<!--     rel="stylesheet" -->
-<!--     href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" -->
-<!-- /> -->
 <link rel="sitemap" href="/sitemap-index.xml" />
-<script is:inline>
-    (function () {
-        try {
-            const stored = localStorage.getItem("color-mode");
-            const prefersDark = window.matchMedia(
-                "(prefers-color-scheme: dark)",
-            ).matches;
-
-            const theme =
-                stored === "dark" ||
-                (stored === "system" && prefersDark) ||
-                (!stored && prefersDark)
-                    ? "dark"
-                    : "light";
-
-            document.documentElement.classList.toggle("dark", theme === "dark");
-        } catch {}
-    })();
-</script>
 <!-- <ClientRouter /> -->
+<script is:inline>
+    const theme = (() => {
+        const localStorageTheme = localStorage?.getItem("color-mode") ?? "";
+        if (["dark", "light"].includes(localStorageTheme)) {
+            return localStorageTheme;
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+        }
+        return "light";
+    })();
+
+    if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+    } else {
+        document.documentElement.classList.add("dark");
+    }
+
+    window.localStorage.setItem("color-mode", theme);
+</script>
