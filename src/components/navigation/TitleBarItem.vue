@@ -32,6 +32,7 @@ onMounted(() => {
     margin: 0 15px;
     font-weight: bold;
     color: var(--text-0);
+    user-select: none;
 
     &:hover {
         color: var(--accent);

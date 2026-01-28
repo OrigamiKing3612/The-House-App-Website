@@ -1,12 +1,13 @@
 ---
-
+import { Image } from "astro:assets";
+import IconLight from "@assets/icons/light/icon.png";
 ---
 
 <footer class="footer">
     <div class="footer-left">
         <div class="footer-info">
-            <img
-                src="/icons/light/icon.png"
+            <Image
+                src={IconLight}
                 alt="The House App Logo"
                 title="The House App"
                 width="64"

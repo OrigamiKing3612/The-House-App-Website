@@ -4,34 +4,24 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import { components } from "../../components/ContentComponents.astro";
 
 export type Props = {
-    post: CollectionEntry<"blog">;
+    docs: CollectionEntry<"docs">;
 };
 
 export async function getStaticPaths() {
-    const unsortedPosts = await getCollection("blog");
-    const posts = unsortedPosts.sort(
-        (a, b) => Number(a.data.timestamp) - Number(b.data.timestamp),
-    );
-    return posts.map((post) => ({
-        params: { slug: post.id },
-        props: { post },
+    const docs = await getCollection("docs");
+    return docs.map((docs) => ({
+        params: { slug: docs.id },
+        props: { docs },
     }));
 }
 
-const { post } = Astro.props;
-const { data } = post;
-const { Content } = await render(post);
+const { docs } = Astro.props;
+const { data } = docs;
+const { Content } = await render(docs);
 ---
 
-<MainLayout title={`${post.data.title} - The House App`}>
-    <link
-        slot="head"
-        rel="alternate"
-        type="application/rss+xml"
-        title="The House App Blog RSS"
-        href="https://the-house-app.com/blog/rss.xml"
-    />
-    <div class="blog">
+<MainLayout title={`${data.title} - The House App`}>
+    <div class="docs">
         <div class="header">
             <h1>{data.title}</h1>
             <div class="description">{data.description}</div>
@@ -40,12 +30,11 @@ const { Content } = await render(post);
         <div class="content">
             <Content components={components} />
         </div>
-        <!-- <ReleaseFooter v-if="post.type == 'release'" /> -->
     </div>
 </MainLayout>
 
 <style lang="scss">
-    .blog {
+    .docs {
         width: 80vw;
 
         .header {

@@ -33,5 +33,6 @@ onMounted(() => {
     font-weight: bold;
     line-height: 144%;
     letter-spacing: -5%;
+    user-select: none;
 }
 </style>
