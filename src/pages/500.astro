@@ -10,5 +10,7 @@ const { error } = Astro.props;
         Message: {error instanceof Error ? error.message : "Unknown error"}
     </p>
 
-    <AppSubmitButton @click="handleError"> Back </AppSubmitButton>
+    <a href="/">
+        <AppSubmitButton> Back </AppSubmitButton>
+    </a>
 </MainLayout>
