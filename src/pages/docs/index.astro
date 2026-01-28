@@ -12,7 +12,7 @@ const posts = await getCollection("docs");
         {
             posts.map((a) => (
                 <article>
-                    <a href={`/docs/${a.id}`} class="link">
+                    <a href={`/docs/${a.data.slug}`} class="link">
                         <div class="item">
                             <div class="title">{a.data.title}</div>
                             <div class="description">{a.data.description}</div>

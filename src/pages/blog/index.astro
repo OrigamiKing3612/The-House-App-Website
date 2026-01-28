@@ -1,13 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
-import {
-    LargeTitleText,
-    CardGrid,
-    Badge,
-} from "@origami-systems/ui";
+import { LargeTitleText, CardGrid, Badge } from "@origami-systems/ui";
 
-const posts = await getCollection("blog");
+const unsortedPosts = await getCollection("blog");
+const posts = unsortedPosts.sort(
+    (a, b) => Number(a.data.timestamp) - Number(b.data.timestamp),
+);
 ---
 
 <MainLayout title="Blog - The House App">
@@ -21,9 +20,9 @@ const posts = await getCollection("blog");
     <LargeTitleText> Blog </LargeTitleText>
     <CardGrid>
         {
-            posts.map((a) => (
-                <article>
-                    <a href={`/blog/${a.id}`} class="link">
+            posts.toReversed().map((a) => (
+                <article class="ignore-div">
+                    <a href={`/blog/${a.data.slug}`} class="link">
                         <div class="item">
                             <div class="title">{a.data.title}</div>
                             <div class="description">{a.data.description}</div>

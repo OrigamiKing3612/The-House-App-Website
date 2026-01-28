@@ -115,7 +115,7 @@ export const allQuestions: FAQAnswers[] = [
             },
             {
                 q: "How do I create a new year?",
-                a: "Organization admins can create a new year by navigating to the Year Management section in the admin page and clicking on 'Create New Year' under the 'Year Management' secion.",
+                a: "Organization admins can create a new year by navigating to the Year Management section in the admin page and clicking on 'Create New Year' under the 'Year Management' section.",
             },
             {
                 q: "Can I archive previous years?",

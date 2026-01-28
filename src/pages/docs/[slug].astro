@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
-import MainLayout from "../../layouts/MainLayout.astro";
-import { components } from "../../components/ContentComponents.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
+import { components } from "@/ContentComponents.astro";
 
 export type Props = {
     docs: CollectionEntry<"docs">;
@@ -10,7 +10,7 @@ export type Props = {
 export async function getStaticPaths() {
     const docs = await getCollection("docs");
     return docs.map((docs) => ({
-        params: { slug: docs.id },
+        params: { slug: docs.data.slug },
         props: { docs },
     }));
 }
