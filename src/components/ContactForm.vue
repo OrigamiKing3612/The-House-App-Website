@@ -13,14 +13,15 @@
         <TextArea label="What would you like to know more about? (optional)" v-model="question"
             placeholder="Tell us what interests you or any questions you have" class="text-area" />
         <TextField v-model="hp_field" name="hp_field" autocomplete="off" tabindex="-1" style="display: none;" />
-        <AppSubmitButton type="submit" @click="submit" primary>Submit</AppSubmitButton>
+        <AppSubmitButton type="submit" @click="submit" primary :disabled>Submit</AppSubmitButton>
     </form>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { TextField, TextArea, WithLabel, Dropdown, AppSubmitButton } from '@origami-systems/ui';
-import { SubmitContact } from '~/utils/SubmitContact';
+import { SubmitContact } from '@utils/SubmitContact';
+import { useNotifications } from '@utils/useNotifications';
 
 const hp_field = ref('');
 const name = ref('');
@@ -36,7 +37,15 @@ const howDidYouHearAboutUsOptions = [
 const hear = ref('Website');
 const howDidYouHearAboutUs = ref("");
 const question = ref("");
-const notifications: any = {}
+const notifications = useNotifications();
+
+const disabled = computed(() => (
+    !name.value ||
+    !email.value ||
+    !organization.value ||
+    !hear.value ||
+    (hear.value === 'Other' && !howDidYouHearAboutUs.value)
+))
 
 const submit = async (done: () => void) => {
     try {

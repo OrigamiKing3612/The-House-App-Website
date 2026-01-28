@@ -7,6 +7,7 @@ interface Props {
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
+import LocalNotifications from "@/LocalNotifications.vue";
 
 import "../styles/global.css";
 import "@origami-systems/ui/style.css";
@@ -29,5 +30,6 @@ const {
             <slot />
         </main>
         <Footer />
+        <LocalNotifications client:only="vue" />
     </body>
 </html>
