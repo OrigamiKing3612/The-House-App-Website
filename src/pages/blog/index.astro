@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
 import { LargeTitleText, CardGrid, Badge } from "@origami-systems/ui";
 
 const unsortedPosts = await getCollection("blog");
 const posts = unsortedPosts.sort(
-    (a, b) => Number(a.data.timestamp) - Number(b.data.timestamp),
+    (a, b) => Number(b.data.timestamp) - Number(a.data.timestamp),
 );
 ---
 
@@ -20,28 +20,24 @@ const posts = unsortedPosts.sort(
     <LargeTitleText> Blog </LargeTitleText>
     <CardGrid>
         {
-            posts.toReversed().map((a) => (
+            posts.map(({ data }) => (
                 <article class="ignore-div">
-                    <a href={`/blog/${a.data.slug}`} class="link">
+                    <a href={`/blog/${data.slug}`} class="link">
                         <div class="item">
-                            <div class="title">{a.data.title}</div>
-                            <div class="description">{a.data.description}</div>
+                            <div class="title">{data.title}</div>
+                            <div class="description">{data.description}</div>
                             <div class="extra">
                                 <Badge client:only="vue">
-                                    <span class="capitalize">
-                                        {a.data.type}
-                                    </span>
+                                    <span class="capitalize">{data.type}</span>
                                 </Badge>
                                 <div class="tags">
-                                    {a.data.tags.map((tag) => (
+                                    {data.tags.map((tag) => (
                                         <div class="tag">{tag}</div>
                                     ))}
                                 </div>
                             </div>
                             <time class="timestamp">
-                                {new Date(
-                                    a.data.timestamp,
-                                ).toLocaleDateString()}
+                                {new Date(data.timestamp).toLocaleDateString()}
                             </time>
                         </div>
                     </a>

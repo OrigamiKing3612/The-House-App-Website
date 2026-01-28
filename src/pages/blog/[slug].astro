@@ -10,7 +10,7 @@ export type Props = {
 export async function getStaticPaths() {
     const unsortedPosts = await getCollection("blog");
     const posts = unsortedPosts.sort(
-        (a, b) => Number(a.data.timestamp) - Number(b.data.timestamp),
+        (a, b) => Number(b.data.timestamp) - Number(a.data.timestamp),
     );
     return posts.map((post) => ({
         params: { slug: post.data.slug },
