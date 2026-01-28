@@ -19,9 +19,8 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { TextField, TextArea, WithLabel, Dropdown, AppSubmitButton } from '@origami-systems/ui';
+import { TextField, TextArea, WithLabel, Dropdown, AppSubmitButton, useNotifications } from '@origami-systems/ui';
 import { SubmitContact } from '@utils/SubmitContact';
-import { useNotifications } from '@utils/useNotifications';
 
 const hp_field = ref('');
 const name = ref('');

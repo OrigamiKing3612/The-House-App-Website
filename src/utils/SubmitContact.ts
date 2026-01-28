@@ -2,6 +2,9 @@ export const SubmitContact = async (name: string, email: string, organization: s
     try {
         await fetch("https://n8n.origamiking3612.com/webhook/the-house-app/contact", {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 name: name,
                 email: email,
@@ -15,6 +18,6 @@ export const SubmitContact = async (name: string, email: string, organization: s
         return true;
     } catch (error: any) {
         console.error("API error:", error.message)
-        return []
+        return false;
     }
 }
