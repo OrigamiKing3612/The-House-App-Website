@@ -1,0 +1,12 @@
+:root {
+    --accent: var(--house-app);
+    --accent-dark: var(--house-app-dark);
+}
+
+.ignore-div {
+    display: contents;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
